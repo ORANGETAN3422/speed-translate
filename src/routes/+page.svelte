@@ -1,2 +1,26 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import QuizSession from '$lib/components/QuizSession.svelte';
+
+	let active = $state(false);
+    let currentLevel = $state(0);
+
+	function createSession(jlpt: number) {
+		console.log('create session');
+        active = true;
+        currentLevel = jlpt;
+	}
+
+	let things = [5, 4, 3, 2, 1];
+</script>
+
+<div class="flex flex-col gap-2">
+	{#each things as n (n)}
+		<button onclick={() => createSession(n)}>Start JLPT {n}</button>
+	{/each}
+</div>
+
+{#if active}
+	<div class="overlay">
+		<QuizSession level={currentLevel} onclose={() => (active = false)} />
+	</div>
+{/if}
