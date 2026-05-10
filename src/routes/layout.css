@@ -1,2 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@theme {
+	--color-bg: var(--bg);
+	--color-surface: var(--surface);
+	--color-text: var(--text);
+	--color-primary: var(--primary);
+	--color-muted: var(--muted);
+	--color-success: var(--success);
+	--color-error: var(--error);
+}
+
+:root {
+	--bg: oklch(1 0 0);
+	--surface: oklch(0.97 0 0);
+	--text: oklch(0.2 0 0);
+	--primary: oklch(0.6 0.2 250);
+	--muted: oklch(0.5 0 0);
+	--success: oklch(0.65 0.18 145);
+	--error: oklch(0.6 0.22 25);
+}
+
+[data-theme='dark'] {
+	--bg: oklch(0.15 0 0);
+	--surface: oklch(0.2 0 0);
+	--text: oklch(0.95 0 0);
+	--primary: oklch(0.7 0.2 250);
+	--muted: oklch(0.6 0 0);
+	--success: oklch(0.7 0.18 145);
+	--error: oklch(0.65 0.22 25);
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jp {
+    font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+}

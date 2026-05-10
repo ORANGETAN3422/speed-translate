@@ -2,12 +2,12 @@
 	import QuizSession from '$lib/components/QuizSession.svelte';
 
 	let active = $state(false);
-    let currentLevel = $state(0);
+	let currentLevel = $state(0);
 
 	function createSession(jlpt: number) {
 		console.log('create session');
-        active = true;
-        currentLevel = jlpt;
+		active = true;
+		currentLevel = jlpt;
 	}
 
 	let things = [5, 4, 3, 2, 1];
