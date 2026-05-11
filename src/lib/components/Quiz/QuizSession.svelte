@@ -1,30 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { loadSentence, type Sentence } from '$lib/sentence';
+	import { loadSentence, type Sentence } from '$lib/helpers/sentence';
+	import { getKeyboardSounds, mapSounds, keyAliases } from '../../helpers/sound';
 
 	import Summary from './Summary.svelte';
 	//import ShaderBackground from '../Graphics/ShaderBackground.svelte';
 
-	const soundModules = import.meta.glob('../nk-cream/*.wav', {
-		eager: true,
-		query: '?url',
-		import: 'default'
-	}) as Record<string, string>;
-
-	const soundMap: Record<string, string> = {};
-	for (const [path, url] of Object.entries(soundModules)) {
-		const name = path.split('/').pop()!.replace('.wav', '').toLowerCase();
-		soundMap[name] = url;
-	}
-
-	const keyAliases: Record<string, string> = {
-		backspace: 'backspace',
-		delete: 'backspace',
-		enter: 'enter',
-		' ': 'space',
-		tab: 'tab',
-		shift: 'shift'
-	};
+	const soundModules = getKeyboardSounds("nk-cream");
+	const soundMap: Record<string, string> = mapSounds(soundModules);
 
 	function playKeySound(e: KeyboardEvent) {
 		if (!inputFocused) return;

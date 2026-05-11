@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type Sentence } from '$lib/sentence';
+	import { type Sentence } from '$lib/helpers/sentence';
 
 	let {
 		answeredSentences,

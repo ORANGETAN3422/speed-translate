@@ -10,12 +10,12 @@
 		currentLevel = jlpt;
 	}
 
-	let things = [5, 4, 3, 2, 1];
+	let things = [5, 4];
 </script>
 
 <div class="flex flex-col gap-2">
 	{#each things as n (n)}
-		<button onclick={() => createSession(n)}>Start JLPT {n}</button>
+		<button onclick={() => createSession(n)}>Start {n}</button>
 	{/each}
 </div>
 
