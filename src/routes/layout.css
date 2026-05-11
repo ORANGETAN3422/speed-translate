@@ -24,21 +24,21 @@
 }
 
 [data-theme='dark'] {
-	--bg: oklch(0.15 0 0);
-	--surface: oklch(0.2 0 0);
-	--text: oklch(0.95 0 0);
-	--primary: oklch(0.7 0.2 250);
-	--muted: oklch(0.6 0 0);
-	--success: oklch(0.7 0.18 145);
-	--error: oklch(0.65 0.22 25);
+	--bg: oklch(0.18 0.02 250);
+	--surface: oklch(0.24 0.02 250);
+	--text: oklch(0.94 0.01 80);
+	--muted: oklch(0.6 0.02 240);
+	--primary: oklch(0.78 0.13 220);
+	--success: oklch(0.72 0.12 160);
+	--error: oklch(0.66 0.17 25);
 }
 
 body {
 	background-color: var(--bg);
 	color: var(--text);
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .jp {
-    font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+	font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
 }

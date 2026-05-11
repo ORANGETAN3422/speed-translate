@@ -1,5 +1,5 @@
 <script lang="ts">
-	import QuizSession from '$lib/components/QuizSession.svelte';
+	import QuizSession from '$lib/components/Quiz/QuizSession.svelte';
 
 	let active = $state(false);
 	let currentLevel = $state(0);

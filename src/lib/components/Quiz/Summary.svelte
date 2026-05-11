@@ -23,15 +23,18 @@
 
 <p class="tabular-nums">{formatTime(time)}</p>
 
-<div class="flex flex-col gap-4">
+<div class="flex w-full max-w-3xl flex-col gap-2">
 	{#each answeredSentences as sentence, i (sentence.jp)}
-		<div class="flex flex-col gap-1 rounded border p-4">
-			<p class="jp text-sm text-muted">{sentence.jp}</p>
-			<p>{sentence.en}</p>
-			<hr />
-			<p>{englishAnswers[i] === '' ? 'No answer' : englishAnswers[i]}</p>
+		<div class="flex items-center gap-4 rounded border px-4 py-2">
+			<div class="flex flex-1 flex-col">
+				<p class="jp text-sm text-muted">{sentence.jp}</p>
+				<p>{sentence.en}</p>
+				<p class="text-sm text-muted">
+					{englishAnswers[i] === '' ? 'No answer' : englishAnswers[i]}
+				</p>
+			</div>
 
-			<div class="mt-2 flex gap-2">
+			<div class="flex shrink-0 gap-2">
 				<button
 					type="button"
 					onclick={() => mark(i, true)}

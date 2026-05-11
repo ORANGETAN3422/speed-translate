@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadSentence, type Sentence } from '$lib/sentence';
+
 	import Summary from './Summary.svelte';
+	//import ShaderBackground from '../Graphics/ShaderBackground.svelte';
 
 	const soundModules = import.meta.glob('../nk-cream/*.wav', {
 		eager: true,
@@ -36,8 +38,8 @@
 
 	let { level, onclose }: { level: number; onclose: () => void } = $props();
 
-    // add a settings creation thing later for this
-    // reveal answer functonailty support later
+	// add a settings creation thing later for this
+	// reveal answer functonailty support later
 	const REVEAL_ANSWER = false;
 	const GOAL = 10;
 
@@ -102,7 +104,8 @@
 	}
 </script>
 
-<div class="fixed inset-0 flex flex-col bg-bg text-text">
+<div class="fixed inset-0 isolate flex flex-col text-text bg-bg">
+	<!-- <ShaderBackground /> -->
 	<header class="p-4">
 		<button onclick={onclose}>Back</button>
 	</header>
@@ -111,53 +114,66 @@
 		<main class="flex flex-1 flex-col items-center gap-6 overflow-y-auto px-4 py-8">
 			<Summary {answeredSentences} {englishAnswers} time={elapsedMs} />
 
-			<!-- svelte-ignore a11y_autofocus -->
-			<button class="rounded border px-4 py-2" onclick={onclose} autofocus> Return to menu </button>
+			<button class="rounded border px-4 py-2" onclick={onclose}> Return to menu </button>
 		</main>
 	{:else}
 		<main class="flex flex-1 flex-col items-center justify-center gap-6 px-4">
-			<div class="flex w-full max-w-md items-center gap-3">
-				<div class="h-2 flex-1 overflow-hidden rounded-full bg-surface">
-					<div
-						class="h-full bg-primary transition-all"
-						style="width: {(progress / GOAL) * 100}%"
-					></div>
+			<div
+				class="flex flex-col items-center gap-6 bg-bg/50 p-15"
+				style="
+					mask-image:
+						linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+						linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+					mask-composite: intersect;
+					-webkit-mask-image:
+						linear-gradient(to right, transparent, black 15%, black 85%, transparent),
+						linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+					-webkit-mask-composite: source-in;
+				"
+			>
+				<div class="flex w-full max-w-md items-center gap-3">
+					<div class="h-2 flex-1 overflow-hidden rounded-full bg-surface">
+						<div
+							class="h-full bg-primary transition-all"
+							style="width: {(progress / GOAL) * 100}%"
+						></div>
+					</div>
+					<span class="text-sm text-muted tabular-nums">{progress} / {GOAL}</span>
 				</div>
-				<span class="text-sm text-muted tabular-nums">{progress} / {GOAL}</span>
-			</div>
 
-			<div class="text-center">
-				<p class="jp text-2xl">{currentSentence?.jp}</p>
+				<div class="text-center">
+					<p class="jp text-2xl">{currentSentence?.jp}</p>
+					{#if revealed}
+						<p class="mt-2 text-muted">{currentSentence?.en}</p>
+					{/if}
+				</div>
+
 				{#if revealed}
-					<p class="mt-2 text-muted">{currentSentence?.en}</p>
+					<!-- svelte-ignore a11y_autofocus -->
+					<button class="rounded border px-4 py-2" onclick={nextSentence} autofocus> Next </button>
+				{:else}
+					<form
+						onsubmit={(e) => {
+							e.preventDefault();
+							submitAnswer();
+						}}
+					>
+						<input
+							bind:this={inputEl}
+							type="text"
+							bind:value={answer}
+							placeholder="Your Answer"
+							class="border-b-2 border-primary px-3 py-2 outline-none"
+							onfocus={() => {
+								inputFocused = true;
+							}}
+							onblur={() => {
+								inputFocused = false;
+							}}
+						/>
+					</form>
 				{/if}
 			</div>
-
-			{#if revealed}
-				<!-- svelte-ignore a11y_autofocus -->
-				<button class="rounded border px-4 py-2" onclick={nextSentence} autofocus> Next </button>
-			{:else}
-				<form
-					onsubmit={(e) => {
-						e.preventDefault();
-						submitAnswer();
-					}}
-				>
-					<input
-						bind:this={inputEl}
-						type="text"
-						bind:value={answer}
-						placeholder="Your answer"
-						class="rounded border px-3 py-2"
-						onfocus={() => {
-							inputFocused = true;
-						}}
-						onblur={() => {
-							inputFocused = false;
-						}}
-					/>
-				</form>
-			{/if}
 		</main>
 	{/if}
 </div>
