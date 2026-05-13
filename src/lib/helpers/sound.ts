@@ -1,28 +1,21 @@
-import { asset } from "$app/paths"
+import { asset } from '$app/paths';
 
-export const keyAliases: Record<string, string> = {
-		backspace: 'backspace',
-		delete: 'backspace',
-		enter: 'enter',
-		' ': 'space',
-		tab: 'tab',
-		shift: 'shift'
-	};
-
-export function getKeyboardSounds(keyboardSound: string): Record<string, string> {
-    return import.meta.glob(asset(`sfx/keyboard/${keyboardSound}/*.wav`), {
-        eager: true,
-        query: '?url',
-        import: 'default',
-    }) as Record<string, string>
+export function playSound(soundUrl: string) {
+	new Audio(soundUrl).play().catch(() => {});
 }
+export const getSfxURL = (file: string): string => asset(`/sfx/${file}.wav`);
 
-export function mapSounds(soundModules: Record<string, string>): Record<string, string> {
-    const soundMap: Record<string, string> = {};
-    for (const [path, url] of Object.entries(soundModules)) {
-		const name = path.split('/').pop()!.replace('.wav', '').toLowerCase();
-		soundMap[name] = url;
-	}
+// Keyboard Sound Functions
+export const keyAliases: Record<string, string> = {
+	backspace: 'backspace',
+	delete: 'backspace',
+	enter: 'enter',
+	' ': 'space',
+	tab: 'tab',
+	shift: 'shift'
+};
 
-    return soundMap;
+export function getKeyboardSoundUrl(keyboard: string, key: string): string {
+	const normalized = keyAliases[key.toLowerCase()] ?? key.toLowerCase();
+	return asset(`/sfx/keyboard/${keyboard}/${normalized}.wav`);
 }

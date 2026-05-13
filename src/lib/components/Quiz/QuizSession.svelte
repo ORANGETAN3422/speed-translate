@@ -1,30 +1,22 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadSentence, type Sentence } from '$lib/helpers/sentence';
-	import { getKeyboardSounds, mapSounds, keyAliases } from '../../helpers/sound';
+	import { getKeyboardSoundUrl, playSound } from '../../helpers/sound';
+	import { cubicOut } from 'svelte/easing';
 
 	import Summary from './Summary.svelte';
 	//import ShaderBackground from '../Graphics/ShaderBackground.svelte';
 
-	const soundModules = getKeyboardSounds("nk-cream");
-	const soundMap: Record<string, string> = mapSounds(soundModules);
-
-	function playKeySound(e: KeyboardEvent) {
-		if (!inputFocused) return;
-
-		const key = e.key.toLowerCase();
-		const name = keyAliases[key] ?? key;
-		const url = soundMap[name];
-		if (!url) return;
-		new Audio(url).play().catch(() => {});
-	}
-
-	let { level, onclose }: { level: number; onclose: () => void } = $props();
-
 	// add a settings creation thing later for this
-	// reveal answer functonailty support later
+	// add reveal answer support
 	const REVEAL_ANSWER = false;
 	const GOAL = 10;
+	const KEYBOARD = 'nk-cream';
+
+	// session vars
+	let { level, onclose }: { level: number; onclose: () => void } = $props();
+
+	let mounted = $state(false);
 
 	let originalSentences: Sentence[] = $state<Sentence[]>([]);
 	let currentSentence = $state<Sentence | undefined>(undefined);
@@ -33,6 +25,46 @@
 
 	let inputEl = $state<HTMLInputElement | undefined>();
 	let inputFocused = $state(false);
+
+	function flyRotate(
+		node: Element,
+		{
+			delay = 0,
+			duration = 400,
+			easing = cubicOut,
+			x = 0,
+			y = 0,
+			opacity = 0,
+			rotate = 0
+		}: {
+			delay?: number;
+			duration?: number;
+			easing?: (t: number) => number;
+			x?: number;
+			y?: number;
+			opacity?: number;
+			rotate?: number;
+		} = {}
+	) {
+		const style = getComputedStyle(node);
+		const target_opacity = +style.opacity;
+		const transform = style.transform === 'none' ? '' : style.transform;
+		const od = target_opacity - opacity;
+
+		return {
+			delay,
+			duration,
+			easing,
+			css: (t: number, u: number) =>
+				`transform: ${transform} translate(${(1 - t) * x}px, ${(1 - t) * y}px) rotate(${(1 - t) * rotate}deg);` +
+				`opacity: ${target_opacity - od * u};`
+		};
+	}
+
+	function playKeySound(e: KeyboardEvent) {
+		if (!inputFocused) return;
+		playSound(getKeyboardSoundUrl(KEYBOARD, e.key));
+	}
 
 	$effect(() => {
 		if (!revealed) inputEl?.focus();
@@ -51,6 +83,8 @@
 		unansweredSentences = [...originalSentences];
 		startTime = Date.now();
 		nextSentence();
+
+		mounted = true;
 	});
 
 	$effect(() => {
@@ -87,8 +121,8 @@
 	}
 </script>
 
-<div class="fixed inset-0 isolate flex flex-col text-text bg-bg">
-	<!-- <ShaderBackground /> -->
+<div class="fixed inset-0 isolate flex flex-col bg-bg text-text">
+	<!-- <ShaderBackground /> dead -->
 	<header class="p-4">
 		<button onclick={onclose}>Back</button>
 	</header>
@@ -114,47 +148,55 @@
 					-webkit-mask-composite: source-in;
 				"
 			>
-				<div class="flex w-full max-w-md items-center gap-3">
-					<div class="h-2 flex-1 overflow-hidden rounded-full bg-surface">
-						<div
-							class="h-full bg-primary transition-all"
-							style="width: {(progress / GOAL) * 100}%"
-						></div>
-					</div>
-					<span class="text-sm text-muted tabular-nums">{progress} / {GOAL}</span>
-				</div>
-
-				<div class="text-center">
-					<p class="jp text-2xl">{currentSentence?.jp}</p>
-					{#if revealed}
-						<p class="mt-2 text-muted">{currentSentence?.en}</p>
-					{/if}
-				</div>
-
-				{#if revealed}
-					<!-- svelte-ignore a11y_autofocus -->
-					<button class="rounded border px-4 py-2" onclick={nextSentence} autofocus> Next </button>
-				{:else}
-					<form
-						onsubmit={(e) => {
-							e.preventDefault();
-							submitAnswer();
-						}}
+				{#if mounted}
+					<div
+						class="flex w-full max-w-md items-center gap-3"
+						in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 0 }}
 					>
-						<input
-							bind:this={inputEl}
-							type="text"
-							bind:value={answer}
-							placeholder="Your Answer"
-							class="border-b-2 border-primary px-3 py-2 outline-none"
-							onfocus={() => {
-								inputFocused = true;
+						<div class="h-2 flex-1 overflow-hidden rounded-full bg-surface">
+							<div
+								class="h-full bg-primary transition-all"
+								style="width: {(progress / GOAL) * 100}%"
+							></div>
+						</div>
+						<span class="text-sm text-muted tabular-nums">{progress} / {GOAL}</span>
+					</div>
+
+					<div class="text-center" in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 20 }}>
+						<p class="jp text-2xl">{currentSentence?.jp}</p>
+						{#if revealed}
+							<p class="mt-2 text-muted">{currentSentence?.en}</p>
+						{/if}
+					</div>
+
+					{#if revealed}
+						<!-- svelte-ignore a11y_autofocus -->
+						<button class="rounded border px-4 py-2" onclick={nextSentence} autofocus>
+							Next
+						</button>
+					{:else}
+						<form
+							in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 40 }}
+							onsubmit={(e) => {
+								e.preventDefault();
+								submitAnswer();
 							}}
-							onblur={() => {
-								inputFocused = false;
-							}}
-						/>
-					</form>
+						>
+							<input
+								bind:this={inputEl}
+								type="text"
+								bind:value={answer}
+								placeholder="Your Answer"
+								class="border-b-2 border-primary px-3 py-2 outline-none"
+								onfocus={() => {
+									inputFocused = true;
+								}}
+								onblur={() => {
+									inputFocused = false;
+								}}
+							/>
+						</form>
+					{/if}
 				{/if}
 			</div>
 		</main>

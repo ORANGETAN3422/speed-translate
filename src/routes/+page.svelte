@@ -15,7 +15,7 @@
 
 <div class="flex flex-col gap-2">
 	{#each things as n (n)}
-		<button onclick={() => createSession(n)}>Start {n}</button>
+		<button onclick={() => createSession(n)}>{n}</button>
 	{/each}
 </div>
 
