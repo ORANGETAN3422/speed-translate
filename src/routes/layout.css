@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
@@ -8,6 +8,7 @@
 	--color-surface: var(--surface);
 	--color-text: var(--text);
 	--color-primary: var(--primary);
+	--color-accent: var(--accent);
 	--color-muted: var(--muted);
 	--color-success: var(--success);
 	--color-error: var(--error);
@@ -18,27 +19,130 @@
 	--surface: oklch(0.97 0 0);
 	--text: oklch(0.2 0 0);
 	--primary: oklch(0.6 0.2 250);
+	--accent: oklch(0.78 0.16 75);
 	--muted: oklch(0.5 0 0);
 	--success: oklch(0.65 0.18 145);
 	--error: oklch(0.6 0.22 25);
 }
 
 [data-theme='dark'] {
-	--bg: oklch(0.18 0.02 250);
-	--surface: oklch(0.24 0.02 250);
-	--text: oklch(0.94 0.01 80);
-	--muted: oklch(0.6 0.02 240);
-	--primary: oklch(0.78 0.13 220);
-	--success: oklch(0.72 0.12 160);
-	--error: oklch(0.66 0.17 25);
+	--bg: oklch(0.17 0.01 290);
+	--surface: oklch(0.23 0.015 290);
+	--text: oklch(0.92 0.01 80);
+	--muted: oklch(0.55 0.02 290);
+	--primary: oklch(0.7 0.13 295);
+	--accent: oklch(0.74 0.13 30);
+	--success: oklch(0.7 0.1 150);
+	--error: oklch(0.65 0.14 15);
 }
 
 body {
 	background-color: var(--bg);
 	color: var(--text);
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'JetBrains Mono', monospace;
 }
 
 .jp {
-	font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+	font-family: 'IBM Plex Sans JP', 'JetBrains Mono', monospace;
+}
+
+.glow-num {
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	text-shadow:
+		0 0 8px var(--primary);
+}
+
+.glow {
+	filter: drop-shadow(0 0 4px color-mix(in oklch, var(--primary), transparent 70%));
+}
+
+.border-fancy {
+	border-bottom: solid color-mix(in oklch, var(--bc, var(--primary)), black 73%);
+	border-right: solid color-mix(in oklch, var(--bc, var(--primary)), black 73%);
+
+	border-top: solid color-mix(in oklch, var(--bc, var(--primary)), black 17%);
+	border-left: solid color-mix(in oklch, var(--bc, var(--primary)), black 17%);
+}
+
+.bg-fancy {
+	background-color: color-mix(in oklch, var(--bc, var(--primary)), black 64%);
+}
+
+.shadow-fancy {
+	box-shadow: 0px 4px 0 #0000001a;
+}
+
+@property --wave-x {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 0%;
+}
+
+.bg-textured {
+	background:
+		radial-gradient(
+			ellipse 80% 60% at 50% 0%,
+			color-mix(in oklch, var(--primary), transparent 98%),
+			transparent 70%
+		),
+		radial-gradient(
+				circle,
+				color-mix(in oklch, var(--bg), white 3%) 1.5px,
+				transparent 1px
+			)
+			0 0 / 28px 28px,
+		var(--bg);
+}
+
+.bg-textured::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+
+	/* move */
+	background: linear-gradient(
+		15deg,
+		transparent calc(var(--wave-x) - 30%),
+		color-mix(in oklch, var(--primary), transparent 95%) var(--wave-x),
+		transparent calc(var(--wave-x) + 30%)
+	);
+
+	/* dot hole */
+	-webkit-mask-image: radial-gradient(circle, black 1.5px, transparent 1.5px);
+	-webkit-mask-size: 28px 28px;
+	mask-image: radial-gradient(circle, black 1.5px, transparent 1.5px);
+	mask-size: 28px 28px;
+
+	animation: bg-wave 14s infinite;
+}
+
+@keyframes bg-wave {
+	0% {
+		--wave-x: 115%;
+	}
+	100% {
+		--wave-x: -15%;
+	}
+}
+
+.interactive {
+	cursor: pointer;
+	transition:
+		filter 120ms ease,
+		transform 80ms ease;
+}
+.interactive:hover:not(:disabled) {
+	filter: brightness(1.18);
+	transform: translateY(2px);
+	box-shadow: none;
+}
+.interactive:active:not(:disabled) {
+	filter: brightness(0.85);
+	transform: translateY(1px);
+}
+.interactive:disabled {
+	cursor: not-allowed;
 }
