@@ -63,7 +63,7 @@
 >
 	<div class="flex flex-col gap-2">
 		{#if mounted && !closing}
-			{#each answeredSentences as sentence, i (sentence.jp)}
+			{#each answeredSentences as sentence, i (sentence.question)}
 				<div
 					in:flyRotate|global={{ duration: 700, y: 150, rotate: 15, delay: i * 25 }}
 					out:osuDeath|global={{ duration: 1000, y: 250, delay: i * 25 }}

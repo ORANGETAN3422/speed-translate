@@ -20,26 +20,29 @@
 </script>
 
 <div class="flex flex-1 flex-col gap-1">
-	<p class="jp text-base">{sentence.jp}</p>
-	<p
-		class="text-sm text-muted"
-	>
-		{sentence.en}
+	<p class="jp text-base">{sentence.question}</p>
+	<p class="text-sm text-muted">
+		{sentence.answer}
 	</p>
 	<p class="text-sm">
-		<span class="text-muted ">A:</span>
-		<span class="transition-all duration-300 group-hover/card:text-text group-hover/card:[text-shadow:0_0_8px_var(--primary)]">{answer === '' ? 'No answer' : answer}</span>
+		<span class="text-muted">A:</span>
+		<span
+			class="transition-all duration-300 group-hover/card:text-text group-hover/card:[text-shadow:0_0_8px_var(--primary)]"
+			>{answer === '' ? 'No answer' : answer}</span
+		>
 	</p>
 </div>
 
-<div class="relative -my-3 -mr-5 flex shrink-0 items-center gap-3 self-stretch py-3 pr-5 pl-24 isolate">
-    <div
+<div
+	class="relative isolate -my-3 -mr-5 flex shrink-0 items-center gap-3 self-stretch py-3 pr-5 pl-24"
+>
+	<div
 		class="absolute inset-0 -z-10 opacity-60"
 		style="background: color-mix(in oklch, var(--bc, var(--primary)), black 52%); clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);"
 	></div>
 
 	<div
-		class="absolute inset-0 -z-10 opacity-60 group-hover/card:opacity-100 transition-opacity duration-300"
+		class="absolute inset-0 -z-10 opacity-60 transition-opacity duration-300 group-hover/card:opacity-100"
 		style="background: color-mix(in oklch, var(--bc, var(--primary)), black 52%); clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%);"
 	></div>
 

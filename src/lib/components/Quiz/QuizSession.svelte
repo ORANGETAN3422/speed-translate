@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadSentence, type Sentence } from '$lib/helpers/sentence';
-	import { getKeyboardSoundUrl, playSound } from '../../helpers/sound';
+	import { getKeyboardSoundUrl, playSound, preloadKeyboard } from '../../helpers/sound';
 	import { flyRotate } from '$lib/helpers/transitions';
 	import { cubicIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
@@ -12,11 +12,14 @@
 	// add a settings creation thing later for this
 	// add reveal answer support
 	const REVEAL_ANSWER = false;
-	const GOAL = 10;
 	const KEYBOARD = 'nk-cream';
 
 	// session vars
-	let { level, onclose }: { level: number; onclose: () => void } = $props();
+	let {
+		level,
+		goal = 10,
+		onclose
+	}: { level: number; goal?: number; onclose: () => void } = $props();
 
 	let mounted = $state(false);
 	let leaving = $state(false);
@@ -31,7 +34,8 @@
 
 	function playKeySound(e: KeyboardEvent) {
 		if (!inputFocused) return;
-		playSound(getKeyboardSoundUrl(KEYBOARD, e.key));
+		const url = getKeyboardSoundUrl(KEYBOARD, e.code);
+		if (url) playSound(url);
 	}
 
 	$effect(() => {
@@ -57,6 +61,7 @@
 	}
 
 	onMount(async () => {
+		preloadKeyboard(KEYBOARD);
 		originalSentences = await loadSentence(level);
 		unansweredSentences = [...originalSentences];
 		startTime = Date.now();
@@ -93,7 +98,7 @@
 	}
 
 	function nextSentence() {
-		if (progress >= GOAL || unansweredSentences.length === 0) {
+		if (progress >= goal || unansweredSentences.length === 0) {
 			elapsedMs = Date.now() - startTime;
 			finished = true;
 			return;
@@ -105,12 +110,27 @@
 		answer = '';
 		revealed = false;
 	}
+
+	function retry() {
+		unansweredSentences = [...originalSentences];
+		answeredSentences = [];
+		englishAnswers = [];
+		progress = 0;
+		finished = false;
+		startTime = Date.now();
+		nextSentence();
+	}
 </script>
 
-<div class="fixed inset-0 isolate flex flex-col bg-textured text-text" out:fade|global={{ duration: 300, easing: cubicIn }}>
+<div
+	class="bg-textured fixed inset-0 isolate flex flex-col text-text"
+	out:fade|global={{ duration: 300, easing: cubicIn }}
+>
 	<!-- <ShaderBackground /> dead -->
 	<header class="p-4">
-		<button class="interactive text-sm tracking-wider text-muted uppercase" onclick={onclose}>← Back</button>
+		<button class="interactive text-sm tracking-wider text-muted uppercase" onclick={onclose}
+			>← Back</button
+		>
 	</header>
 
 	{#if finished}
@@ -131,12 +151,19 @@
 				>
 					Return to menu
 				</button>
+				<button
+					class="border-fancy bg-fancy interactive px-4 py-2"
+					transition:fade|global={{ duration: 750, easing: cubicIn }}
+					onclick={retry}
+				>
+					Retry
+				</button>
 			{/if}
 		</main>
 	{:else}
 		<main class="flex flex-1 flex-col items-center justify-center gap-8 px-4">
 			{#if mounted}
-			<!-- progress -->
+				<!-- progress -->
 				<div
 					class="flex w-full max-w-md items-center gap-4"
 					in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 0 }}
@@ -144,7 +171,7 @@
 					<div class="h-2 flex-1 bg-surface">
 						<div
 							class="h-full bg-primary transition-all"
-							style="width: {(progress / GOAL) * 100}%"
+							style="width: {(progress / goal) * 100}%"
 						></div>
 					</div>
 					<span class="glow-num text-sm">{liveTime}</span>
@@ -152,16 +179,20 @@
 
 				<!-- jp sentene -->
 				<div class="text-center" in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 20 }}>
-					<p class="jp text-3xl leading-relaxed">{currentSentence?.jp}</p>
+					<p class="jp text-3xl leading-relaxed">{currentSentence?.question}</p>
 					{#if revealed}
-						<p class="mt-2 text-muted">{currentSentence?.en}</p>
+						<p class="mt-2 text-muted">{currentSentence?.answer}</p>
 					{/if}
 				</div>
 
 				<!-- answer input -->
 				{#if revealed}
 					<!-- svelte-ignore a11y_autofocus -->
-					<button class="border-fancy bg-fancy interactive px-4 py-2" onclick={nextSentence} autofocus>
+					<button
+						class="border-fancy bg-fancy interactive px-4 py-2"
+						onclick={nextSentence}
+						autofocus
+					>
 						Next
 					</button>
 				{/if}

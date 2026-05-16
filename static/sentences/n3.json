@@ -1,2502 +1,2502 @@
 [
   {
-    "jp": "したくない。",
-    "en": "I don't want to.",
+    "question": "したくない。",
+    "answer": "I don't want to.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなことしてません。",
-    "en": "I didn't do that.",
+    "question": "そんなことしてません。",
+    "answer": "I didn't do that.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼にするよ。",
-    "en": "I'll take him.",
+    "question": "彼にするよ。",
+    "answer": "I'll take him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は何をしましょうか。",
-    "en": "Where do I come in?",
+    "question": "私は何をしましょうか。",
+    "answer": "Where do I come in?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何をしたいのですか。",
-    "en": "What does he want to do?",
+    "question": "彼は何をしたいのですか。",
+    "answer": "What does he want to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "あれ、したいんだよね？",
-    "en": "You want to do that, don't you?",
+    "question": "あれ、したいんだよね？",
+    "answer": "You want to do that, don't you?",
     "jlpt": "N3"
   },
   {
-    "jp": "それで何をしようとしているの？",
-    "en": "And what are we going to do?",
+    "question": "それで何をしようとしているの？",
+    "answer": "And what are we going to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼と仕事をする。",
-    "en": "I work with him.",
+    "question": "私は彼と仕事をする。",
+    "answer": "I work with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は何もしないだろう。",
-    "en": "She'll do nothing.",
+    "question": "彼女は何もしないだろう。",
+    "answer": "She'll do nothing.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何をしている人ですか。",
-    "en": "What is he?",
+    "question": "彼は何をしている人ですか。",
+    "answer": "What is he?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は今勉強していません。",
-    "en": "I am not studying now.",
+    "question": "私は今勉強していません。",
+    "answer": "I am not studying now.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼がここにいさえすればなあ。",
-    "en": "I'm disappointed that he's not here.",
+    "question": "彼がここにいさえすればなあ。",
+    "answer": "I'm disappointed that he's not here.",
     "jlpt": "N3"
   },
   {
-    "jp": "どんな仕事をしていますか。",
-    "en": "What sort of work do you do?",
+    "question": "どんな仕事をしていますか。",
+    "answer": "What sort of work do you do?",
     "jlpt": "N3"
   },
   {
-    "jp": "できるけど、しないよ。",
-    "en": "I can do it, but I won't.",
+    "question": "できるけど、しないよ。",
+    "answer": "I can do it, but I won't.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は成功していただろう。",
-    "en": "He would have succeeded.",
+    "question": "彼は成功していただろう。",
+    "answer": "He would have succeeded.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼に電話をした。",
-    "en": "I gave him a call.",
+    "question": "私は彼に電話をした。",
+    "answer": "I gave him a call.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はこのことをしなくてもよい。",
-    "en": "He does not have to do this.",
+    "question": "彼はこのことをしなくてもよい。",
+    "answer": "He does not have to do this.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は行くことにした。",
-    "en": "I've made up my mind to go.",
+    "question": "私は行くことにした。",
+    "answer": "I've made up my mind to go.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女に言わないことにした。",
-    "en": "I decided not to tell her.",
+    "question": "彼女に言わないことにした。",
+    "answer": "I decided not to tell her.",
     "jlpt": "N3"
   },
   {
-    "jp": "何かしなければならない。",
-    "en": "I have to do something.",
+    "question": "何かしなければならない。",
+    "answer": "I have to do something.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はどうしたのですか。",
-    "en": "What is the matter with him?",
+    "question": "彼はどうしたのですか。",
+    "answer": "What is the matter with him?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は言われたことをした。",
-    "en": "He did what he had been told.",
+    "question": "彼は言われたことをした。",
+    "answer": "He did what he had beanswer told.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼がそれをしたと思う。",
-    "en": "I think he did it.",
+    "question": "私は彼がそれをしたと思う。",
+    "answer": "I think he did it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は何をしているんですか。",
-    "en": "What does she do?",
+    "question": "彼女は何をしているんですか。",
+    "answer": "What does she do?",
     "jlpt": "N3"
   },
   {
-    "jp": "これを、私がしたのです。",
-    "en": "This I have done.",
+    "question": "これを、私がしたのです。",
+    "answer": "This I have done.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何もすることがありません。",
-    "en": "He has nothing to do.",
+    "question": "彼は何もすることがありません。",
+    "answer": "He has nothing to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は結婚しているのかしら。",
-    "en": "I wonder if he is married.",
+    "question": "彼は結婚しているのかしら。",
+    "answer": "I wonder if he is married.",
     "jlpt": "N3"
   },
   {
-    "jp": "家にいることにした。",
-    "en": "I decided to stay home.",
+    "question": "家にいることにした。",
+    "answer": "I decided to stay home.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が何をしたと思いますか。",
-    "en": "What do you think he did?",
+    "question": "彼が何をしたと思いますか。",
+    "answer": "What do you think he did?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私によくしてくれた。",
-    "en": "He did well by me.",
+    "question": "彼は私によくしてくれた。",
+    "answer": "He did well by me.",
     "jlpt": "N3"
   },
   {
-    "jp": "その時にしていただろう。",
-    "en": "I would have done it at that time.",
+    "question": "その時にしていただろう。",
+    "answer": "I would have done it at that time.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は出発しようとしていた。",
-    "en": "He was about to start.",
+    "question": "彼は出発しようとしていた。",
+    "answer": "He was about to start.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女のことを気にしている。",
-    "en": "He can't take his eyes off her.",
+    "question": "彼は彼女のことを気にしている。",
+    "answer": "He can't take his eyes off her.",
     "jlpt": "N3"
   },
   {
-    "jp": "しなきゃよかったな。",
-    "en": "I shouldn't have done it.",
+    "question": "しなきゃよかったな。",
+    "answer": "I shouldn't have done it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を馬鹿にしている。",
-    "en": "I look upon him as a fool.",
+    "question": "私は彼を馬鹿にしている。",
+    "answer": "I look upon him as a fool.",
     "jlpt": "N3"
   },
   {
-    "jp": "私のことは気にしないで。",
-    "en": "Don't mind me.",
+    "question": "私のことは気にしないで。",
+    "answer": "Don't mind me.",
     "jlpt": "N3"
   },
   {
-    "jp": "いいよ、何をすればいいの？",
-    "en": "Sure. What can I do?",
+    "question": "いいよ、何をすればいいの？",
+    "answer": "Sure. What can I do?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは何をしているのか。",
-    "en": "What are they at?",
+    "question": "彼らは何をしているのか。",
+    "answer": "What are they at?",
     "jlpt": "N3"
   },
   {
-    "jp": "ここにいることにしたよ。",
-    "en": "I've decided to stay here.",
+    "question": "ここにいることにしたよ。",
+    "answer": "I've decided to stay here.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は結婚しています。",
-    "en": "I'm married.",
+    "question": "私は結婚しています。",
+    "answer": "I'm married.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は出発しようとしていた。",
-    "en": "I was about to start.",
+    "question": "私は出発しようとしていた。",
+    "answer": "I was about to start.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話したのですか。",
-    "en": "Did you telephone him?",
+    "question": "彼に電話したのですか。",
+    "answer": "Did you telephone him?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼に説明しました。",
-    "en": "I explained it to him.",
+    "question": "私は彼に説明しました。",
+    "answer": "I explained it to him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女に電話をしました。",
-    "en": "I called her up.",
+    "question": "私は彼女に電話をしました。",
+    "answer": "I called her up.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は何をすべきか知っている。",
-    "en": "I know what to do.",
+    "question": "私は何をすべきか知っている。",
+    "answer": "I know what to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼に電話した。",
-    "en": "She called him on the phone.",
+    "question": "彼女は彼に電話した。",
+    "answer": "She called him on the phone.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が大きな顔をしていた。",
-    "en": "He acted like he owned the place.",
+    "question": "彼が大きな顔をしていた。",
+    "answer": "He acted like he owned the place.",
     "jlpt": "N3"
   },
   {
-    "jp": "そのことで彼と話がしたい。",
-    "en": "I want to talk to him about it.",
+    "question": "そのことで彼と話がしたい。",
+    "answer": "I want to talk to him about it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はこの質問を彼にした。",
-    "en": "I put this question to him.",
+    "question": "私はこの質問を彼にした。",
+    "answer": "I put this question to him.",
     "jlpt": "N3"
   },
   {
-    "jp": "悪いことをしていない。",
-    "en": "I did nothing wrong.",
+    "question": "悪いことをしていない。",
+    "answer": "I did nothing wrong.",
     "jlpt": "N3"
   },
   {
-    "jp": "気にしていないよ。",
-    "en": "I don't care.",
+    "question": "気にしていないよ。",
+    "answer": "I don't care.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は結婚していません。",
-    "en": "She isn't married.",
+    "question": "彼女は結婚していません。",
+    "answer": "She isn't married.",
     "jlpt": "N3"
   },
   {
-    "jp": "私なんか悪いことしたっけ？",
-    "en": "Have I done something wrong?",
+    "question": "私なんか悪いことしたっけ？",
+    "answer": "Have I done something wrong?",
     "jlpt": "N3"
   },
   {
-    "jp": "どんな仕事をするのですか。",
-    "en": "What kind of work will you do?",
+    "question": "どんな仕事をするのですか。",
+    "answer": "What kind of work will you do?",
     "jlpt": "N3"
   },
   {
-    "jp": "私にできることは何でもしよう。",
-    "en": "I will do everything in my power.",
+    "question": "私にできることは何でもしよう。",
+    "answer": "I will do everything in my power.",
     "jlpt": "N3"
   },
   {
-    "jp": "すなわち彼はそれをしたくないのだ。",
-    "en": "In other words, he doesn't want to do it.",
+    "question": "すなわち彼はそれをしたくないのだ。",
+    "answer": "In other words, he doesn't want to do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたは何をしたいですか。",
-    "en": "What do you want to do?",
+    "question": "あなたは何をしたいですか。",
+    "answer": "What do you want to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "何をしたいのか言ってね。",
-    "en": "Tell me what you want to do.",
+    "question": "何をしたいのか言ってね。",
+    "answer": "Tell me what you want to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼と結婚した。",
-    "en": "She married him.",
+    "question": "彼女は彼と結婚した。",
+    "answer": "She married him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は外出しています。",
-    "en": "He is not in.",
+    "question": "彼は外出しています。",
+    "answer": "He is not in.",
     "jlpt": "N3"
   },
   {
-    "jp": "私としては家にいたい。",
-    "en": "For my part I prefer to stay at home.",
+    "question": "私としては家にいたい。",
+    "answer": "For my part I prefer to stay at home.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は自分でそれをした。",
-    "en": "He did it himself.",
+    "question": "彼は自分でそれをした。",
+    "answer": "He did it himself.",
     "jlpt": "N3"
   },
   {
-    "jp": "それをしたのは私たちではない。",
-    "en": "It's not us who did it.",
+    "question": "それをしたのは私たちではない。",
+    "answer": "It's not us who did it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼から何をするか聞いた？",
-    "en": "Did he tell you what to do?",
+    "question": "彼から何をするか聞いた？",
+    "answer": "Did he tell you what to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "このようにして私はそれをした。",
-    "en": "This is how I did it.",
+    "question": "このようにして私はそれをした。",
+    "answer": "This is how I did it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちは何もすることがない。",
-    "en": "We don't have anything to do.",
+    "question": "私たちは何もすることがない。",
+    "answer": "We don't have anything to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼を尊敬している。",
-    "en": "She thinks highly of him.",
+    "question": "彼女は彼を尊敬している。",
+    "answer": "She thinks highly of him.",
     "jlpt": "N3"
   },
   {
-    "jp": "それで、君は何をしたいの？",
-    "en": "Well then, what do you want to do?",
+    "question": "それで、君は何をしたいの？",
+    "answer": "Well thanswer, what do you want to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼を幸せにしました。",
-    "en": "She made him happy.",
+    "question": "彼女は彼を幸せにしました。",
+    "answer": "She made him happy.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は今日、何をしましたか？",
-    "en": "What has he done today?",
+    "question": "彼は今日、何をしましたか？",
+    "answer": "What has he done today?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼にそれをさせた。",
-    "en": "She made him do it.",
+    "question": "彼女は彼にそれをさせた。",
+    "answer": "She made him do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "仕事してるのは私だけ。",
-    "en": "There's no one at work but me.",
+    "question": "仕事してるのは私だけ。",
+    "answer": "There's no one at work but me.",
     "jlpt": "N3"
   },
   {
-    "jp": "君は彼に従ってさえいればいい。",
-    "en": "You only have to follow him.",
+    "question": "君は彼に従ってさえいればいい。",
+    "answer": "You only have to follow him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は今お金はいらない。",
-    "en": "I do not need money now.",
+    "question": "私は今お金はいらない。",
+    "answer": "I do not need money now.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼にそうさせました。",
-    "en": "I made him do so.",
+    "question": "私は彼にそうさせました。",
+    "answer": "I made him do so.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちは彼を尊敬している。",
-    "en": "We look up to him.",
+    "question": "私たちは彼を尊敬している。",
+    "answer": "We look up to him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女を幸せにします。",
-    "en": "I will make her happy.",
+    "question": "私は彼女を幸せにします。",
+    "answer": "I will make her happy.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は出発しようとしている。",
-    "en": "She is about to leave.",
+    "question": "彼女は出発しようとしている。",
+    "answer": "She is about to leave.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は私の宿題をしています。",
-    "en": "I'm doing my homework.",
+    "question": "私は私の宿題をしています。",
+    "answer": "I'm doing my homework.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はいいですよ。",
-    "en": "It's OK with me.",
+    "question": "私はいいですよ。",
+    "answer": "It's OK with me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私のせいにしようとした。",
-    "en": "He tried to put the blame on me.",
+    "question": "彼は私のせいにしようとした。",
+    "answer": "He tried to put the blame on me.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は楽しみにしています。",
-    "en": "I'm looking forward to it.",
+    "question": "私は楽しみにしています。",
+    "answer": "I'm looking forward to it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私のことは心配しないで。",
-    "en": "Don't worry about me.",
+    "question": "私のことは心配しないで。",
+    "answer": "Don't worry about me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はまた失敗したのですか。",
-    "en": "Did he fail again?",
+    "question": "彼はまた失敗したのですか。",
+    "answer": "Did he fail again?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は勉強しなければなりません。",
-    "en": "I have to study.",
+    "question": "私は勉強しなければなりません。",
+    "answer": "I have to study.",
     "jlpt": "N3"
   },
   {
-    "jp": "そこで何をしてたの？",
-    "en": "What were you doing down there?",
+    "question": "そこで何をしてたの？",
+    "answer": "What were you doing down there?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女のためなら何でもする。",
-    "en": "I will do anything I can do for her.",
+    "question": "私は彼女のためなら何でもする。",
+    "answer": "I will do anything I can do for her.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなの気にしないで。",
-    "en": "Don't worry about that.",
+    "question": "そんなの気にしないで。",
+    "answer": "Don't worry about that.",
     "jlpt": "N3"
   },
   {
-    "jp": "自分ですればいいだろ。",
-    "en": "Do your own work.",
+    "question": "自分ですればいいだろ。",
+    "answer": "Do your own work.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼と話がしたいんです。",
-    "en": "I want to have a talk with him.",
+    "question": "彼と話がしたいんです。",
+    "answer": "I want to have a talk with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたは勉強していますか。",
-    "en": "Are you studying?",
+    "question": "あなたは勉強していますか。",
+    "answer": "Are you studying?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼の言う通りにした。",
-    "en": "I did it the way he told me to.",
+    "question": "私は彼の言う通りにした。",
+    "answer": "I did it the way he told me to.",
     "jlpt": "N3"
   },
   {
-    "jp": "次に何をしたらよいのですか。",
-    "en": "What am I to do next?",
+    "question": "次に何をしたらよいのですか。",
+    "answer": "What am I to do next?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はいい体をしている。",
-    "en": "He has a nice body.",
+    "question": "彼はいい体をしている。",
+    "answer": "He has a nice body.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は感謝しています。",
-    "en": "I am thankful.",
+    "question": "私は感謝しています。",
+    "answer": "I am thankful.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が何をするかわからない。",
-    "en": "There is no telling what he will do.",
+    "question": "彼が何をするかわからない。",
+    "answer": "There is no telling what he will do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私を見ることさえしなかった。",
-    "en": "She didn't so much as look at me.",
+    "question": "彼女は私を見ることさえしなかった。",
+    "answer": "She didn't so much as look at me.",
     "jlpt": "N3"
   },
   {
-    "jp": "なんてことをしてくれたんだ。",
-    "en": "What have you done?",
+    "question": "なんてことをしてくれたんだ。",
+    "answer": "What have you done?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はいつも勉強している。",
-    "en": "He is always studying.",
+    "question": "彼はいつも勉強している。",
+    "answer": "He is always studying.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼の言うようにしなさい。",
-    "en": "Do it like he tells you.",
+    "question": "彼の言うようにしなさい。",
+    "answer": "Do it like he tells you.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はそれをすると言います。",
-    "en": "She says she does that.",
+    "question": "彼女はそれをすると言います。",
+    "answer": "She says she does that.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼とそのことで議論した。",
-    "en": "I argued with him about it.",
+    "question": "私は彼とそのことで議論した。",
+    "answer": "I argued with him about it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私を現在の私にした。",
-    "en": "He has made me what I am today.",
+    "question": "彼は私を現在の私にした。",
+    "answer": "He has made me what I am today.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私に質問をした。",
-    "en": "She asked me a question.",
+    "question": "彼女は私に質問をした。",
+    "answer": "She asked me a question.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はこれを必要としている。",
-    "en": "I need this.",
+    "question": "私はこれを必要としている。",
+    "answer": "I need this.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私を愛しているかしら。",
-    "en": "I wonder if he loves me.",
+    "question": "彼は私を愛しているかしら。",
+    "answer": "I wonder if he loves me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼にはそれはすることができない。",
-    "en": "He is unable to do it.",
+    "question": "彼にはそれはすることができない。",
+    "answer": "He is unable to do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はうまいことをした。",
-    "en": "He had his share of luck.",
+    "question": "彼はうまいことをした。",
+    "answer": "He had his share of luck.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が食べてるのにします。",
-    "en": "I'll have what he's having.",
+    "question": "彼が食べてるのにします。",
+    "answer": "I'll have what he's having.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はどうすればいいんだろう。",
-    "en": "I wonder what I should do.",
+    "question": "私はどうすればいいんだろう。",
+    "answer": "I wonder what I should do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は息をしていますか。",
-    "en": "Is he breathing?",
+    "question": "彼は息をしていますか。",
+    "answer": "Is he breathing?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は結婚したのかしら。",
-    "en": "I wonder if she is married.",
+    "question": "彼女は結婚したのかしら。",
+    "answer": "I wonder if she is married.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はおかしな顔をしている。",
-    "en": "She has a funny face.",
+    "question": "彼女はおかしな顔をしている。",
+    "answer": "She has a funny face.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女にお会いしたいのですが。",
-    "en": "I'd like to see her.",
+    "question": "彼女にお会いしたいのですが。",
+    "answer": "I'd like to see her.",
     "jlpt": "N3"
   },
   {
-    "jp": "私が運転しましょうか？",
-    "en": "Do you want me to drive?",
+    "question": "私が運転しましょうか？",
+    "answer": "Do you want me to drive?",
     "jlpt": "N3"
   },
   {
-    "jp": "したいことを何でもしなさい。",
-    "en": "Do whatever you want to do.",
+    "question": "したいことを何でもしなさい。",
+    "answer": "Do whatever you want to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はサッカーをしている。",
-    "en": "He plays soccer.",
+    "question": "彼はサッカーをしている。",
+    "answer": "He plays soccer.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼がそれをしたのを知っている。",
-    "en": "I know that it was done by him.",
+    "question": "私は彼がそれをしたのを知っている。",
+    "answer": "I know that it was done by him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は成功したいんです。",
-    "en": "I'm anxious to succeed.",
+    "question": "私は成功したいんです。",
+    "answer": "I'm anxious to succeed.",
     "jlpt": "N3"
   },
   {
-    "jp": "だから、どうした？",
-    "en": "So, what's the problem?",
+    "question": "だから、どうした？",
+    "answer": "So, what's the problem?",
     "jlpt": "N3"
   },
   {
-    "jp": "私のためにしてくれる？",
-    "en": "Will you do it for me?",
+    "question": "私のためにしてくれる？",
+    "answer": "Will you do it for me?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女に恋をしている。",
-    "en": "I love her.",
+    "question": "私は彼女に恋をしている。",
+    "answer": "I love her.",
     "jlpt": "N3"
   },
   {
-    "jp": "さぁ、勉強しなくっちゃ。",
-    "en": "I have to study now.",
+    "question": "さぁ、勉強しなくっちゃ。",
+    "answer": "I have to study now.",
     "jlpt": "N3"
   },
   {
-    "jp": "誰にしたらいいかしら？",
-    "en": "Who shall I choose?",
+    "question": "誰にしたらいいかしら？",
+    "answer": "Who shall I choose?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はどうしてるのかしら？",
-    "en": "I wonder how she is doing.",
+    "question": "彼女はどうしてるのかしら？",
+    "answer": "I wonder how she is doing.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女に電話することにしました。",
-    "en": "I decided to call her.",
+    "question": "彼女に電話することにしました。",
+    "answer": "I decided to call her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話したんだ。",
-    "en": "I called him up.",
+    "question": "彼に電話したんだ。",
+    "answer": "I called him up.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼のしたことは間違っていない。",
-    "en": "What he did is not wrong.",
+    "question": "彼のしたことは間違っていない。",
+    "answer": "What he did is not wrong.",
     "jlpt": "N3"
   },
   {
-    "jp": "他のはありませんか？",
-    "en": "Do you have any others?",
+    "question": "他のはありませんか？",
+    "answer": "Do you have any others?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は病気をしていたようだった。",
-    "en": "He seemed to have been ill.",
+    "question": "彼は病気をしていたようだった。",
+    "answer": "He seemed to have beanswer ill.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は外出しようとしていた。",
-    "en": "She was on the point of going out.",
+    "question": "彼女は外出しようとしていた。",
+    "answer": "She was on the point of going out.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は何をしなければならないのですか。",
-    "en": "What am I to do?",
+    "question": "私は何をしなければならないのですか。",
+    "answer": "What am I to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女を幸福にした。",
-    "en": "He made her happy.",
+    "question": "彼は彼女を幸福にした。",
+    "answer": "He made her happy.",
     "jlpt": "N3"
   },
   {
-    "jp": "好きなことしていいよ。",
-    "en": "You can do whatever you like.",
+    "question": "好きなことしていいよ。",
+    "answer": "You can do whatever you like.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼と友達になろうとした。",
-    "en": "She tried to make friends with him.",
+    "question": "彼女は彼と友達になろうとした。",
+    "answer": "She tried to make frianswerds with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは行かないことにした。",
-    "en": "They've decided not to come.",
+    "question": "彼らは行かないことにした。",
+    "answer": "They've decided not to come.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が私にキスしようとしたの。",
-    "en": "He tried to kiss me.",
+    "question": "彼が私にキスしようとしたの。",
+    "answer": "He tried to kiss me.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちは静かにしていた。",
-    "en": "We kept quiet.",
+    "question": "私たちは静かにしていた。",
+    "answer": "We kept quiet.",
     "jlpt": "N3"
   },
   {
-    "jp": "あれ、私何言おうとしたんだっけ？",
-    "en": "Uhh, what was I going to say again?",
+    "question": "あれ、私何言おうとしたんだっけ？",
+    "answer": "Uhh, what was I going to say again?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らはそれをしなかった。",
-    "en": "They didn't do it.",
+    "question": "彼らはそれをしなかった。",
+    "answer": "They didn't do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は出かけようとしていた。",
-    "en": "She was on the point of leaving.",
+    "question": "彼女は出かけようとしていた。",
+    "answer": "She was on the point of leaving.",
     "jlpt": "N3"
   },
   {
-    "jp": "私とテニスをしませんか。",
-    "en": "What do you say to playing tennis with me?",
+    "question": "私とテニスをしませんか。",
+    "answer": "What do you say to playing tanswernis with me?",
     "jlpt": "N3"
   },
   {
-    "jp": "私はここにいなくてもいい。",
-    "en": "I don't have to be here.",
+    "question": "私はここにいなくてもいい。",
+    "answer": "I don't have to be here.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女を幸福にしたい。",
-    "en": "I want to make her happy.",
+    "question": "私は彼女を幸福にしたい。",
+    "answer": "I want to make her happy.",
     "jlpt": "N3"
   },
   {
-    "jp": "それをしなければと思った。",
-    "en": "I thought I must do it.",
+    "question": "それをしなければと思った。",
+    "answer": "I thought I must do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちの方であらゆることをした。",
-    "en": "We did everything for our part.",
+    "question": "私たちの方であらゆることをした。",
+    "answer": "We did everything for our part.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなことをしては彼女に悪い。",
-    "en": "If you do that kind of thing, it's not fair to her.",
+    "question": "そんなことをしては彼女に悪い。",
+    "answer": "If you do that kind of thing, it's not fair to her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女のことは心配するな。",
-    "en": "Don't you worry about her.",
+    "question": "彼女のことは心配するな。",
+    "answer": "Don't you worry about her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私がいることに気づいた。",
-    "en": "He noticed my presence.",
+    "question": "彼は私がいることに気づいた。",
+    "answer": "He noticed my presanswerce.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は昨日仕事をしていません。",
-    "en": "I didn't work yesterday.",
+    "question": "私は昨日仕事をしていません。",
+    "answer": "I didn't work yesterday.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は仕事はしないと言った。",
-    "en": "She said no more work.",
+    "question": "彼女は仕事はしないと言った。",
+    "answer": "She said no more work.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私の話を聞こうとしない。",
-    "en": "He won't listen to me.",
+    "question": "彼は私の話を聞こうとしない。",
+    "answer": "He won't listanswer to me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は成功すると思うよ。",
-    "en": "I think he will succeed.",
+    "question": "彼は成功すると思うよ。",
+    "answer": "I think he will succeed.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女を信用しているのか？",
-    "en": "Do you trust her?",
+    "question": "彼女を信用しているのか？",
+    "answer": "Do you trust her?",
     "jlpt": "N3"
   },
   {
-    "jp": "そうするのが彼のためだった。",
-    "en": "It was to his profit to do so.",
+    "question": "そうするのが彼のためだった。",
+    "answer": "It was to his profit to do so.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼の車を修理している。",
-    "en": "I'm working on his car.",
+    "question": "私は彼の車を修理している。",
+    "answer": "I'm working on his car.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何ていい人なのでしょう。",
-    "en": "What a nice fellow he is!",
+    "question": "彼は何ていい人なのでしょう。",
+    "answer": "What a nice fellow he is!",
     "jlpt": "N3"
   },
   {
-    "jp": "しかし彼もまた興奮していた。",
-    "en": "But he was excited too.",
+    "question": "しかし彼もまた興奮していた。",
+    "answer": "But he was excited too.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私のと同じ時計をしている。",
-    "en": "She wears the same watch as mine.",
+    "question": "彼女は私のと同じ時計をしている。",
+    "answer": "She wears the same watch as mine.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女を妻にした。",
-    "en": "He made her his wife.",
+    "question": "彼は彼女を妻にした。",
+    "answer": "He made her his wife.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女には電話しなくていいよ。",
-    "en": "You don't need to call her.",
+    "question": "彼女には電話しなくていいよ。",
+    "answer": "You don't need to call her.",
     "jlpt": "N3"
   },
   {
-    "jp": "君のことを心配している。",
-    "en": "We are worried about you.",
+    "question": "君のことを心配している。",
+    "answer": "We are worried about you.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼のことを愛している。",
-    "en": "She loves him.",
+    "question": "彼女は彼のことを愛している。",
+    "answer": "She loves him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は演説していた。",
-    "en": "He was giving a speech.",
+    "question": "彼は演説していた。",
+    "answer": "He was giving a speech.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は結婚してないです。",
-    "en": "He is unmarried.",
+    "question": "彼は結婚してないです。",
+    "answer": "He is unmarried.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなことしない方がいいって。",
-    "en": "You shouldn't do such a thing.",
+    "question": "そんなことしない方がいいって。",
+    "answer": "You shouldn't do such a thing.",
     "jlpt": "N3"
   },
   {
-    "jp": "それから君はどうしたのか。",
-    "en": "What did you do then?",
+    "question": "それから君はどうしたのか。",
+    "answer": "What did you do thanswer?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は少しも気にしていない。",
-    "en": "I don't care a rap.",
+    "question": "私は少しも気にしていない。",
+    "answer": "I don't care a rap.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼の言ったことに反対する。",
-    "en": "I dissent from what he said.",
+    "question": "私は彼の言ったことに反対する。",
+    "answer": "I dissanswert from what he said.",
     "jlpt": "N3"
   },
   {
-    "jp": "いいよ、気にしなくて。",
-    "en": "Don't worry about it.",
+    "question": "いいよ、気にしなくて。",
+    "answer": "Don't worry about it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はどうしてる？",
-    "en": "How is he?",
+    "question": "彼はどうしてる？",
+    "answer": "How is he?",
     "jlpt": "N3"
   },
   {
-    "jp": "言われたようにせよ。",
-    "en": "Do as you are told.",
+    "question": "言われたようにせよ。",
+    "answer": "Do as you are told.",
     "jlpt": "N3"
   },
   {
-    "jp": "次何をするか知りません。",
-    "en": "I don't know what I'll do next.",
+    "question": "次何をするか知りません。",
+    "answer": "I don't know what I'll do next.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はなぜそんなことをしたのか。",
-    "en": "Why did he do that?",
+    "question": "彼はなぜそんなことをしたのか。",
+    "answer": "Why did he do that?",
     "jlpt": "N3"
   },
   {
-    "jp": "君は今何をしているの。",
-    "en": "What are you about now?",
+    "question": "君は今何をしているの。",
+    "answer": "What are you about now?",
     "jlpt": "N3"
   },
   {
-    "jp": "することがたくさんある。",
-    "en": "We have a great deal to do.",
+    "question": "することがたくさんある。",
+    "answer": "We have a great deal to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちは彼の邪魔をした。",
-    "en": "We disturbed him.",
+    "question": "私たちは彼の邪魔をした。",
+    "answer": "We disturbed him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女が彼をお金持ちにした。",
-    "en": "She made him rich.",
+    "question": "彼女が彼をお金持ちにした。",
+    "answer": "She made him rich.",
     "jlpt": "N3"
   },
   {
-    "jp": "今日しなくてもいいよ。",
-    "en": "It is OK if you don't do it today.",
+    "question": "今日しなくてもいいよ。",
+    "answer": "It is OK if you don't do it today.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はあなたを尊敬している。",
-    "en": "I look up to you.",
+    "question": "私はあなたを尊敬している。",
+    "answer": "I look up to you.",
     "jlpt": "N3"
   },
   {
-    "jp": "私の本はどうしましたか。",
-    "en": "What did you do with my book?",
+    "question": "私の本はどうしましたか。",
+    "answer": "What did you do with my book?",
     "jlpt": "N3"
   },
   {
-    "jp": "私としては、満足してます。",
-    "en": "As for me, I'm satisfied.",
+    "question": "私としては、満足してます。",
+    "answer": "As for me, I'm satisfied.",
     "jlpt": "N3"
   },
   {
-    "jp": "したいけど、そんな時間はない。",
-    "en": "I'd like to, but I don't have the time.",
+    "question": "したいけど、そんな時間はない。",
+    "answer": "I'd like to, but I don't have the time.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はその問題を理解している。",
-    "en": "He understands the problem.",
+    "question": "彼はその問題を理解している。",
+    "answer": "He understands the problem.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼の考えは私と同じだ。",
-    "en": "His idea is identical to mine.",
+    "question": "彼の考えは私と同じだ。",
+    "answer": "His idea is idanswertical to mine.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼に勉強するよう言った。",
-    "en": "She told him to study.",
+    "question": "彼女は彼に勉強するよう言った。",
+    "answer": "She told him to study.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私を助けている。",
-    "en": "She's helping me.",
+    "question": "彼女は私を助けている。",
+    "answer": "She's helping me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそれを読みもしなかった。",
-    "en": "He didn't even read it.",
+    "question": "彼はそれを読みもしなかった。",
+    "answer": "He didn't evanswer read it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はゴルフをしている。",
-    "en": "He is playing golf.",
+    "question": "彼はゴルフをしている。",
+    "answer": "He is playing golf.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女を愛していない。",
-    "en": "I don't love her.",
+    "question": "私は彼女を愛していない。",
+    "answer": "I don't love her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はよい声をしている。",
-    "en": "He has a sweet voice.",
+    "question": "彼はよい声をしている。",
+    "answer": "He has a sweet voice.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は外出せずに家にいた。",
-    "en": "I stayed at home instead of going out.",
+    "question": "私は外出せずに家にいた。",
+    "answer": "I stayed at home instead of going out.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼にキスをした。",
-    "en": "She kissed him.",
+    "question": "彼女は彼にキスをした。",
+    "answer": "She kissed him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何について話している？",
-    "en": "What's he talking about?",
+    "question": "彼は何について話している？",
+    "answer": "What's he talking about?",
     "jlpt": "N3"
   },
   {
-    "jp": "これは、私たちがするしかない。",
-    "en": "That is something we can't avoid doing.",
+    "question": "これは、私たちがするしかない。",
+    "answer": "That is something we can't avoid doing.",
     "jlpt": "N3"
   },
   {
-    "jp": "私としては、反対しません。",
-    "en": "For my part, I have no objection.",
+    "question": "私としては、反対しません。",
+    "answer": "For my part, I have no objection.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたのためにしました。",
-    "en": "I did it for you.",
+    "question": "あなたのためにしました。",
+    "answer": "I did it for you.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を味方にしよう。",
-    "en": "I will make a friend of him.",
+    "question": "私は彼を味方にしよう。",
+    "answer": "I will make a frianswerd of him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はついていない。",
-    "en": "Luck is against me.",
+    "question": "私はついていない。",
+    "answer": "Luck is against me.",
     "jlpt": "N3"
   },
   {
-    "jp": "ではそのようにしてください。",
-    "en": "OK then, please do it that way.",
+    "question": "ではそのようにしてください。",
+    "answer": "OK thanswer, please do it that way.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は外出したくない。",
-    "en": "I don't want to go out.",
+    "question": "私は外出したくない。",
+    "answer": "I don't want to go out.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそれを楽しみにしている。",
-    "en": "He is looking forward to it.",
+    "question": "彼はそれを楽しみにしている。",
+    "answer": "He is looking forward to it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話したらどうですか。",
-    "en": "Why don't you call him up?",
+    "question": "彼に電話したらどうですか。",
+    "answer": "Why don't you call him up?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は成功するだろうと思った。",
-    "en": "I thought that I should succeed.",
+    "question": "私は成功するだろうと思った。",
+    "answer": "I thought that I should succeed.",
     "jlpt": "N3"
   },
   {
-    "jp": "気にしないようにしているんだ。",
-    "en": "I just brush it off.",
+    "question": "気にしないようにしているんだ。",
+    "answer": "I just brush it off.",
     "jlpt": "N3"
   },
   {
-    "jp": "どうしたの？ 何があったの？",
-    "en": "What's up? What happened?",
+    "question": "どうしたの？ 何があったの？",
+    "answer": "What's up? What happanswered?",
     "jlpt": "N3"
   },
   {
-    "jp": "お金は何だってする。",
-    "en": "Money will do anything.",
+    "question": "お金は何だってする。",
+    "answer": "Money will do anything.",
     "jlpt": "N3"
   },
   {
-    "jp": "私の車に何してるの？",
-    "en": "What are you doing in my car?",
+    "question": "私の車に何してるの？",
+    "answer": "What are you doing in my car?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はいい人です。",
-    "en": "He's a good person.",
+    "question": "彼はいい人です。",
+    "answer": "He's a good person.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はばかにされていた。",
-    "en": "They were making a fool of me.",
+    "question": "私はばかにされていた。",
+    "answer": "They were making a fool of me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそんな馬鹿なことはしない。",
-    "en": "He is above such stupid behavior.",
+    "question": "彼はそんな馬鹿なことはしない。",
+    "answer": "He is above such stupid behavior.",
     "jlpt": "N3"
   },
   {
-    "jp": "してくれる？",
-    "en": "Will you do it for me?",
+    "question": "してくれる？",
+    "answer": "Will you do it for me?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は他にすることがあるんです。",
-    "en": "I have something else to do.",
+    "question": "私は他にすることがあるんです。",
+    "answer": "I have something else to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たち結婚します！",
-    "en": "We are getting married!",
+    "question": "私たち結婚します！",
+    "answer": "We are getting married!",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は仕事で成功しました。",
-    "en": "He succeeded in business.",
+    "question": "彼は仕事で成功しました。",
+    "answer": "He succeeded in business.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私がきたことに感謝した。",
-    "en": "He thanked me for coming.",
+    "question": "彼は私がきたことに感謝した。",
+    "answer": "He thanked me for coming.",
     "jlpt": "N3"
   },
   {
-    "jp": "またお会いしましょう。",
-    "en": "See you around.",
+    "question": "またお会いしましょう。",
+    "answer": "See you around.",
     "jlpt": "N3"
   },
   {
-    "jp": "自分のことは自分でしなさい。",
-    "en": "Take care of your own affairs yourself.",
+    "question": "自分のことは自分でしなさい。",
+    "answer": "Take care of your own affairs yourself.",
     "jlpt": "N3"
   },
   {
-    "jp": "私が彼女にそれを説明します。",
-    "en": "I will explain it to her.",
+    "question": "私が彼女にそれを説明します。",
+    "answer": "I will explain it to her.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は君を信頼している。",
-    "en": "I have confidence in you.",
+    "question": "私は君を信頼している。",
+    "answer": "I have confidanswerce in you.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼が野球をするのを見た。",
-    "en": "I saw him play baseball.",
+    "question": "私は彼が野球をするのを見た。",
+    "answer": "I saw him play baseball.",
     "jlpt": "N3"
   },
   {
-    "jp": "ただ見ているだけです。",
-    "en": "I'm just looking.",
+    "question": "ただ見ているだけです。",
+    "answer": "I'm just looking.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は失敗などしないと言う。",
-    "en": "He says he is above failure.",
+    "question": "彼は失敗などしないと言う。",
+    "answer": "He says he is above failure.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女と結婚したいんだ。",
-    "en": "I hope to marry her.",
+    "question": "彼女と結婚したいんだ。",
+    "answer": "I hope to marry her.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなことする必要ないよ。",
-    "en": "There is no necessity for you to do that.",
+    "question": "そんなことする必要ないよ。",
+    "answer": "There is no necessity for you to do that.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は来ると私に約束しました。",
-    "en": "He promised me to come.",
+    "question": "彼は来ると私に約束しました。",
+    "answer": "He promised me to come.",
     "jlpt": "N3"
   },
   {
-    "jp": "何かいいことありませんか。",
-    "en": "What's the good news?",
+    "question": "何かいいことありませんか。",
+    "answer": "What's the good news?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何時間も運転している。",
-    "en": "He has been driving for hours.",
+    "question": "彼は何時間も運転している。",
+    "answer": "He has beanswer driving for hours.",
     "jlpt": "N3"
   },
   {
-    "jp": "お願いしたいことがあります。",
-    "en": "I have a request.",
+    "question": "お願いしたいことがあります。",
+    "answer": "I have a request.",
     "jlpt": "N3"
   },
   {
-    "jp": "私と結婚してくれませんか。",
-    "en": "Will you marry me?",
+    "question": "私と結婚してくれませんか。",
+    "answer": "Will you marry me?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私が何をしていたのか尋ねた。",
-    "en": "He asked me what I had been doing.",
+    "question": "彼は私が何をしていたのか尋ねた。",
+    "answer": "He asked me what I had beanswer doing.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼がどうしているか知っているかい？",
-    "en": "Do you know what has become of him?",
+    "question": "彼がどうしているか知っているかい？",
+    "answer": "Do you know what has become of him?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は賛成しないようだ。",
-    "en": "He seems not to agree.",
+    "question": "彼は賛成しないようだ。",
+    "answer": "He seems not to agree.",
     "jlpt": "N3"
   },
   {
-    "jp": "今料理をしています。",
-    "en": "I am cooking now.",
+    "question": "今料理をしています。",
+    "answer": "I am cooking now.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は何を心配しているのですか。",
-    "en": "What is she worried about?",
+    "question": "彼女は何を心配しているのですか。",
+    "answer": "What is she worried about?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私に謝りさえしなかった。",
-    "en": "He did not so much as apologize to me.",
+    "question": "彼は私に謝りさえしなかった。",
+    "answer": "He did not so much as apologize to me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼らに尊敬されている。",
-    "en": "He is respected by them.",
+    "question": "彼は彼らに尊敬されている。",
+    "answer": "He is respected by them.",
     "jlpt": "N3"
   },
   {
-    "jp": "何かあったら電話するよ。",
-    "en": "If anything happens, I'll give you a call.",
+    "question": "何かあったら電話するよ。",
+    "answer": "If anything happanswers, I'll give you a call.",
     "jlpt": "N3"
   },
   {
-    "jp": "今日は何もすることがない。",
-    "en": "There is nothing to do today.",
+    "question": "今日は何もすることがない。",
+    "answer": "There is nothing to do today.",
     "jlpt": "N3"
   },
   {
-    "jp": "静かにしていましょう。",
-    "en": "Let's keep quiet.",
+    "question": "静かにしていましょう。",
+    "answer": "Let's keep quiet.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は英語を勉強しています。",
-    "en": "She studies English.",
+    "question": "彼女は英語を勉強しています。",
+    "answer": "She studies answerglish.",
     "jlpt": "N3"
   },
   {
-    "jp": "これにします。",
-    "en": "This is my choice.",
+    "question": "これにします。",
+    "answer": "This is my choice.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は正しいことをした。",
-    "en": "She did what she believed was right.",
+    "question": "彼女は正しいことをした。",
+    "answer": "She did what she believed was right.",
     "jlpt": "N3"
   },
   {
-    "jp": "言わんとすることはわかる。",
-    "en": "I know what you mean.",
+    "question": "言わんとすることはわかる。",
+    "answer": "I know what you mean.",
     "jlpt": "N3"
   },
   {
-    "jp": "今から何をしたいですか。",
-    "en": "What would you like to do now?",
+    "question": "今から何をしたいですか。",
+    "answer": "What would you like to do now?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は車を買うことにした。",
-    "en": "I decided to buy a car.",
+    "question": "私は車を買うことにした。",
+    "answer": "I decided to buy a car.",
     "jlpt": "N3"
   },
   {
-    "jp": "医者になることにした。",
-    "en": "I decided to become a doctor.",
+    "question": "医者になることにした。",
+    "answer": "I decided to become a doctor.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は思ったことを口にする。",
-    "en": "He's a plain speaker.",
+    "question": "彼は思ったことを口にする。",
+    "answer": "He's a plain speaker.",
     "jlpt": "N3"
   },
   {
-    "jp": "もう彼に電話しましたか。",
-    "en": "Did you call him yet?",
+    "question": "もう彼に電話しましたか。",
+    "answer": "Did you call him yet?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは出発しようとしている。",
-    "en": "They are about to start.",
+    "question": "彼らは出発しようとしている。",
+    "answer": "They are about to start.",
     "jlpt": "N3"
   },
   {
-    "jp": "何時にしましょうか。",
-    "en": "What time shall we make it?",
+    "question": "何時にしましょうか。",
+    "answer": "What time shall we make it?",
     "jlpt": "N3"
   },
   {
-    "jp": "何をするつもりだったのか？",
-    "en": "What were you planning to do?",
+    "question": "何をするつもりだったのか？",
+    "answer": "What were you planning to do?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女から離れていた。",
-    "en": "He stood aloof from her.",
+    "question": "彼は彼女から離れていた。",
+    "answer": "He stood aloof from her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は入院している。",
-    "en": "He is in hospital.",
+    "question": "彼は入院している。",
+    "answer": "He is in hospital.",
     "jlpt": "N3"
   },
   {
-    "jp": "君はそうすべきだった。",
-    "en": "You should have done so.",
+    "question": "君はそうすべきだった。",
+    "answer": "You should have done so.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は前ほど勉強しない。",
-    "en": "He doesn't study as hard as he used to.",
+    "question": "彼は前ほど勉強しない。",
+    "answer": "He doesn't study as hard as he used to.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は良くなってきています。",
-    "en": "He is getting better.",
+    "question": "彼は良くなってきています。",
+    "answer": "He is getting better.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼を助けようともしなかった。",
-    "en": "She didn't even try to help.",
+    "question": "彼女は彼を助けようともしなかった。",
+    "answer": "She didn't evanswer try to help.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は遅くまで仕事をしていた。",
-    "en": "He was at work till late at night.",
+    "question": "彼は遅くまで仕事をしていた。",
+    "answer": "He was at work till late at night.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を正直だと思っていた。",
-    "en": "I thought that he was honest.",
+    "question": "私は彼を正直だと思っていた。",
+    "answer": "I thought that he was honest.",
     "jlpt": "N3"
   },
   {
-    "jp": "それは私が言おうとしたことではない。",
-    "en": "That is not what I meant to say.",
+    "question": "それは私が言おうとしたことではない。",
+    "answer": "That is not what I meant to say.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は禁煙している。",
-    "en": "I'm quitting smoking.",
+    "question": "私は禁煙している。",
+    "answer": "I'm quitting smoking.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は今お金がありません。",
-    "en": "I don't have any money right now.",
+    "question": "私は今お金がありません。",
+    "answer": "I don't have any money right now.",
     "jlpt": "N3"
   },
   {
-    "jp": "誰と話をしていたの？",
-    "en": "Who have you been talking to?",
+    "question": "誰と話をしていたの？",
+    "answer": "Who have you beanswer talking to?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそれについて質問した。",
-    "en": "He asked a question about it.",
+    "question": "彼はそれについて質問した。",
+    "answer": "He asked a question about it.",
     "jlpt": "N3"
   },
   {
-    "jp": "何が彼女をそうさせたのか。",
-    "en": "What made her do so?",
+    "question": "何が彼女をそうさせたのか。",
+    "answer": "What made her do so?",
     "jlpt": "N3"
   },
   {
-    "jp": "お仕事は何をされているんですか？",
-    "en": "What's your job?",
+    "question": "お仕事は何をされているんですか？",
+    "answer": "What's your job?",
     "jlpt": "N3"
   },
   {
-    "jp": "今日私は何をしたらよいだろう。",
-    "en": "I wonder what I should do today.",
+    "question": "今日私は何をしたらよいだろう。",
+    "answer": "I wonder what I should do today.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は、昨日私を幸せにした。",
-    "en": "He made me happy yesterday.",
+    "question": "彼は、昨日私を幸せにした。",
+    "answer": "He made me happy yesterday.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼には日本人の彼女がいる。",
-    "en": "His girlfriend is Japanese.",
+    "question": "彼には日本人の彼女がいる。",
+    "answer": "His girlfrianswerd is Japanese.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を家に招待した。",
-    "en": "I invited him to my house.",
+    "question": "私は彼を家に招待した。",
+    "answer": "I invited him to my house.",
     "jlpt": "N3"
   },
   {
-    "jp": "私も心配してたのよ。",
-    "en": "I was worried, too.",
+    "question": "私も心配してたのよ。",
+    "answer": "I was worried, too.",
     "jlpt": "N3"
   },
   {
-    "jp": "何もしない人に言われたくない。",
-    "en": "I don't want to hear that from someone who's not going to practice what they preach.",
+    "question": "何もしない人に言われたくない。",
+    "answer": "I don't want to hear that from someone who's not going to practice what they preach.",
     "jlpt": "N3"
   },
   {
-    "jp": "その事は問題にしていません。",
-    "en": "I make little of the problem.",
+    "question": "その事は問題にしていません。",
+    "answer": "I make little of the problem.",
     "jlpt": "N3"
   },
   {
-    "jp": "私には話をする友達がいない。",
-    "en": "I have no friend to talk with.",
+    "question": "私には話をする友達がいない。",
+    "answer": "I have no frianswerd to talk with.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼なしじゃ何もできないの。",
-    "en": "I can't do anything without him.",
+    "question": "彼なしじゃ何もできないの。",
+    "answer": "I can't do anything without him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私にそれをさせてください。",
-    "en": "Let me do it.",
+    "question": "私にそれをさせてください。",
+    "answer": "Let me do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼と協力した。",
-    "en": "I went into partnership with him.",
+    "question": "私は彼と協力した。",
+    "answer": "I wanswert into partnership with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "仕事のことは気にするな。",
-    "en": "Don't worry about the work.",
+    "question": "仕事のことは気にするな。",
+    "answer": "Don't worry about the work.",
     "jlpt": "N3"
   },
   {
-    "jp": "そのことは問題にしたくないんだ。",
-    "en": "I don't want to make an issue of it.",
+    "question": "そのことは問題にしたくないんだ。",
+    "answer": "I don't want to make an issue of it.",
     "jlpt": "N3"
   },
   {
-    "jp": "これは私についてですか？",
-    "en": "Is this about me?",
+    "question": "これは私についてですか？",
+    "answer": "Is this about me?",
     "jlpt": "N3"
   },
   {
-    "jp": "好きなことをしなさい。",
-    "en": "Do what you like.",
+    "question": "好きなことをしなさい。",
+    "answer": "Do what you like.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼がいったことは気にするなよ。",
-    "en": "Don't bother with what he said.",
+    "question": "彼がいったことは気にするなよ。",
+    "answer": "Don't bother with what he said.",
     "jlpt": "N3"
   },
   {
-    "jp": "それはしない方がいい。",
-    "en": "You'd better not do it.",
+    "question": "それはしない方がいい。",
+    "answer": "You'd better not do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私のいるのに気がついた。",
-    "en": "He noticed my presence.",
+    "question": "彼は私のいるのに気がついた。",
+    "answer": "He noticed my presanswerce.",
     "jlpt": "N3"
   },
   {
-    "jp": "何も心配することはない。",
-    "en": "There is nothing to worry about.",
+    "question": "何も心配することはない。",
+    "answer": "There is nothing to worry about.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女に恋をした。",
-    "en": "He fell in love with her.",
+    "question": "彼は彼女に恋をした。",
+    "answer": "He fell in love with her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に会いたいと電話した。",
-    "en": "I telephoned to say that I wanted to see him.",
+    "question": "彼に会いたいと電話した。",
+    "answer": "I telephoned to say that I wanted to see him.",
     "jlpt": "N3"
   },
   {
-    "jp": "どうして勉強しているの？",
-    "en": "Why are you studying?",
+    "question": "どうして勉強しているの？",
+    "answer": "Why are you studying?",
     "jlpt": "N3"
   },
   {
-    "jp": "誰がそんなことをさせたの。",
-    "en": "Who put you up to it?",
+    "question": "誰がそんなことをさせたの。",
+    "answer": "Who put you up to it?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は少しも仕事をしなかった。",
-    "en": "He didn't do a stitch of work.",
+    "question": "彼は少しも仕事をしなかった。",
+    "answer": "He didn't do a stitch of work.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼のことは無視していなさい。",
-    "en": "Do not take any notice of him.",
+    "question": "彼のことは無視していなさい。",
+    "answer": "Do not take any notice of him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私にはそんなのどうでもいいよ。",
-    "en": "It doesn't matter to me.",
+    "question": "私にはそんなのどうでもいいよ。",
+    "answer": "It doesn't matter to me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は思ったよりよかった。",
-    "en": "He was better than I expected.",
+    "question": "彼は思ったよりよかった。",
+    "answer": "He was better than I expected.",
     "jlpt": "N3"
   },
   {
-    "jp": "次に何をすべきかが問題である。",
-    "en": "What to do next is the question.",
+    "question": "次に何をすべきかが問題である。",
+    "answer": "What to do next is the question.",
     "jlpt": "N3"
   },
   {
-    "jp": "どうして、何もしないの？",
-    "en": "Why aren't you doing anything?",
+    "question": "どうして、何もしないの？",
+    "answer": "Why aranswer't you doing anything?",
     "jlpt": "N3"
   },
   {
-    "jp": "実は、彼のこと好きじゃないの。",
-    "en": "In fact, I don't like him.",
+    "question": "実は、彼のこと好きじゃないの。",
+    "answer": "In fact, I don't like him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女の健康を心配している。",
-    "en": "He is anxious about her health.",
+    "question": "彼は彼女の健康を心配している。",
+    "answer": "He is anxious about her health.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそのことで彼女と相談した。",
-    "en": "He spoke to her about the matter.",
+    "question": "彼はそのことで彼女と相談した。",
+    "answer": "He spoke to her about the matter.",
     "jlpt": "N3"
   },
   {
-    "jp": "テニスがしたいのですが。",
-    "en": "I'd like to play tennis.",
+    "question": "テニスがしたいのですが。",
+    "answer": "I'd like to play tanswernis.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はダイエットしています。",
-    "en": "I'm on a diet.",
+    "question": "私はダイエットしています。",
+    "answer": "I'm on a diet.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女を手伝うことにしました。",
-    "en": "I decided to help her.",
+    "question": "彼女を手伝うことにしました。",
+    "answer": "I decided to help her.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は宿題をしなければならない。",
-    "en": "I have to do my homework.",
+    "question": "私は宿題をしなければならない。",
+    "answer": "I have to do my homework.",
     "jlpt": "N3"
   },
   {
-    "jp": "何もする必要はない。",
-    "en": "Nothing has to be done.",
+    "question": "何もする必要はない。",
+    "answer": "Nothing has to be done.",
     "jlpt": "N3"
   },
   {
-    "jp": "一人にしないで。",
-    "en": "Don't leave me alone.",
+    "question": "一人にしないで。",
+    "answer": "Don't leave me alone.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女を一人にした方がいい。",
-    "en": "We'd better leave her alone.",
+    "question": "彼女を一人にした方がいい。",
+    "answer": "We'd better leave her alone.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はいつも私をばかにしている。",
-    "en": "He is always making a fool of me.",
+    "question": "彼はいつも私をばかにしている。",
+    "answer": "He is always making a fool of me.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は勉強する必要があります。",
-    "en": "I have to study.",
+    "question": "私は勉強する必要があります。",
+    "answer": "I have to study.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私たちに話す約束をした。",
-    "en": "He promised he would tell us.",
+    "question": "彼は私たちに話す約束をした。",
+    "answer": "He promised he would tell us.",
     "jlpt": "N3"
   },
   {
-    "jp": "私、安心しています。",
-    "en": "I feel at ease.",
+    "question": "私、安心しています。",
+    "answer": "I feel at ease.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は海外に行くことにした。",
-    "en": "He decided to go abroad.",
+    "question": "彼は海外に行くことにした。",
+    "answer": "He decided to go abroad.",
     "jlpt": "N3"
   },
   {
-    "jp": "話しがしたいだけ。",
-    "en": "I'd just like to talk.",
+    "question": "話しがしたいだけ。",
+    "answer": "I'd just like to talk.",
     "jlpt": "N3"
   },
   {
-    "jp": "何かしてみましょう。",
-    "en": "Let's try something.",
+    "question": "何かしてみましょう。",
+    "answer": "Let's try something.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私を誤解した。",
-    "en": "He got me wrong.",
+    "question": "彼は私を誤解した。",
+    "answer": "He got me wrong.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼によって何が言われましたか。",
-    "en": "What was said by him?",
+    "question": "彼によって何が言われましたか。",
+    "answer": "What was said by him?",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちは野球をしました。",
-    "en": "We played baseball.",
+    "question": "私たちは野球をしました。",
+    "answer": "We played baseball.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼がそんなことをしたはずがない。",
-    "en": "He cannot have done such a thing.",
+    "question": "彼がそんなことをしたはずがない。",
+    "answer": "He cannot have done such a thing.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼のために料理をしている。",
-    "en": "She is cooking for him.",
+    "question": "彼女は彼のために料理をしている。",
+    "answer": "She is cooking for him.",
     "jlpt": "N3"
   },
   {
-    "jp": "今日はそれをしないことにした。",
-    "en": "I've decided not to do that today.",
+    "question": "今日はそれをしないことにした。",
+    "answer": "I've decided not to do that today.",
     "jlpt": "N3"
   },
   {
-    "jp": "また電話します。",
-    "en": "I'll call him later.",
+    "question": "また電話します。",
+    "answer": "I'll call him later.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は今何の仕事をしているのですか。",
-    "en": "What is he up to now?",
+    "question": "彼は今何の仕事をしているのですか。",
+    "answer": "What is he up to now?",
     "jlpt": "N3"
   },
   {
-    "jp": "君は彼に感謝すべきだ。",
-    "en": "You ought to thank him.",
+    "question": "君は彼に感謝すべきだ。",
+    "answer": "You ought to thank him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は英語を勉強します。",
-    "en": "I study English.",
+    "question": "私は英語を勉強します。",
+    "answer": "I study answerglish.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はいい暮らしをしている。",
-    "en": "She makes a good living.",
+    "question": "彼女はいい暮らしをしている。",
+    "answer": "She makes a good living.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたはいつ帰宅しますか。",
-    "en": "When will you be back?",
+    "question": "あなたはいつ帰宅しますか。",
+    "answer": "Whanswer will you be back?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は約束した。",
-    "en": "I promised.",
+    "question": "私は約束した。",
+    "answer": "I promised.",
     "jlpt": "N3"
   },
   {
-    "jp": "それをして何が悪いのか。",
-    "en": "What is the harm in doing that?",
+    "question": "それをして何が悪いのか。",
+    "answer": "What is the harm in doing that?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はどうかしたのですか。",
-    "en": "Is anything the matter with him?",
+    "question": "彼はどうかしたのですか。",
+    "answer": "Is anything the matter with him?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼をいい先生だと思う。",
-    "en": "I think him a good teacher.",
+    "question": "私は彼をいい先生だと思う。",
+    "answer": "I think him a good teacher.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼ほど頭のいい人はいない。",
-    "en": "Nobody is cleverer than he.",
+    "question": "彼ほど頭のいい人はいない。",
+    "answer": "Nobody is cleverer than he.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは結婚することにした。",
-    "en": "They decided to marry.",
+    "question": "彼らは結婚することにした。",
+    "answer": "They decided to marry.",
     "jlpt": "N3"
   },
   {
-    "jp": "家でするよ。",
-    "en": "I'll do it at home.",
+    "question": "家でするよ。",
+    "answer": "I'll do it at home.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はあなたに感謝する。",
-    "en": "I thank you.",
+    "question": "私はあなたに感謝する。",
+    "answer": "I thank you.",
     "jlpt": "N3"
   },
   {
-    "jp": "君、ええ仕事をしてるな。",
-    "en": "You're doing good work there.",
+    "question": "君、ええ仕事をしてるな。",
+    "answer": "You're doing good work there.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話してみよう。",
-    "en": "I'll give him a buzz.",
+    "question": "彼に電話してみよう。",
+    "answer": "I'll give him a buzz.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は電話で話をしました。",
-    "en": "I talked on the telephone.",
+    "question": "私は電話で話をしました。",
+    "answer": "I talked on the telephone.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はお金を持っていません。",
-    "en": "He has no money.",
+    "question": "彼はお金を持っていません。",
+    "answer": "He has no money.",
     "jlpt": "N3"
   },
   {
-    "jp": "何しに来たんだっけ？",
-    "en": "I can't remember why I came here.",
+    "question": "何しに来たんだっけ？",
+    "answer": "I can't remember why I came here.",
     "jlpt": "N3"
   },
   {
-    "jp": "俺と同じことをするんだ。",
-    "en": "Do the same thing I do.",
+    "question": "俺と同じことをするんだ。",
+    "answer": "Do the same thing I do.",
     "jlpt": "N3"
   },
   {
-    "jp": "満足しています。",
-    "en": "I'm satisfied.",
+    "question": "満足しています。",
+    "answer": "I'm satisfied.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らはテニスをしていました。",
-    "en": "They were playing tennis.",
+    "question": "彼らはテニスをしていました。",
+    "answer": "They were playing tanswernis.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたと話がしたいなぁ。",
-    "en": "I want to talk to you.",
+    "question": "あなたと話がしたいなぁ。",
+    "answer": "I want to talk to you.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は彼女を殴りさえした。",
-    "en": "He went so far as to hit her.",
+    "question": "彼は彼女を殴りさえした。",
+    "answer": "He wanswert so far as to hit her.",
     "jlpt": "N3"
   },
   {
-    "jp": "じゃあ、お願いします。",
-    "en": "Well, please do so.",
+    "question": "じゃあ、お願いします。",
+    "answer": "Well, please do so.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らはいつ到着しますか。",
-    "en": "When will they arrive?",
+    "question": "彼らはいつ到着しますか。",
+    "answer": "Whanswer will they arrive?",
     "jlpt": "N3"
   },
   {
-    "jp": "今は何もすることがないんだ。",
-    "en": "I don't have anything to do right now.",
+    "question": "今は何もすることがないんだ。",
+    "answer": "I don't have anything to do right now.",
     "jlpt": "N3"
   },
   {
-    "jp": "外出しなかったのですか。",
-    "en": "Didn't you go out?",
+    "question": "外出しなかったのですか。",
+    "answer": "Didn't you go out?",
     "jlpt": "N3"
   },
   {
-    "jp": "何かいいことないかな。",
-    "en": "I wish something nice would happen.",
+    "question": "何かいいことないかな。",
+    "answer": "I wish something nice would happanswer.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは旅行のしたくをしている。",
-    "en": "They are making preparations for the trip.",
+    "question": "彼らは旅行のしたくをしている。",
+    "answer": "They are making preparations for the trip.",
     "jlpt": "N3"
   },
   {
-    "jp": "悪いようにはしないから。",
-    "en": "You won't regret it.",
+    "question": "悪いようにはしないから。",
+    "answer": "You won't regret it.",
     "jlpt": "N3"
   },
   {
-    "jp": "誰がそんなことをするっていうんだ？",
-    "en": "Why would anybody do something like that?",
+    "question": "誰がそんなことをするっていうんだ？",
+    "answer": "Why would anybody do something like that?",
     "jlpt": "N3"
   },
   {
-    "jp": "すべてしましたか？",
-    "en": "Have you done everything?",
+    "question": "すべてしましたか？",
+    "answer": "Have you done everything?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼がそれをしたはずありません。",
-    "en": "He can't have done that.",
+    "question": "彼がそれをしたはずありません。",
+    "answer": "He can't have done that.",
     "jlpt": "N3"
   },
   {
-    "jp": "水がありさえすればいい。",
-    "en": "All we need is water.",
+    "question": "水がありさえすればいい。",
+    "answer": "All we need is water.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は旅行を計画している。",
-    "en": "She is contemplating a trip.",
+    "question": "彼女は旅行を計画している。",
+    "answer": "She is contemplating a trip.",
     "jlpt": "N3"
   },
   {
-    "jp": "よくなっていますよ。",
-    "en": "It's getting better.",
+    "question": "よくなっていますよ。",
+    "answer": "It's getting better.",
     "jlpt": "N3"
   },
   {
-    "jp": "我々は彼女の心配をしている。",
-    "en": "We are anxious about her health.",
+    "question": "我々は彼女の心配をしている。",
+    "answer": "We are anxious about her health.",
     "jlpt": "N3"
   },
   {
-    "jp": "お金はいらないんだって。",
-    "en": "They say they don't need money.",
+    "question": "お金はいらないんだって。",
+    "answer": "They say they don't need money.",
     "jlpt": "N3"
   },
   {
-    "jp": "言うこととすることとは別問題だ。",
-    "en": "Saying is quite different from doing.",
+    "question": "言うこととすることとは別問題だ。",
+    "answer": "Saying is quite differanswert from doing.",
     "jlpt": "N3"
   },
   {
-    "jp": "いいよ！ありがとう。",
-    "en": "Ok! Thanks.",
+    "question": "いいよ！ありがとう。",
+    "answer": "Ok! Thanks.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はついている。",
-    "en": "She's on a roll.",
+    "question": "彼女はついている。",
+    "answer": "She's on a roll.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は決心をしました。",
-    "en": "I've made up my mind.",
+    "question": "私は決心をしました。",
+    "answer": "I've made up my mind.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女のいうことを理解する。",
-    "en": "I can make out what she said.",
+    "question": "私は彼女のいうことを理解する。",
+    "answer": "I can make out what she said.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はスケートをしている。",
-    "en": "He is skating.",
+    "question": "彼はスケートをしている。",
+    "answer": "He is skating.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を高く評価している。",
-    "en": "I have a high opinion of him.",
+    "question": "私は彼を高く評価している。",
+    "answer": "I have a high opinion of him.",
     "jlpt": "N3"
   },
   {
-    "jp": "何て言ったらいいのかなあ。",
-    "en": "Hmm, how shall I say this?",
+    "question": "何て言ったらいいのかなあ。",
+    "answer": "Hmm, how shall I say this?",
     "jlpt": "N3"
   },
   {
-    "jp": "私はもう彼を信用しない。",
-    "en": "I do not trust him any longer.",
+    "question": "私はもう彼を信用しない。",
+    "answer": "I do not trust him any longer.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼にはする事がたくさんある。",
-    "en": "He has a lot of things to do.",
+    "question": "彼にはする事がたくさんある。",
+    "answer": "He has a lot of things to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "今出発していいですか。",
-    "en": "May I leave now?",
+    "question": "今出発していいですか。",
+    "answer": "May I leave now?",
     "jlpt": "N3"
   },
   {
-    "jp": "誰かいい人いないかな。",
-    "en": "Is there a single good natured person in this world?",
+    "question": "誰かいい人いないかな。",
+    "answer": "Is there a single good natured person in this world?",
     "jlpt": "N3"
   },
   {
-    "jp": "誰かそれをしたの？",
-    "en": "Did anyone do that?",
+    "question": "誰かそれをしたの？",
+    "answer": "Did anyone do that?",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちの家へようこそ。",
-    "en": "Welcome to our home.",
+    "question": "私たちの家へようこそ。",
+    "answer": "Welcome to our home.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなこと心配しなくていいよ。",
-    "en": "You don't need to worry about such a thing.",
+    "question": "そんなこと心配しなくていいよ。",
+    "answer": "You don't need to worry about such a thing.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を頼りにした。",
-    "en": "I relied on him.",
+    "question": "私は彼を頼りにした。",
+    "answer": "I relied on him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼には勉強する部屋がない。",
-    "en": "He has no room to study in.",
+    "question": "彼には勉強する部屋がない。",
+    "answer": "He has no room to study in.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何を求めているのですか。",
-    "en": "What is he after?",
+    "question": "彼は何を求めているのですか。",
+    "answer": "What is he after?",
     "jlpt": "N3"
   },
   {
-    "jp": "尊敬する人はいますか。",
-    "en": "Do you have anyone to look up to?",
+    "question": "尊敬する人はいますか。",
+    "answer": "Do you have anyone to look up to?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼と競争した。",
-    "en": "I had a race with him.",
+    "question": "私は彼と競争した。",
+    "answer": "I had a race with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "自分でそれをしなければならない。",
-    "en": "You must do it yourself.",
+    "question": "自分でそれをしなければならない。",
+    "answer": "You must do it yourself.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は成功しそうだ。",
-    "en": "It is in the cards that he will succeed.",
+    "question": "彼は成功しそうだ。",
+    "answer": "It is in the cards that he will succeed.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は二時間勉強している。",
-    "en": "He has been studying for two hours.",
+    "question": "彼は二時間勉強している。",
+    "answer": "He has beanswer studying for two hours.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は勉強するつもりです。",
-    "en": "I am going to study.",
+    "question": "私は勉強するつもりです。",
+    "answer": "I am going to study.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が来てから出発します。",
-    "en": "I'll leave after he comes.",
+    "question": "彼が来てから出発します。",
+    "answer": "I'll leave after he comes.",
     "jlpt": "N3"
   },
   {
-    "jp": "いてよかった。",
-    "en": "I was glad I was there.",
+    "question": "いてよかった。",
+    "answer": "I was glad I was there.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私を信用してくれた。",
-    "en": "She trusted me.",
+    "question": "彼女は私を信用してくれた。",
+    "answer": "She trusted me.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼が健康だと思う。",
-    "en": "I think him in good health.",
+    "question": "私は彼が健康だと思う。",
+    "answer": "I think him in good health.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はとても興奮していた。",
-    "en": "I was so excited!",
+    "question": "私はとても興奮していた。",
+    "answer": "I was so excited!",
     "jlpt": "N3"
   },
   {
-    "jp": "できればお会いしたいのですが。",
-    "en": "I'd like to see you if possible.",
+    "question": "できればお会いしたいのですが。",
+    "answer": "I'd like to see you if possible.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はその仕事に成功した。",
-    "en": "She succeeded in the work.",
+    "question": "彼女はその仕事に成功した。",
+    "answer": "She succeeded in the work.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は信頼すべき人ではない。",
-    "en": "He is not a man to rely on.",
+    "question": "彼は信頼すべき人ではない。",
+    "answer": "He is not a man to rely on.",
     "jlpt": "N3"
   },
   {
-    "jp": "あなたは成功するでしょう。",
-    "en": "I'm sure of your success.",
+    "question": "あなたは成功するでしょう。",
+    "answer": "I'm sure of your success.",
     "jlpt": "N3"
   },
   {
-    "jp": "ご予約はされていますか？",
-    "en": "Do you have an appointment?",
+    "question": "ご予約はされていますか？",
+    "answer": "Do you have an appointmanswert?",
     "jlpt": "N3"
   },
   {
-    "jp": "私の車は故障している。",
-    "en": "My car is not running.",
+    "question": "私の車は故障している。",
+    "answer": "My car is not running.",
     "jlpt": "N3"
   },
   {
-    "jp": "好きなだけいていいのよ。",
-    "en": "You can stay as long as you like.",
+    "question": "好きなだけいていいのよ。",
+    "answer": "You can stay as long as you like.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は仕事で失敗した。",
-    "en": "He couldn't make it in business.",
+    "question": "彼は仕事で失敗した。",
+    "answer": "He couldn't make it in business.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼の言っていることに注目した。",
-    "en": "I took note of what he was saying.",
+    "question": "彼の言っていることに注目した。",
+    "answer": "I took note of what he was saying.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私と握手した。",
-    "en": "He shook hands with me.",
+    "question": "彼は私と握手した。",
+    "answer": "He shook hands with me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話なんかしなければよかった。",
-    "en": "I should have known better than to call him.",
+    "question": "彼に電話なんかしなければよかった。",
+    "answer": "I should have known better than to call him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼らは彼に話をさせた。",
-    "en": "They let him tell the story.",
+    "question": "彼らは彼に話をさせた。",
+    "answer": "They let him tell the story.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は笑ってばかりいる。",
-    "en": "He does nothing but laugh.",
+    "question": "彼は笑ってばかりいる。",
+    "answer": "He does nothing but laugh.",
     "jlpt": "N3"
   },
   {
-    "jp": "君の思うようにしなさい。",
-    "en": "Just follow your heart.",
+    "question": "君の思うようにしなさい。",
+    "answer": "Just follow your heart.",
     "jlpt": "N3"
   },
   {
-    "jp": "じゃあどうしろって言うんだよ。",
-    "en": "What do you suggest I do then?",
+    "question": "じゃあどうしろって言うんだよ。",
+    "answer": "What do you suggest I do thanswer?",
     "jlpt": "N3"
   },
   {
-    "jp": "誰が運転しているんですか？",
-    "en": "Who's at the wheel?",
+    "question": "誰が運転しているんですか？",
+    "answer": "Who's at the wheel?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はテニスをするのが好きだ。",
-    "en": "He is fond of playing tennis.",
+    "question": "彼はテニスをするのが好きだ。",
+    "answer": "He is fond of playing tanswernis.",
     "jlpt": "N3"
   },
   {
-    "jp": "又しても彼女は遅刻した。",
-    "en": "She was late once again.",
+    "question": "又しても彼女は遅刻した。",
+    "answer": "She was late once again.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はその結果を心配している。",
-    "en": "He is anxious about the result.",
+    "question": "彼はその結果を心配している。",
+    "answer": "He is anxious about the result.",
     "jlpt": "N3"
   },
   {
-    "jp": "期待しているから。",
-    "en": "I'm sure you'll whip us up something really good.",
+    "question": "期待しているから。",
+    "answer": "I'm sure you'll whip us up something really good.",
     "jlpt": "N3"
   },
   {
-    "jp": "明日は何をしますか。",
-    "en": "What will you do tomorrow?",
+    "question": "明日は何をしますか。",
+    "answer": "What will you do tomorrow?",
     "jlpt": "N3"
   },
   {
-    "jp": "好きにしろよ。",
-    "en": "Do as you like.",
+    "question": "好きにしろよ。",
+    "answer": "Do as you like.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼に失望した。",
-    "en": "I was disappointed in him.",
+    "question": "私は彼に失望した。",
+    "answer": "I was disappointed in him.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はイライラしていた。",
-    "en": "He became irritated.",
+    "question": "彼はイライラしていた。",
+    "answer": "He became irritated.",
     "jlpt": "N3"
   },
   {
-    "jp": "どこにも行かないことにした。",
-    "en": "I decided not to go anywhere.",
+    "question": "どこにも行かないことにした。",
+    "answer": "I decided not to go anywhere.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に何が起こったのですか。",
-    "en": "What happened to him?",
+    "question": "彼に何が起こったのですか。",
+    "answer": "What happanswered to him?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私に大変良くしてくれる。",
-    "en": "He is very kind to me.",
+    "question": "彼は私に大変良くしてくれる。",
+    "answer": "He is very kind to me.",
     "jlpt": "N3"
   },
   {
-    "jp": "どんな人と結婚したい？",
-    "en": "What kind of person would you like to marry?",
+    "question": "どんな人と結婚したい？",
+    "answer": "What kind of person would you like to marry?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は全く勉強しなかった。",
-    "en": "I didn't study at all.",
+    "question": "私は全く勉強しなかった。",
+    "answer": "I didn't study at all.",
     "jlpt": "N3"
   },
   {
-    "jp": "テニスをしたことがない。",
-    "en": "I've never played tennis.",
+    "question": "テニスをしたことがない。",
+    "answer": "I've never played tanswernis.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はその問題に注意した。",
-    "en": "He focused his attention on that problem.",
+    "question": "彼はその問題に注意した。",
+    "answer": "He focused his attanswertion on that problem.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は離婚している。",
-    "en": "She's divorced.",
+    "question": "彼女は離婚している。",
+    "answer": "She's divorced.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は遅刻すると思う。",
-    "en": "I suppose he will be late.",
+    "question": "彼は遅刻すると思う。",
+    "answer": "I suppose he will be late.",
     "jlpt": "N3"
   },
   {
-    "jp": "君と一緒のことをします。",
-    "en": "I'll do the same thing that you do.",
+    "question": "君と一緒のことをします。",
+    "answer": "I'll do the same thing that you do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は今何をしていると思いますか。",
-    "en": "What do you figure she is doing now?",
+    "question": "彼女は今何をしていると思いますか。",
+    "answer": "What do you figure she is doing now?",
     "jlpt": "N3"
   },
   {
-    "jp": "あらゆる人が彼を愛している。",
-    "en": "Everybody loves him.",
+    "question": "あらゆる人が彼を愛している。",
+    "answer": "Everybody loves him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼に静かにするように言った。",
-    "en": "I told him to be quiet.",
+    "question": "私は彼に静かにするように言った。",
+    "answer": "I told him to be quiet.",
     "jlpt": "N3"
   },
   {
-    "jp": "君の好きなようにしたまえ。",
-    "en": "Do as you like.",
+    "question": "君の好きなようにしたまえ。",
+    "answer": "Do as you like.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼に電話して下さい。",
-    "en": "Please call him up.",
+    "question": "彼に電話して下さい。",
+    "answer": "Please call him up.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は車を運転しますよね？",
-    "en": "He drives a car, doesn't he?",
+    "question": "彼は車を運転しますよね？",
+    "answer": "He drives a car, doesn't he?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女に対して彼は冷たくした。",
-    "en": "He hardened his heart against her.",
+    "question": "彼女に対して彼は冷たくした。",
+    "answer": "He hardanswered his heart against her.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼の意見は私のと一致している。",
-    "en": "His views are in accord with mine.",
+    "question": "彼の意見は私のと一致している。",
+    "answer": "His views are in accord with mine.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は、損をしている。",
-    "en": "He is out of pocket.",
+    "question": "彼は、損をしている。",
+    "answer": "He is out of pocket.",
     "jlpt": "N3"
   },
   {
-    "jp": "君はそんなことをしてはいけない。",
-    "en": "You are not to do that.",
+    "question": "君はそんなことをしてはいけない。",
+    "answer": "You are not to do that.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女に賛成したい。",
-    "en": "I feel inclined to agree with her.",
+    "question": "彼女に賛成したい。",
+    "answer": "I feel inclined to agree with her.",
     "jlpt": "N3"
   },
   {
-    "jp": "それをする必要はない。",
-    "en": "You don't have to do it.",
+    "question": "それをする必要はない。",
+    "answer": "You don't have to do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "故障しているようです。",
-    "en": "It seems out of order.",
+    "question": "故障しているようです。",
+    "answer": "It seems out of order.",
     "jlpt": "N3"
   },
   {
-    "jp": "他にすることがなかったんだ。",
-    "en": "There was nothing else to do.",
+    "question": "他にすることがなかったんだ。",
+    "answer": "There was nothing else to do.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は食事をした。",
-    "en": "She ate her dinner.",
+    "question": "彼女は食事をした。",
+    "answer": "She ate her dinner.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は彼より頭がいい。",
-    "en": "She is smarter than he is.",
+    "question": "彼女は彼より頭がいい。",
+    "answer": "She is smarter than he is.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼がいってもよいといった。",
-    "en": "I said it was OK for him to go.",
+    "question": "私は彼がいってもよいといった。",
+    "answer": "I said it was OK for him to go.",
     "jlpt": "N3"
   },
   {
-    "jp": "それをしようとする人は誰もいない。",
-    "en": "There is no person to do it.",
+    "question": "それをしようとする人は誰もいない。",
+    "answer": "There is no person to do it.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女にいい人ができたらしい。",
-    "en": "She seems to have found a boyfriend.",
+    "question": "彼女にいい人ができたらしい。",
+    "answer": "She seems to have found a boyfrianswerd.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は結婚してると思うよ。",
-    "en": "I think she's married.",
+    "question": "彼女は結婚してると思うよ。",
+    "answer": "I think she's married.",
     "jlpt": "N3"
   },
   {
-    "jp": "次は何をすればいいのかな？",
-    "en": "What should I do next?",
+    "question": "次は何をすればいいのかな？",
+    "answer": "What should I do next?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は進歩している。",
-    "en": "She's making progress.",
+    "question": "彼女は進歩している。",
+    "answer": "She's making progress.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はそこにいてよかった。",
-    "en": "I'm glad I was there.",
+    "question": "私はそこにいてよかった。",
+    "answer": "I'm glad I was there.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はあなたを愛しています。",
-    "en": "I love you.",
+    "question": "私はあなたを愛しています。",
+    "answer": "I love you.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私を知らないふりをした。",
-    "en": "He made believe not to know me.",
+    "question": "彼は私を知らないふりをした。",
+    "answer": "He made believe not to know me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はたくさん仕事をした。",
-    "en": "She did a great deal of work.",
+    "question": "彼女はたくさん仕事をした。",
+    "answer": "She did a great deal of work.",
     "jlpt": "N3"
   },
   {
-    "jp": "説明している時間はない。",
-    "en": "There is no time for explanation.",
+    "question": "説明している時間はない。",
+    "answer": "There is no time for explanation.",
     "jlpt": "N3"
   },
   {
-    "jp": "何が起こっているのか。",
-    "en": "What's going on?",
+    "question": "何が起こっているのか。",
+    "answer": "What's going on?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼を信用していい。",
-    "en": "You can trust him.",
+    "question": "彼を信用していい。",
+    "answer": "You can trust him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は帰宅してもよいですか。",
-    "en": "May I go home?",
+    "question": "私は帰宅してもよいですか。",
+    "answer": "May I go home?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私の計画に賛成した。",
-    "en": "She approved of my plan.",
+    "question": "彼女は私の計画に賛成した。",
+    "answer": "She approved of my plan.",
     "jlpt": "N3"
   },
   {
-    "jp": "そうしないではいられないんだよ。",
-    "en": "I can't help doing that.",
+    "question": "そうしないではいられないんだよ。",
+    "answer": "I can't help doing that.",
     "jlpt": "N3"
   },
   {
-    "jp": "私達は彼を案内人にした。",
-    "en": "We made him our guide.",
+    "question": "私達は彼を案内人にした。",
+    "answer": "We made him our guide.",
     "jlpt": "N3"
   },
   {
-    "jp": "「信用して」と彼は言った。",
-    "en": "Trust me, he said.",
+    "question": "「信用して」と彼は言った。",
+    "answer": "Trust me, he said.",
     "jlpt": "N3"
   },
   {
-    "jp": "私が成功したのは彼のおかげだ。",
-    "en": "I owe my success to him.",
+    "question": "私が成功したのは彼のおかげだ。",
+    "answer": "I owe my success to him.",
     "jlpt": "N3"
   },
   {
-    "jp": "私たちはあの人を信頼しています。",
-    "en": "We believe in that man.",
+    "question": "私たちはあの人を信頼しています。",
+    "answer": "We believe in that man.",
     "jlpt": "N3"
   },
   {
-    "jp": "フランス語を勉強している。",
-    "en": "We're learning French.",
+    "question": "フランス語を勉強している。",
+    "answer": "We're learning Franswerch.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼を友人と考えていた。",
-    "en": "I considered him a friend.",
+    "question": "私は彼を友人と考えていた。",
+    "answer": "I considered him a frianswerd.",
     "jlpt": "N3"
   },
   {
-    "jp": "誰かがその仕事をするだろう。",
-    "en": "Someone will do that job.",
+    "question": "誰かがその仕事をするだろう。",
+    "answer": "Someone will do that job.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は邪魔されたくない。",
-    "en": "I don't like to be disturbed.",
+    "question": "私は邪魔されたくない。",
+    "answer": "I don't like to be disturbed.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私を助手にしました。",
-    "en": "He made me his assistant.",
+    "question": "彼は私を助手にしました。",
+    "answer": "He made me his assistant.",
     "jlpt": "N3"
   },
   {
-    "jp": "本当に私と仕事がしたいの？",
-    "en": "Are you sure you want to work with me?",
+    "question": "本当に私と仕事がしたいの？",
+    "answer": "Are you sure you want to work with me?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は何でもすぐに理解する。",
-    "en": "He understands everything right on the spot.",
+    "question": "彼は何でもすぐに理解する。",
+    "answer": "He understands everything right on the spot.",
     "jlpt": "N3"
   },
   {
-    "jp": "私はただ確認しただけよ。",
-    "en": "I was just making sure.",
+    "question": "私はただ確認しただけよ。",
+    "answer": "I was just making sure.",
     "jlpt": "N3"
   },
   {
-    "jp": "私が彼の代理をします。",
-    "en": "I will take his place.",
+    "question": "私が彼の代理をします。",
+    "answer": "I will take his place.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼に賛成です。",
-    "en": "I agree with him.",
+    "question": "私は彼に賛成です。",
+    "answer": "I agree with him.",
     "jlpt": "N3"
   },
   {
-    "jp": "誰も出席していなかった。",
-    "en": "No one was present.",
+    "question": "誰も出席していなかった。",
+    "answer": "No one was presanswert.",
     "jlpt": "N3"
   },
   {
-    "jp": "この仕事をしない方がいいよ。",
-    "en": "You shouldn't do this work.",
+    "question": "この仕事をしない方がいいよ。",
+    "answer": "You shouldn't do this work.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそれをした、しかも彼女のいる前で。",
-    "en": "He did it, and in her presence.",
+    "question": "彼はそれをした、しかも彼女のいる前で。",
+    "answer": "He did it, and in her presanswerce.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はそれをし続けた。",
-    "en": "He went on doing it.",
+    "question": "彼はそれをし続けた。",
+    "answer": "He wanswert on doing it.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は学校で勉強する。",
-    "en": "I study at school.",
+    "question": "私は学校で勉強する。",
+    "answer": "I study at school.",
     "jlpt": "N3"
   },
   {
-    "jp": "君のためならどんなことでもするよ。",
-    "en": "I'd do any damn thing for you.",
+    "question": "君のためならどんなことでもするよ。",
+    "answer": "I'd do any damn thing for you.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女は私を避けている。",
-    "en": "She avoids me.",
+    "question": "彼女は私を避けている。",
+    "answer": "She avoids me.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は自分の仕事に満足している。",
-    "en": "He is pleased with his work.",
+    "question": "彼は自分の仕事に満足している。",
+    "answer": "He is pleased with his work.",
     "jlpt": "N3"
   },
   {
-    "jp": "何の話をしてたんだっけ？",
-    "en": "What was I talking about?",
+    "question": "何の話をしてたんだっけ？",
+    "answer": "What was I talking about?",
     "jlpt": "N3"
   },
   {
-    "jp": "今は彼女に電話しないで。",
-    "en": "Don't phone her now.",
+    "question": "今は彼女に電話しないで。",
+    "answer": "Don't phone her now.",
     "jlpt": "N3"
   },
   {
-    "jp": "もう彼女に電話しましたか。",
-    "en": "Have you called her yet?",
+    "question": "もう彼女に電話しましたか。",
+    "answer": "Have you called her yet?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼が幸せでいると思っている。",
-    "en": "I understand him to be happy.",
+    "question": "彼が幸せでいると思っている。",
+    "answer": "I understand him to be happy.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私に金をくれと言った。",
-    "en": "He asked me for some money.",
+    "question": "彼は私に金をくれと言った。",
+    "answer": "He asked me for some money.",
     "jlpt": "N3"
   },
   {
-    "jp": "何の話をしているか分かる？",
-    "en": "Do you see what I'm talking about?",
+    "question": "何の話をしているか分かる？",
+    "answer": "Do you see what I'm talking about?",
     "jlpt": "N3"
   },
   {
-    "jp": "今まで誰もしたことがない。",
-    "en": "No one has ever done it before.",
+    "question": "今まで誰もしたことがない。",
+    "answer": "No one has ever done it before.",
     "jlpt": "N3"
   },
   {
-    "jp": "これをして何のためになるの。",
-    "en": "What's the point of doing this?",
+    "question": "これをして何のためになるの。",
+    "answer": "What's the point of doing this?",
     "jlpt": "N3"
   },
   {
-    "jp": "それをする時間がない！",
-    "en": "There’s no time for that!",
+    "question": "それをする時間がない！",
+    "answer": "There’s no time for that!",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は私に口答えした。",
-    "en": "He gave me back talk.",
+    "question": "彼は私に口答えした。",
+    "answer": "He gave me back talk.",
     "jlpt": "N3"
   },
   {
-    "jp": "どうしてそんな事をしているの。",
-    "en": "What are you doing that for?",
+    "question": "どうしてそんな事をしているの。",
+    "answer": "What are you doing that for?",
     "jlpt": "N3"
   },
   {
-    "jp": "君、理解してるのかなぁ。",
-    "en": "I wonder whether you understand.",
+    "question": "君、理解してるのかなぁ。",
+    "answer": "I wonder whether you understand.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は君の健康を心配している。",
-    "en": "I am anxious about your health.",
+    "question": "私は君の健康を心配している。",
+    "answer": "I am anxious about your health.",
     "jlpt": "N3"
   },
   {
-    "jp": "私に電話して下さい。",
-    "en": "Please give me a call.",
+    "question": "私に電話して下さい。",
+    "answer": "Please give me a call.",
     "jlpt": "N3"
   },
   {
-    "jp": "私達、結婚はしてないのよ。",
-    "en": "We aren't married.",
+    "question": "私達、結婚はしてないのよ。",
+    "answer": "We aranswer't married.",
     "jlpt": "N3"
   },
   {
-    "jp": "私は一時間勉強しました。",
-    "en": "I studied for one hour.",
+    "question": "私は一時間勉強しました。",
+    "answer": "I studied for one hour.",
     "jlpt": "N3"
   },
   {
-    "jp": "野球をしたことがありますか。",
-    "en": "Have you ever played baseball?",
+    "question": "野球をしたことがありますか。",
+    "answer": "Have you ever played baseball?",
     "jlpt": "N3"
   },
   {
-    "jp": "私は彼女と握手をした。",
-    "en": "I shook hands with her.",
+    "question": "私は彼女と握手をした。",
+    "answer": "I shook hands with her.",
     "jlpt": "N3"
   },
   {
-    "jp": "時間があればそうします。",
-    "en": "If I get time, I will.",
+    "question": "時間があればそうします。",
+    "answer": "If I get time, I will.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼はすぐに出発した。",
-    "en": "He left immediately.",
+    "question": "彼はすぐに出発した。",
+    "answer": "He left immediately.",
     "jlpt": "N3"
   },
   {
-    "jp": "彼女はあなたを利用しているのです。",
-    "en": "She is making use of you.",
+    "question": "彼女はあなたを利用しているのです。",
+    "answer": "She is making use of you.",
     "jlpt": "N3"
   },
   {
-    "jp": "そうするべきではないと思う。",
-    "en": "I don't think we should do that.",
+    "question": "そうするべきではないと思う。",
+    "answer": "I don't think we should do that.",
     "jlpt": "N3"
   },
   {
-    "jp": "長いことそこで何してるの？",
-    "en": "What have you been doing there for so long?",
+    "question": "長いことそこで何してるの？",
+    "answer": "What have you beanswer doing there for so long?",
     "jlpt": "N3"
   },
   {
-    "jp": "彼は話そうとするところだった。",
-    "en": "He was about to speak.",
+    "question": "彼は話そうとするところだった。",
+    "answer": "He was about to speak.",
     "jlpt": "N3"
   },
   {
-    "jp": "そんなことして誰のためになるの？",
-    "en": "Who are you doing that for?",
+    "question": "そんなことして誰のためになるの？",
+    "answer": "Who are you doing that for?",
     "jlpt": "N3"
   }
 ]
