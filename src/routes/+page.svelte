@@ -1,9 +1,13 @@
 <script lang="ts">
 	import QuizSession from '$lib/components/Quiz/QuizSession.svelte';
 	import JlptCard from '$lib/components/Home/JlptCard.svelte';
+	import StatCard from '$lib/components/Home/StatCard.svelte';
+	import StartButton from '$lib/components/Home/StartButton.svelte';
+
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { onMount } from 'svelte';
-	import { cubicOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
+	import { cubicOut, sineIn } from 'svelte/easing';
 
 	let active = $state(false);
 	let closing = $state(false);
@@ -49,15 +53,17 @@
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
 			<h1
 				class="pb-4 text-center text-6xl tracking-wider uppercase"
-				transition:osuDeath|global={{ duration: 700, y: 100, delay: 25, easing: cubicOut }}
+				in:osuDeath|global={{ duration: 700, y: 100, delay: 50, easing: cubicOut }}
+				out:fly|global={{ duration: 350, y: -50, easing: sineIn }}
 			>
 				Speed Translate
 			</h1>
-			<button
-				class="h-50 w-50 rounded-full bg-primary"
-				transition:osuDeath|global={{ duration: 800, y: 100, easing: cubicOut }}
-				onclick={() => startCreation()}>Start</button
-			>
+			<div class="relative">
+				<div class="absolute top-1/2 right-full mr-14 -translate-y-1/2">
+					<StatCard />
+				</div>
+				<StartButton onclick={startCreation} />
+			</div>
 		</div>
 	{/if}
 
@@ -72,12 +78,30 @@
 			<div class="flex w-full max-w-md flex-col gap-3">
 				{#each things as n, i (n)}
 					<div
-						transition:osuDeath|global={{ duration: 600, y: 80, delay: i * 40, rotate: 15, easing: cubicOut }}
+						transition:osuDeath|global={{
+							duration: 400,
+							y: 60,
+							delay: i * 40,
+							rotate: 15,
+							easing: cubicOut
+						}}
 					>
 						<JlptCard level={n} onclick={(count) => createSession(n, count)} />
 					</div>
 				{/each}
 			</div>
+			<button
+				class="border-fancy bg-fancy shadow-fancy interactive text-sm tracking-wider"
+				onclick={() => (showingCreation = false)}
+				transition:osuDeath|global={{
+					duration: 400,
+					y: 60,
+					rotate: 15,
+					easing: cubicOut
+				}}
+			>
+				<p class="p-2 text-white">Back</p>
+			</button>
 		</div>
 	{/if}
 </div>

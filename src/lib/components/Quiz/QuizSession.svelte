@@ -164,6 +164,7 @@
 				{answeredSentences}
 				{englishAnswers}
 				time={elapsedMs}
+				set={`n${level}`}
 				closing={leaving}
 				onclosed={handleSummaryClosed}
 			/>

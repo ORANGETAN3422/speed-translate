@@ -2,18 +2,21 @@
 	import { onMount } from 'svelte';
 	import { type Sentence } from '$lib/helpers/sentence';
 	import { flyRotate, osuDeath } from '$lib/helpers/transitions';
+	import { setRecord, compareRecord } from '$lib/helpers/saving';
 	import SummaryCard from './SummaryCard.svelte';
 
 	let {
 		answeredSentences,
 		englishAnswers,
 		time,
+		set,
 		closing = false,
 		onclosed
 	}: {
 		answeredSentences: Sentence[];
 		englishAnswers: string[];
 		time: number;
+		set: string;
 		closing?: boolean;
 		onclosed?: () => void;
 	} = $props();
@@ -38,8 +41,27 @@
 			lockedHeight = containerEl.offsetHeight;
 			lockedTimeHeight = timeEl?.offsetHeight ?? 0;
 			lockedSlotHeights = slotEls.map((el) => el?.offsetHeight ?? 0);
+			saveSession();
 		}
 	});
+
+	function saveSession() {
+		const score = marks.filter((m) => m === true).length;
+		const record = {
+			set,
+			time,
+			words: answeredSentences.length,
+			score
+		};
+
+		// Always save as last session
+		setRecord(record, true);
+
+		// Only save as a personal best if at least 5 correct AND faster than existing
+		if (score >= 5 && compareRecord(record)) {
+			setRecord(record, false);
+		}
+	}
 
 	$effect(() => {
 		if (closing && !allOutroed) {
