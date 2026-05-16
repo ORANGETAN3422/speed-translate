@@ -1,9 +1,6 @@
 <script lang="ts">
-	let {
-		level,
-		onclick,
-		bg
-	}: { level: number; onclick: (count: number) => void; bg?: string } = $props();
+	let { level, onclick, bg }: { level: number; onclick: (count: number) => void; bg?: string } =
+		$props();
 
 	const levelColors: Record<number, string> = {
 		5: '#9F2D8B',
@@ -36,18 +33,19 @@
 		<span class="glow-num text-4xl">N{level}</span>
 	</button>
 
-	<div class="relative -my-3 -mr-5 isolate flex shrink-0 items-center self-stretch py-3 pr-5 pl-10">
+	<div class="relative isolate -my-3 -mr-5 flex shrink-0 items-center self-stretch py-3 pr-5 pl-10">
 		<div
 			class="absolute inset-0 -z-10"
 			style="background: color-mix(in oklch, var(--bc, var(--primary)), black 52%); clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);"
 		></div>
 
+		<p class="pr-3">Words:</p>
 		<div class="flex items-center gap-3">
 			<button
 				type="button"
 				onclick={() => adjust(-1)}
 				disabled={wordCount <= MIN}
-				class="border-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				−
 			</button>
@@ -56,7 +54,7 @@
 				type="button"
 				onclick={() => adjust(1)}
 				disabled={wordCount >= MAX}
-				class="border-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				+
 			</button>

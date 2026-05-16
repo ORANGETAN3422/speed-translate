@@ -23,11 +23,32 @@
 
 	let mounted = $state(false);
 	let containerEl = $state<HTMLDivElement>();
+	let timeEl = $state<HTMLDivElement>();
 	let lockedHeight = $state<number | null>(null);
+	let lockedTimeHeight = $state<number | null>(null);
+	let slotEls = $state<(HTMLDivElement | undefined)[]>([]);
+	let lockedSlotHeights = $state<number[]>([]);
+	let allOutroed = $state(false);
+
+	const CARD_STAGGER = 25;
+	const CARD_DURATION = 1000;
 
 	$effect.pre(() => {
 		if (closing && containerEl && lockedHeight === null) {
 			lockedHeight = containerEl.offsetHeight;
+			lockedTimeHeight = timeEl?.offsetHeight ?? 0;
+			lockedSlotHeights = slotEls.map((el) => el?.offsetHeight ?? 0);
+		}
+	});
+
+	$effect(() => {
+		if (closing && !allOutroed) {
+			const totalMs = (answeredSentences.length - 1) * CARD_STAGGER + CARD_DURATION;
+			const id = setTimeout(() => {
+				allOutroed = true;
+				onclosed?.();
+			}, totalMs);
+			return () => clearTimeout(id);
 		}
 	});
 
@@ -48,13 +69,15 @@
 	});
 </script>
 
-{#if !closing}
-	<p out:osuDeath|global={{ duration: 1000, y: 250 }} class="glow-num text-3xl">
-		{formatTime(time)}
-		|
-		{answeredSentences.length} Words
-	</p>
-{/if}
+<div bind:this={timeEl} style:min-height={lockedTimeHeight ? `${lockedTimeHeight}px` : undefined}>
+	{#if !closing}
+		<p out:osuDeath|global={{ duration: 1000, y: 250 }} class="glow-num text-3xl">
+			{formatTime(time)}
+			|
+			{answeredSentences.length} Words
+		</p>
+	{/if}
+</div>
 
 <div
 	bind:this={containerEl}
@@ -62,20 +85,26 @@
 	style:height={lockedHeight !== null ? `${lockedHeight}px` : undefined}
 >
 	<div class="flex flex-col gap-2">
-		{#if mounted && !closing}
+		{#if mounted && !allOutroed}
 			{#each answeredSentences as sentence, i (sentence.question)}
 				<div
-					in:flyRotate|global={{ duration: 700, y: 150, rotate: 15, delay: i * 25 }}
-					out:osuDeath|global={{ duration: 1000, y: 250, delay: i * 25 }}
-					onoutroend={i === answeredSentences.length - 1 ? onclosed : undefined}
-					class="group/card border-fancy bg-fancy flex items-center gap-6 px-5 py-3 transition-all duration-300 hover:translate-x-3"
+					bind:this={slotEls[i]}
+					style:min-height={lockedSlotHeights[i] ? `${lockedSlotHeights[i]}px` : undefined}
 				>
-					<SummaryCard
-						{sentence}
-						answer={englishAnswers[i]}
-						mark={marks[i]}
-						onmark={(value) => mark(i, value)}
-					/>
+					{#if !closing}
+						<div
+							in:flyRotate|global={{ duration: 700, y: 150, rotate: 15, delay: i * CARD_STAGGER }}
+							out:osuDeath|global={{ duration: CARD_DURATION, y: 250, delay: i * CARD_STAGGER }}
+							class="group/card border-fancy bg-fancy flex items-center gap-6 px-5 py-3 transition-all duration-300 hover:translate-x-3"
+						>
+							<SummaryCard
+								{sentence}
+								answer={englishAnswers[i]}
+								mark={marks[i]}
+								onmark={(value) => mark(i, value)}
+							/>
+						</div>
+					{/if}
 				</div>
 			{/each}
 		{/if}

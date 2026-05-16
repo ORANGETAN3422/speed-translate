@@ -44,7 +44,8 @@ export function osuDeath(
 		easing = cubicIn,
 		x = 0,
 		y = 0,
-		opacity = 0
+		opacity = 0,
+		rotate = 25
 	}: {
 		delay?: number;
 		duration?: number;
@@ -60,14 +61,14 @@ export function osuDeath(
 	const transform = style.transform === 'none' ? '' : style.transform;
 	const od = target_opacity - opacity;
 
-	const rotate = Math.random() * 50 - 25;
+	const rotation = Math.random() * (2 * rotate) - rotate;
 
 	return {
 		delay,
 		duration,
 		easing,
 		css: (t: number, u: number) =>
-			`transform: ${transform} translate(${(1 - t) * x}px, ${(1 - t) * y}px) rotate(${(1 - t) * rotate}deg);` +
+			`transform: ${transform} translate(${(1 - t) * x}px, ${(1 - t) * y}px) rotate(${(1 - t) * rotation}deg);` +
 			`opacity: ${target_opacity - od * u};`
 	};
 }

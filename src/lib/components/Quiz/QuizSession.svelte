@@ -13,6 +13,7 @@
 	// add reveal answer support
 	const REVEAL_ANSWER = false;
 	const KEYBOARD = 'nk-cream';
+	const INITIAL_TIMEOUT = 500; //ms
 
 	// session vars
 	let {
@@ -60,14 +61,24 @@
 		return `${totalSeconds}`;
 	}
 
+	let pendingRetry = $state(false);
+	let starting = $state(false);
+
+	async function startSession() {
+		starting = true;
+		mounted = false;
+		await new Promise((r) => setTimeout(r, INITIAL_TIMEOUT));
+		startTime = Date.now();
+		nextSentence();
+		mounted = true;
+		starting = false;
+	}
+
 	onMount(async () => {
 		preloadKeyboard(KEYBOARD);
 		originalSentences = await loadSentence(level);
 		unansweredSentences = [...originalSentences];
-		startTime = Date.now();
-		nextSentence();
-
-		mounted = true;
+		await startSession();
 	});
 
 	$effect(() => {
@@ -111,14 +122,24 @@
 		revealed = false;
 	}
 
-	function retry() {
-		unansweredSentences = [...originalSentences];
-		answeredSentences = [];
-		englishAnswers = [];
-		progress = 0;
-		finished = false;
-		startTime = Date.now();
-		nextSentence();
+	function requestRetry() {
+		pendingRetry = true;
+		leaving = true;
+	}
+
+	function handleSummaryClosed() {
+		if (pendingRetry) {
+			pendingRetry = false;
+			leaving = false;
+			unansweredSentences = [...originalSentences];
+			answeredSentences = [];
+			englishAnswers = [];
+			progress = 0;
+			finished = false;
+			startSession();
+		} else {
+			onclose();
+		}
 	}
 </script>
 
@@ -134,34 +155,51 @@
 	</header>
 
 	{#if finished}
-		<main class="flex flex-1 flex-col items-center gap-6 overflow-y-auto px-4 py-8">
+		<main
+			class="flex flex-1 flex-col items-center gap-6 overflow-y-auto px-4 py-8"
+			class:overflow-y-auto={!leaving}
+			class:overflow-hidden={leaving}
+		>
 			<Summary
 				{answeredSentences}
 				{englishAnswers}
 				time={elapsedMs}
 				closing={leaving}
-				onclosed={onclose}
+				onclosed={handleSummaryClosed}
 			/>
 
 			{#if !leaving}
-				<button
-					class="border-fancy bg-fancy interactive px-4 py-2"
-					transition:fade|global={{ duration: 750, easing: cubicIn }}
-					onclick={() => (leaving = true)}
-				>
-					Return to menu
-				</button>
-				<button
-					class="border-fancy bg-fancy interactive px-4 py-2"
-					transition:fade|global={{ duration: 750, easing: cubicIn }}
-					onclick={retry}
-				>
-					Retry
-				</button>
+				<div class="flex flex-row gap-4">
+					<button
+						class="border-fancy bg-fancy interactive px-4 py-2"
+						transition:fade|global={{ duration: 750, easing: cubicIn }}
+						onclick={() => (leaving = true)}
+					>
+						Return to menu
+					</button>
+					<button
+						class="border-fancy bg-fancy interactive px-4 py-2"
+						transition:fade|global={{ duration: 750, easing: cubicIn }}
+						onclick={requestRetry}
+					>
+						Retry
+					</button>
+				</div>
 			{/if}
 		</main>
 	{:else}
-		<main class="flex flex-1 flex-col items-center justify-center gap-8 px-4">
+		<main class="relative flex flex-1 flex-col items-center justify-center gap-8 px-4">
+			{#if starting}
+				<div
+					class="pointer-events-none absolute inset-0 flex items-center justify-center"
+					in:fade={{ duration: 150 }}
+					out:fade={{ duration: 150 }}
+				>
+					<div
+						class="size-10 animate-spin rounded-full border-2 border-primary border-t-transparent"
+					></div>
+				</div>
+			{/if}
 			{#if mounted}
 				<!-- progress -->
 				<div
