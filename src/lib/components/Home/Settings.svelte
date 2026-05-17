@@ -1,42 +1,50 @@
 <script lang="ts">
-	import { keyboards, themes, currentKeyboard, currentTheme } from '$lib/helpers/config';
+	import { keyboards, themes, config, saveConfig } from '$lib/helpers/config.svelte';
+	import { playKeyboardSelectSound } from '$lib/helpers/sound';
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
-	import { cubicOut } from 'svelte/easing';
+	import { cubicOut, sineIn } from 'svelte/easing';
 
 	let { onclose }: { onclose: () => void } = $props();
 
-	let selectedKeyboard = $state(currentKeyboard);
-	let selectedTheme = $state(currentTheme);
-
 	function pickTheme(name: string) {
-		selectedTheme = name;
+		config.currentTheme = name;
+		saveConfig();
 		if (typeof document !== 'undefined') {
-			document.documentElement.dataset.theme = name === 'light' ? '' : name;
+			document.documentElement.dataset.theme = name;
 		}
+	}
+
+	function pickKeyboard(name: string) {
+		config.currentKeyboard = name;
+		saveConfig();
+		playKeyboardSelectSound(name);
 	}
 </script>
 
 <div class="flex w-full max-w-md flex-col gap-6">
 	<h2
 		class="text-center text-3xl tracking-wider uppercase"
-		transition:flyRotate|global={{ duration: 600, y: 60, rotate: 25, easing: cubicOut }}
+		in:flyRotate|global={{ duration: 600, y: 60, rotate: 25, easing: cubicOut }}
+		out:flyRotate|global={{ duration: 500, y: 50, rotate: 15, delay: 15, easing: sineIn }}
 	>
 		Settings
 	</h2>
 
+	<!-- theme selection -->
 	<div
 		class="border-fancy bg-fancy flex flex-col gap-3 px-6 py-4"
-		transition:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 50 }}
+		in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 70 }}
+		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 50, easing: sineIn }}
 	>
-		<p class="text-xs tracking-[0.25em] text-muted uppercase">Theme</p>
-		<div class="flex gap-2">
+		<p class="text-muted text-xs tracking-[0.25em] uppercase">Theme</p>
+		<div class={`grid ${themes.length > 2 ? 'grid-cols-4' : `grid-cols-${themes.length}`} gap-2`}>
 			{#each themes as t (t.themeName)}
 				<button
 					type="button"
 					onclick={() => pickTheme(t.themeName)}
-					class="border-fancy interactive flex-1 px-4 py-2 text-sm tracking-wider uppercase"
-					class:bg-primary={selectedTheme === t.themeName}
-					class:text-bg={selectedTheme === t.themeName}
+					class="hover-sfx border-fancy shadow-fancy interactive flex-1 px-4 py-2 text-sm tracking-wider uppercase"
+					class:bg-primary={config.currentTheme === t.themeName}
+					class:text-bg={config.currentTheme === t.themeName}
 				>
 					{t.displayName}
 				</button>
@@ -44,22 +52,43 @@
 		</div>
 	</div>
 
+	<!-- keyboard selection -->
 	<div
 		class="border-fancy bg-fancy flex flex-col gap-3 px-6 py-4"
-		transition:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 100 }}
+		in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 140 }}
+		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 100, easing: sineIn }}
 	>
-		<p class="text-xs tracking-[0.25em] text-muted uppercase">Keyboard Sound</p>
+		<!-- volume -->
+		<div class="flex items-baseline justify-between">
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Keyboard Volume</p>
+			<span class="glow-num text-sm tabular-nums">
+				{Math.round(config.keyboardVolume * 100)}%
+			</span>
+		</div>
+		<input
+			type="range"
+			min="0"
+			max="1"
+			step="0.05"
+			bind:value={config.keyboardVolume}
+			oninput={saveConfig}
+			class="slider-fancy w-full"
+			style:--val="{config.keyboardVolume * 100}%"
+		/>
+
+		<!-- type -->
+		<p class="text-muted text-xs tracking-[0.25em] uppercase">Keyboard Sound</p>
 		<div class="flex flex-col gap-2">
 			{#each keyboards as kb (kb.fileName)}
 				<button
 					type="button"
-					onclick={() => (selectedKeyboard = kb.fileName)}
-					class="border-fancy interactive flex items-center justify-between px-4 py-2 text-sm tracking-wider uppercase"
-					class:bg-primary={selectedKeyboard === kb.fileName}
-					class:text-bg={selectedKeyboard === kb.fileName}
+					onclick={() => pickKeyboard(kb.fileName)}
+					class="hover-sfx border-fancy shadow-fancy interactive flex items-center justify-between px-4 py-2 text-sm tracking-wider uppercase"
+					class:bg-primary={config.currentKeyboard === kb.fileName}
+					class:text-bg={config.currentKeyboard === kb.fileName}
 				>
 					<span>{kb.displayName}</span>
-					{#if selectedKeyboard === kb.fileName}
+					{#if config.currentKeyboard === kb.fileName}
 						<span class="text-xs opacity-70">selected</span>
 					{/if}
 				</button>
@@ -68,9 +97,10 @@
 	</div>
 
 	<button
-		class="border-fancy bg-fancy shadow-fancy interactive self-center text-sm tracking-wider"
+		class="hover-sfx border-fancy bg-fancy interactive self-center text-sm tracking-wider"
 		onclick={onclose}
-		transition:osuDeath|global={{ duration: 400, y: 60, rotate: 15, easing: cubicOut, delay: 150 }}
+		in:osuDeath|global={{ duration: 400, y: 60, rotate: 15, easing: cubicOut, delay: 150 }}
+		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 50, easing: sineIn }}
 	>
 		<p class="p-2">Back</p>
 	</button>

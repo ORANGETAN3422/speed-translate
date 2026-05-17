@@ -1,6 +1,8 @@
 import { browser } from '$app/environment';
 import { asset } from '$app/paths';
 
+import { config } from './config.svelte';
+
 const audioCtx = browser ? new AudioContext({ latencyHint: 'interactive' }) : null;
 const bufferCache = new Map<string, Promise<AudioBuffer>>();
 
@@ -12,9 +14,12 @@ if (browser && audioCtx) {
 	};
 	window.addEventListener('pointerdown', resume);
 	window.addEventListener('keydown', resume);
+
+	document.addEventListener('mouseover', (e) => addHoverButtonEvent(e));
 }
 
-export const getSfxURL = (file: string): string => asset(`/sfx/${file}.wav`);
+export const getSfxURL = (file: string, mp3: boolean = false): string =>
+	asset(`/sfx/${file}${mp3 ? '.mp3' : '.wav'}`);
 
 function loadAudio(url: string): Promise<AudioBuffer> {
 	let p = bufferCache.get(url);
@@ -27,17 +32,50 @@ function loadAudio(url: string): Promise<AudioBuffer> {
 	return p;
 }
 
-export async function playSound(url: string) {
+export async function playSound(
+	url: string,
+	opts?: { volume?: number; detune?: number; rate?: number }
+) {
 	if (!audioCtx) return;
 	try {
 		const buffer = await loadAudio(url);
 		const source = audioCtx.createBufferSource();
 		source.buffer = buffer;
-		source.connect(audioCtx.destination);
+
+		if (opts?.detune) source.detune.value = opts.detune; // cents
+		if (opts?.rate) source.playbackRate.value = opts.rate;
+
+		if (opts?.volume !== undefined && opts.volume !== 1) {
+			const gain = audioCtx.createGain();
+			gain.gain.value = opts.volume;
+			source.connect(gain);
+			gain.connect(audioCtx.destination);
+		} else {
+			source.connect(audioCtx.destination);
+		}
+
 		source.start();
 	} catch {
-		// igtnore this
+		// ignore
 	}
+}
+
+// Ui Sfx
+
+function addHoverButtonEvent(e: MouseEvent) {
+	const el = (e.target as HTMLElement | null)?.closest('.hover-sfx') as HTMLElement | null;
+	if (!el || (el as HTMLButtonElement).disabled) return;
+	const from = e.relatedTarget as HTMLElement | null;
+	if (from && el.contains(from)) return;
+	playSound(getSfxURL('hover'), {
+		volume: config.uiVolume,
+		detune: -350
+	});
+}
+
+export async function playKeyboardSelectSound(keyboard: string) {
+	await preloadKeyboard(keyboard);
+	playKeyboardKey(keyboard, 'Enter');
 }
 
 // Keyboard Sound Functions
@@ -50,6 +88,11 @@ type KeyboardConfig = {
 
 const configCache = new Map<string, KeyboardConfig>();
 const configPromises = new Map<string, Promise<KeyboardConfig>>();
+
+export function playKeyboardKey(keyboard: string, code: string) {
+	const url = getKeyboardSoundUrl(keyboard, code);
+	if (url) playSound(url, { volume: config.keyboardVolume });
+}
 
 export function preloadKeyboard(keyboard: string): Promise<KeyboardConfig> {
 	const cached = configCache.get(keyboard);

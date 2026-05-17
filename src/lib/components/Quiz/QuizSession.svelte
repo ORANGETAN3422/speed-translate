@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadSentence, type Sentence } from '$lib/helpers/sentence';
-	import { getKeyboardSoundUrl, playSound, preloadKeyboard } from '../../helpers/sound';
+	import { playKeyboardKey, preloadKeyboard } from '../../helpers/sound';
+	import { config } from '$lib/helpers/config.svelte';
 	import { flyRotate } from '$lib/helpers/transitions';
 	import { cubicIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
@@ -12,7 +13,6 @@
 	// add a settings creation thing later for this
 	// add reveal answer support
 	const REVEAL_ANSWER = false;
-	const KEYBOARD = 'nk-cream';
 	const INITIAL_TIMEOUT = 500; //ms
 
 	// session vars
@@ -35,8 +35,7 @@
 
 	function playKeySound(e: KeyboardEvent) {
 		if (!inputFocused) return;
-		const url = getKeyboardSoundUrl(KEYBOARD, e.code);
-		if (url) playSound(url);
+		playKeyboardKey(config.currentKeyboard, e.code);
 	}
 
 	$effect(() => {
@@ -75,7 +74,7 @@
 	}
 
 	onMount(async () => {
-		preloadKeyboard(KEYBOARD);
+		preloadKeyboard(config.currentKeyboard);
 		originalSentences = await loadSentence(level);
 		unansweredSentences = [...originalSentences];
 		await startSession();
@@ -144,12 +143,12 @@
 </script>
 
 <div
-	class="bg-textured fixed inset-0 isolate flex flex-col text-text"
+	class="bg-textured text-text fixed inset-0 isolate flex flex-col"
 	out:fade|global={{ duration: 300, easing: cubicIn }}
 >
 	<!-- <ShaderBackground /> dead -->
 	<header class="p-4">
-		<button class="interactive text-sm tracking-wider text-muted uppercase" onclick={onclose}
+		<button class="interactive text-muted text-sm tracking-wider uppercase" onclick={onclose}
 			>← Back</button
 		>
 	</header>
@@ -169,17 +168,18 @@
 				onclosed={handleSummaryClosed}
 			/>
 
+			<!-- end buttons -->
 			{#if !leaving}
 				<div class="flex flex-row gap-4">
 					<button
-						class="border-fancy bg-fancy interactive px-4 py-2"
+						class="hover-sfx border-fancy bg-fancy interactive px-4 py-2"
 						transition:fade|global={{ duration: 750, easing: cubicIn }}
 						onclick={() => (leaving = true)}
 					>
 						Return to menu
 					</button>
 					<button
-						class="border-fancy bg-fancy interactive px-4 py-2"
+						class="hover-sfx border-fancy bg-fancy interactive px-4 py-2"
 						transition:fade|global={{ duration: 750, easing: cubicIn }}
 						onclick={requestRetry}
 					>
@@ -187,6 +187,7 @@
 					</button>
 				</div>
 			{/if}
+			<!--  -->
 		</main>
 	{:else}
 		<main class="relative flex flex-1 flex-col items-center justify-center gap-8 px-4">
@@ -197,7 +198,7 @@
 					out:fade={{ duration: 150 }}
 				>
 					<div
-						class="size-10 animate-spin rounded-full border-2 border-primary border-t-transparent"
+						class="border-primary size-10 animate-spin rounded-full border-2 border-t-transparent"
 					></div>
 				</div>
 			{/if}
@@ -207,9 +208,9 @@
 					class="flex w-full max-w-md items-center gap-4"
 					in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 0 }}
 				>
-					<div class="h-2 flex-1 bg-surface">
+					<div class="bg-surface h-2 flex-1">
 						<div
-							class="h-full bg-primary transition-all"
+							class="bg-primary h-full transition-all"
 							style="width: {(progress / goal) * 100}%"
 						></div>
 					</div>
@@ -220,7 +221,7 @@
 				<div class="text-center" in:flyRotate={{ duration: 500, y: 100, rotate: 25, delay: 20 }}>
 					<p class="jp text-3xl leading-relaxed">{currentSentence?.question}</p>
 					{#if revealed}
-						<p class="mt-2 text-muted">{currentSentence?.answer}</p>
+						<p class="text-muted mt-2">{currentSentence?.answer}</p>
 					{/if}
 				</div>
 
@@ -248,7 +249,7 @@
 							type="text"
 							bind:value={answer}
 							placeholder="..."
-							class="glow w-72 border-b-2 border-primary bg-transparent px-3 py-2 text-center outline-none"
+							class="glow border-primary w-72 border-b-2 bg-transparent px-3 py-2 text-center outline-none"
 							onfocus={() => {
 								inputFocused = true;
 							}}

@@ -32,7 +32,7 @@
 		}
 	}}
 	style:--bc={color}
-	class="border-fancy bg-fancy shadow-fancy flex w-full cursor-pointer items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110 active:brightness-90"
+	class="hover-sfx border-fancy bg-fancy flex w-full cursor-pointer items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110 active:brightness-90"
 >
 	<div class="flex flex-1 items-center gap-6">
 		<span class="glow-num text-4xl">N{level}</span>
@@ -40,8 +40,8 @@
 
 	<div class="relative isolate -my-3 -mr-5 flex shrink-0 items-center self-stretch py-3 pr-5 pl-10">
 		<div
-			class="pointer-events-none absolute inset-0 -z-10"
-			style="background: color-mix(in oklch, var(--bc, var(--primary)), black 52%); clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);"
+			class="bg-fancy-deep pointer-events-none absolute inset-0 -z-10"
+			style="clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);"
 		></div>
 
 		<p class="pr-3">Words:</p>
@@ -53,7 +53,7 @@
 					adjust(-1);
 				}}
 				disabled={wordCount <= MIN}
-				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="hover-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				−
 			</button>
@@ -65,7 +65,7 @@
 					adjust(1);
 				}}
 				disabled={wordCount >= MAX}
-				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="hover-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				+
 			</button>

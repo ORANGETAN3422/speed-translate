@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { config } from '$lib/helpers/config.svelte';
 
 	import './layout.css';
+	import './themes.css';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
 
 	onMount(() => {
-		document.documentElement.dataset.theme = 'dark';
+		document.documentElement.dataset.theme = config.currentTheme;
 	});
 </script>
 

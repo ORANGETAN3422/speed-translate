@@ -3,39 +3,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@theme {
-	--color-bg: var(--bg);
-	--color-surface: var(--surface);
-	--color-text: var(--text);
-	--color-primary: var(--primary);
-	--color-accent: var(--accent);
-	--color-muted: var(--muted);
-	--color-success: var(--success);
-	--color-error: var(--error);
-}
-
-:root {
-	--bg: oklch(1 0 0);
-	--surface: oklch(0.97 0 0);
-	--text: oklch(0.2 0 0);
-	--primary: oklch(0.6 0.2 250);
-	--accent: oklch(0.78 0.16 75);
-	--muted: oklch(0.5 0 0);
-	--success: oklch(0.65 0.18 145);
-	--error: oklch(0.6 0.22 25);
-}
-
-[data-theme='dark'] {
-	--bg: oklch(0.17 0.01 290);
-	--surface: oklch(0.23 0.015 290);
-	--text: oklch(0.92 0.01 80);
-	--muted: oklch(0.55 0.02 290);
-	--primary: oklch(0.7 0.13 295);
-	--accent: oklch(0.74 0.13 30);
-	--success: oklch(0.7 0.1 150);
-	--error: oklch(0.65 0.14 15);
-}
-
 body {
 	background-color: var(--bg);
 	color: var(--text);
@@ -50,7 +17,7 @@ body {
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 	font-variant-numeric: tabular-nums;
-	text-shadow: 0 0 8px var(--primary);
+	text-shadow: 0 0 8px var(--glow-color, var(--primary));
 }
 
 .glow {
@@ -62,15 +29,117 @@ body {
 }
 
 .border-fancy {
-	border-bottom: solid color-mix(in oklch, var(--bc, var(--primary)), black 73%);
-	border-right: solid color-mix(in oklch, var(--bc, var(--primary)), black 73%);
+	border-bottom: solid
+		color-mix(
+			in oklch,
+			var(--bc, var(--primary)),
+			var(--fancy-shadow, black) var(--fancy-shadow-amount, 73%)
+		);
+	border-right: solid
+		color-mix(
+			in oklch,
+			var(--bc, var(--primary)),
+			var(--fancy-shadow, black) var(--fancy-shadow-amount, 73%)
+		);
 
-	border-top: solid color-mix(in oklch, var(--bc, var(--primary)), black 17%);
-	border-left: solid color-mix(in oklch, var(--bc, var(--primary)), black 17%);
+	border-top: solid
+		color-mix(
+			in oklch,
+			var(--bc, var(--primary)),
+			var(--fancy-highlight, black) var(--fancy-highlight-amount, 17%)
+		);
+	border-left: solid
+		color-mix(
+			in oklch,
+			var(--bc, var(--primary)),
+			var(--fancy-highlight, black) var(--fancy-highlight-amount, 17%)
+		);
 }
 
 .bg-fancy {
-	background-color: color-mix(in oklch, var(--bc, var(--primary)), black 64%);
+	background-color: color-mix(
+		in oklch,
+		var(--bc, var(--primary)),
+		var(--fancy-tint, black) var(--fancy-tint-amount, 64%)
+	);
+}
+
+.bg-fancy-deep {
+	background-color: color-mix(
+		in oklch,
+		var(--bc, var(--primary)),
+		var(--fancy-deep-tint, black) var(--fancy-deep-amount, 52%)
+	);
+}
+
+.slider-fancy {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+	height: 1.5rem;
+	--val: 50%;
+}
+
+.slider-fancy:focus {
+	outline: none;
+}
+
+.slider-fancy::-webkit-slider-runnable-track {
+	height: 8px;
+	background: linear-gradient(to right, var(--primary) var(--val), var(--surface) var(--val));
+	border-top: 1px solid color-mix(in oklch, var(--primary), black 30%);
+	border-left: 1px solid color-mix(in oklch, var(--primary), black 30%);
+	border-bottom: 1px solid color-mix(in oklch, var(--primary), black 75%);
+	border-right: 1px solid color-mix(in oklch, var(--primary), black 75%);
+}
+.slider-fancy::-moz-range-track {
+	height: 8px;
+	background: linear-gradient(to right, var(--primary) var(--val), var(--surface) var(--val));
+	border-top: 1px solid color-mix(in oklch, var(--primary), black 30%);
+	border-left: 1px solid color-mix(in oklch, var(--primary), black 30%);
+	border-bottom: 1px solid color-mix(in oklch, var(--primary), black 75%);
+	border-right: 1px solid color-mix(in oklch, var(--primary), black 75%);
+}
+
+.slider-fancy::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 14px;
+	height: 22px;
+	margin-top: -8px;
+	background: var(--primary);
+	border-top: 2px solid color-mix(in oklch, var(--primary), white 25%);
+	border-left: 2px solid color-mix(in oklch, var(--primary), white 25%);
+	border-bottom: 2px solid color-mix(in oklch, var(--primary), black 55%);
+	border-right: 2px solid color-mix(in oklch, var(--primary), black 55%);
+	cursor: pointer;
+	transition: filter 120ms ease;
+}
+.slider-fancy::-moz-range-thumb {
+	width: 14px;
+	height: 22px;
+	background: var(--primary);
+	border-top: 2px solid color-mix(in oklch, var(--primary), white 25%);
+	border-left: 2px solid color-mix(in oklch, var(--primary), white 25%);
+	border-bottom: 2px solid color-mix(in oklch, var(--primary), black 55%);
+	border-right: 2px solid color-mix(in oklch, var(--primary), black 55%);
+	border-radius: 0;
+	cursor: pointer;
+	transition: filter 120ms ease;
+}
+
+.slider-fancy:hover::-webkit-slider-thumb {
+	filter: brightness(1.15);
+}
+.slider-fancy:hover::-moz-range-thumb {
+	filter: brightness(1.15);
+}
+.slider-fancy:active::-webkit-slider-thumb {
+	filter: brightness(0.9);
+}
+.slider-fancy:active::-moz-range-thumb {
+	filter: brightness(0.9);
 }
 
 .shadow-fancy {
@@ -90,8 +159,12 @@ body {
 			color-mix(in oklch, var(--primary), transparent 98%),
 			transparent 70%
 		),
-		radial-gradient(circle, color-mix(in oklch, var(--bg), white 3%) 1.5px, transparent 1px) 0 0 /
-			28px 28px,
+		radial-gradient(
+				circle,
+				color-mix(in oklch, var(--bg), var(--dot-mix, white) var(--dot-mix-amount, 3%)) 1.5px,
+				transparent 1px
+			)
+			0 0 / 28px 28px,
 		var(--bg);
 }
 

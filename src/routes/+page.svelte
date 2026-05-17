@@ -8,6 +8,7 @@
 	import Settings from '$lib/components/Home/Settings.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
+	import { saveConfig } from '$lib/helpers/config.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { cubicOut, sineIn } from 'svelte/easing';
@@ -37,7 +38,6 @@
 	function closeSession() {
 		closing = true;
 		active = false; // triggers QuizSession's out:fade (300ms)
-		// Hold the menu off until the outro finishes
 		setTimeout(() => (closing = false), 300);
 	}
 
@@ -101,7 +101,7 @@
 				{/each}
 			</div>
 			<button
-				class="border-fancy bg-fancy shadow-fancy interactive text-sm tracking-wider"
+				class="hover-sfx border-fancy bg-fancy interactive text-sm tracking-wider"
 				onclick={() => (showingCreation = false)}
 				transition:osuDeath|global={{
 					duration: 400,
@@ -117,7 +117,12 @@
 
 	{#if mounted && !active && !closing && showingSettings}
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
-			<Settings onclose={() => (showingSettings = false)} />
+			<Settings
+				onclose={() => {
+					showingSettings = false;
+					saveConfig();
+				}}
+			/>
 		</div>
 	{/if}
 </div>
