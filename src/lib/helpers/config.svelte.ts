@@ -16,16 +16,18 @@ export const keyboards: KeyboardInfo[] = [
 ];
 
 export const themes: ThemeInfo[] = [
-	{ themeName: 'default-dark', displayName: 'Default Dark' },
+	{ themeName: 'dark-default', displayName: 'Dark Default' },
 	{ themeName: 'dark-green', displayName: 'Dark Green' },
-	{ themeName: 'default-light', displayName: 'Default Light' }
+	{ themeName: 'dark-grey', displayName: 'Dark Grey' },
+	{ themeName: 'default-light', displayName: 'Light Default' },
+	{ themeName: 'light-grey', displayName: 'Light Grey' }
 ];
 
 export const config = $state({
 	currentKeyboard: 'nk-cream',
 	keyboardVolume: 1,
-	currentTheme: 'default-dark',
-	uiVolume: 1
+	currentTheme: 'dark-default',
+	uiVolume: 0.25
 });
 
 if (browser) {
