@@ -6,9 +6,12 @@
 	import StartButton from '$lib/components/Home/MainRowButtons/StartButton.svelte';
 
 	import SettingsButton from '$lib/components/Home/BottomRowButtons/SettingsButton.svelte';
+	import AboutButton from '$lib/components/Home/BottomRowButtons/AboutButton.svelte';
 	import GitButton from '$lib/components/Home/BottomRowButtons/GitButton.svelte';
+	import OrangeButton from '$lib/components/Home/BottomRowButtons/OrangeButton.svelte';
 
-	import Settings from '$lib/components/Home/Settings.svelte';
+	import Settings from '$lib/components/Home/SettingsMenu.svelte';
+	import AboutMenu from '$lib/components/Home/AboutMenu.svelte';
 	import JlptCard from '$lib/components/Home/JlptCard.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
@@ -22,8 +25,10 @@
 	let currentLevel = $state(0);
 	let currentGoal = $state(10);
 	let mounted = $state(false);
+
 	let showingCreation = $state(false);
 	let showingSettings = $state(false);
+	let showingAbout = $state(false);
 
 	const things = [5, 4, 3, 2, 1];
 
@@ -57,7 +62,7 @@
 </div> -->
 
 <div class="fixed inset-0">
-	{#if mounted && !active && !closing && !showingCreation && !showingSettings}
+	{#if mounted && !active && !closing && !showingCreation && !showingSettings && !showingAbout}
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
 			<h1
 				class="pb-4 text-center text-6xl tracking-wider uppercase"
@@ -77,6 +82,8 @@
 				</div>
 				<!-- bottom -->
 				<div class="absolute top-full left-1/2 mt-18 flex flex-row gap-12 -translate-x-1/2">
+					<OrangeButton />
+					<AboutButton onclick={() => (showingAbout = true)} />
 					<SettingsButton onclick={() => (showingSettings = true)} />
 					<GitButton />
 				</div>
@@ -130,6 +137,16 @@
 						showingSettings = false;
 						saveConfig();
 					}}
+				/>
+			</div>
+		</div>
+	{/if}
+
+	{#if mounted && !active && !closing && showingAbout}
+		<div class="absolute inset-0 overflow-y-auto">
+			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
+				<AboutMenu
+					onclose={() => {showingAbout = false;}}
 				/>
 			</div>
 		</div>
