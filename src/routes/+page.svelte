@@ -2,7 +2,9 @@
 	import QuizSession from '$lib/components/Quiz/QuizSession.svelte';
 	import JlptCard from '$lib/components/Home/JlptCard.svelte';
 	import StatCard from '$lib/components/Home/StatCard.svelte';
+	import ImportButton from '$lib/components/Home/ImportButton.svelte';
 	import StartButton from '$lib/components/Home/StartButton.svelte';
+	import SettingsButton from '$lib/components/Home/SettingsButton.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { onMount } from 'svelte';
@@ -56,13 +58,19 @@
 				in:osuDeath|global={{ duration: 700, y: 100, delay: 50, easing: cubicOut }}
 				out:fly|global={{ duration: 350, y: -50, easing: sineIn }}
 			>
-				Speed Translate
+				Temporary Name
 			</h1>
 			<div class="relative">
 				<div class="absolute top-1/2 right-full mr-14 -translate-y-1/2">
 					<StatCard />
 				</div>
 				<StartButton onclick={startCreation} />
+				<div class="absolute top-1/2 left-full ml-14 -translate-y-1/2">
+					<ImportButton />
+				</div>
+				<div class="absolute top-full left-1/2 mt-18 -translate-x-1/2">
+					<SettingsButton />
+				</div>
 			</div>
 		</div>
 	{/if}

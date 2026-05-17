@@ -54,7 +54,11 @@ body {
 }
 
 .glow {
-	filter: drop-shadow(0 0 4px color-mix(in oklch, var(--primary), transparent 70%));
+	filter: drop-shadow(0 0 4px color-mix(in oklch, var(--primary), transparent 80%));
+}
+
+.icon {
+	filter: invert(100%) drop-shadow(0 0 8px color-mix(in oklch, var(--primary), transparent 60%));
 }
 
 .border-fancy {

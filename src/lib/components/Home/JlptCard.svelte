@@ -22,20 +22,25 @@
 </script>
 
 <div
+	role="button"
+	tabindex="0"
+	onclick={() => onclick(wordCount)}
+	onkeydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			onclick(wordCount);
+		}
+	}}
 	style:--bc={color}
-	class="border-fancy bg-fancy shadow-fancy flex w-full items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110"
+	class="border-fancy bg-fancy shadow-fancy flex w-full cursor-pointer items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110 active:brightness-90"
 >
-	<button
-		type="button"
-		onclick={() => onclick(wordCount)}
-		class="flex flex-1 cursor-pointer items-center gap-6 text-left active:brightness-90"
-	>
+	<div class="flex flex-1 items-center gap-6">
 		<span class="glow-num text-4xl">N{level}</span>
-	</button>
+	</div>
 
 	<div class="relative isolate -my-3 -mr-5 flex shrink-0 items-center self-stretch py-3 pr-5 pl-10">
 		<div
-			class="absolute inset-0 -z-10"
+			class="pointer-events-none absolute inset-0 -z-10"
 			style="background: color-mix(in oklch, var(--bc, var(--primary)), black 52%); clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%);"
 		></div>
 
@@ -43,7 +48,10 @@
 		<div class="flex items-center gap-3">
 			<button
 				type="button"
-				onclick={() => adjust(-1)}
+				onclick={(e) => {
+					e.stopPropagation();
+					adjust(-1);
+				}}
 				disabled={wordCount <= MIN}
 				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
@@ -52,7 +60,10 @@
 			<span class="glow-num w-8 text-center text-2xl tabular-nums">{wordCount}</span>
 			<button
 				type="button"
-				onclick={() => adjust(1)}
+				onclick={(e) => {
+					e.stopPropagation();
+					adjust(1);
+				}}
 				disabled={wordCount >= MAX}
 				class="border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>

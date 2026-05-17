@@ -23,6 +23,7 @@ export function compareRecord(record: record): boolean {
 export function setRecord(record: record, isLastRecord: boolean): void {
 	const key = isLastRecord ? 'last_record' : `record_${record.set}_${record.words}`;
 	window.localStorage.setItem(key, JSON.stringify(record));
+	console.log(record);
 }
 
 /**
@@ -34,5 +35,6 @@ export function setRecord(record: record, isLastRecord: boolean): void {
 export function getRecord(set: string, words?: number): record | null {
 	const key = words !== undefined ? `record_${set}_${words}` : 'last_record';
 	const record = window.localStorage.getItem(key);
+	console.log(record);
 	return record ? (JSON.parse(record) as record) : null;
 }

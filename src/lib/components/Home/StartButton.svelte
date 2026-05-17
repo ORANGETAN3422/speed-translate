@@ -2,15 +2,15 @@
 	import { osuDeath } from '$lib/helpers/transitions';
 	import { sineIn, cubicOut } from 'svelte/easing';
 
-    let { onclick }: { onclick: () => void;} =$props();
+	let { onclick }: { onclick: () => void } = $props();
 </script>
 
 <button
-	class="bg-fancy border-fancy flex h-55 w-55 items-center justify-center bg-primary transition-all duration-300 hover:brightness-125 hover:scale-105 hover:translate-y-[-2px]"
+	class="bg-fancy border-fancy flex h-55 w-55 items-center justify-center bg-primary transition-all duration-600 ease-in-out hover:-translate-y-2 hover:scale-105 hover:brightness-125"
 	style:--bc="color-mix(in oklch, var(--primary), black 20%)"
 	in:osuDeath|global={{ duration: 800, y: 100, easing: cubicOut }}
 	out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, easing: sineIn }}
-    onclick={onclick}
+	{onclick}
 >
 	<div
 		class="bg-fancy flex h-50 w-50 items-center justify-center bg-primary"

@@ -10,17 +10,12 @@
 
 	function findLastRecord(): record | null {
 		if (!browser) return null;
-		for (let i = 0; i < window.localStorage.length; i++) {
-			const key = window.localStorage.key(i);
-			if (key?.startsWith('last_record_')) {
-				const item = window.localStorage.getItem(key);
-				if (item) {
-					try {
-						return JSON.parse(item) as record;
-					} catch {
-						/* ignore */
-					}
-				}
+		const item = window.localStorage.getItem('last_record');
+		if (item) {
+			try {
+				return JSON.parse(item) as record;
+			} catch {
+				/* ignore */
 			}
 		}
 		return null;
@@ -38,7 +33,7 @@
 </script>
 
 <div
-	class="border-fancy bg-fancy flex min-w-64 flex-col gap-4 px-6 py-4 transition-all duration-300 hover:brightness-110"
+	class="border-fancy bg-fancy flex min-w-64 flex-col gap-4 px-6 py-4 transition-all duration-500 ease-in-out hover:-translate-y-1 hover:brightness-110"
 	in:osuDeath|global={{ duration: 800, y: 100, easing: cubicOut, delay: 150 }}
 	out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, easing: cubicIn }}
 >
