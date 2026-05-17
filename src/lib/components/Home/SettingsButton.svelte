@@ -3,6 +3,8 @@
 	import { cubicOut, cubicIn } from 'svelte/easing';
 
 	import settingsPng from '$lib/assets/settings.png';
+
+	let { onclick }: { onclick?: () => void } = $props();
 </script>
 
 <div
@@ -12,6 +14,7 @@
 >
 	<button
 		type="button"
+		{onclick}
 		class="border-fancy bg-fancy flex h-20 w-20 rotate-45 items-center justify-center px-4 py-2 text-xs tracking-[0.25em] uppercase transition-all duration-500 ease-in-out hover:-translate-y-1 hover:brightness-110"
 	>
 		<div

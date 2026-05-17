@@ -5,6 +5,7 @@
 	import ImportButton from '$lib/components/Home/ImportButton.svelte';
 	import StartButton from '$lib/components/Home/StartButton.svelte';
 	import SettingsButton from '$lib/components/Home/SettingsButton.svelte';
+	import Settings from '$lib/components/Home/Settings.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { onMount } from 'svelte';
@@ -17,6 +18,7 @@
 	let currentGoal = $state(10);
 	let mounted = $state(false);
 	let showingCreation = $state(false);
+	let showingSettings = $state(false);
 
 	const things = [5, 4, 3, 2, 1];
 
@@ -51,7 +53,7 @@
 </div> -->
 
 <div class="fixed inset-0">
-	{#if mounted && !active && !closing && !showingCreation}
+	{#if mounted && !active && !closing && !showingCreation && !showingSettings}
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
 			<h1
 				class="pb-4 text-center text-6xl tracking-wider uppercase"
@@ -69,7 +71,7 @@
 					<ImportButton />
 				</div>
 				<div class="absolute top-full left-1/2 mt-18 -translate-x-1/2">
-					<SettingsButton />
+					<SettingsButton onclick={() => (showingSettings = true)} />
 				</div>
 			</div>
 		</div>
@@ -110,6 +112,12 @@
 			>
 				<p class="p-2 text-white">Back</p>
 			</button>
+		</div>
+	{/if}
+
+	{#if mounted && !active && !closing && showingSettings}
+		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
+			<Settings onclose={() => (showingSettings = false)} />
 		</div>
 	{/if}
 </div>
