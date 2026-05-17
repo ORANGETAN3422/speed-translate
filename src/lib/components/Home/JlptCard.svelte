@@ -32,7 +32,7 @@
 		}
 	}}
 	style:--bc={color}
-	class="hover-sfx border-fancy bg-fancy flex w-full cursor-pointer items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110 active:brightness-90"
+	class="hover-sfx click-sfx border-fancy bg-fancy flex w-full cursor-pointer items-center px-5 py-3 transition-all duration-300 hover:translate-x-3 hover:brightness-110 active:brightness-90"
 >
 	<div class="flex flex-1 items-center gap-6">
 		<span class="glow-num text-4xl">N{level}</span>
@@ -53,7 +53,7 @@
 					adjust(-1);
 				}}
 				disabled={wordCount <= MIN}
-				class="hover-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				−
 			</button>
@@ -65,7 +65,7 @@
 					adjust(1);
 				}}
 				disabled={wordCount >= MAX}
-				class="hover-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
+				class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
 			>
 				+
 			</button>

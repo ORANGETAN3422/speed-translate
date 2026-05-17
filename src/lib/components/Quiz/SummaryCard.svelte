@@ -50,7 +50,7 @@
 		type="button"
 		onclick={() => handleMark(true)}
 		disabled={mark !== null}
-		class="hover-sfx border-fancy shadow-fancy interactive flex h-10 w-10 items-center justify-center text-lg disabled:opacity-50"
+		class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-10 w-10 items-center justify-center text-lg disabled:opacity-50"
 		class:bg-success={mark === true}
 		class:text-bg={mark === true}
 		style:--bc={mark === true ? 'var(--success)' : undefined}
@@ -61,7 +61,7 @@
 		type="button"
 		onclick={() => handleMark(false)}
 		disabled={mark !== null}
-		class="hover-sfx border-fancy shadow-fancy interactive flex h-10 w-10 items-center justify-center text-lg disabled:opacity-50"
+		class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-10 w-10 items-center justify-center text-lg disabled:opacity-50"
 		class:bg-error={mark === false}
 		class:text-bg={mark === false}
 		style:--bc={mark === false ? 'var(--error)' : undefined}

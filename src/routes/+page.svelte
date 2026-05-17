@@ -1,11 +1,15 @@
 <script lang="ts">
 	import QuizSession from '$lib/components/Quiz/QuizSession.svelte';
-	import JlptCard from '$lib/components/Home/JlptCard.svelte';
-	import StatCard from '$lib/components/Home/StatCard.svelte';
-	import ImportButton from '$lib/components/Home/ImportButton.svelte';
-	import StartButton from '$lib/components/Home/StartButton.svelte';
-	import SettingsButton from '$lib/components/Home/SettingsButton.svelte';
+
+	import StatCard from '$lib/components/Home/MainRowButtons/StatCard.svelte';
+	import ImportButton from '$lib/components/Home/MainRowButtons/ImportButton.svelte';
+	import StartButton from '$lib/components/Home/MainRowButtons/StartButton.svelte';
+
+	import SettingsButton from '$lib/components/Home/BottomRowButtons/SettingsButton.svelte';
+	import GitButton from '$lib/components/Home/BottomRowButtons/GitButton.svelte';
+
 	import Settings from '$lib/components/Home/Settings.svelte';
+	import JlptCard from '$lib/components/Home/JlptCard.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { saveConfig } from '$lib/helpers/config.svelte';
@@ -63,6 +67,7 @@
 				Temporary Name
 			</h1>
 			<div class="relative">
+				<!-- middle -->
 				<div class="absolute top-1/2 right-full mr-14 -translate-y-1/2">
 					<StatCard />
 				</div>
@@ -70,8 +75,10 @@
 				<div class="absolute top-1/2 left-full ml-14 -translate-y-1/2">
 					<ImportButton />
 				</div>
-				<div class="absolute top-full left-1/2 mt-18 -translate-x-1/2">
+				<!-- bottom -->
+				<div class="absolute top-full left-1/2 mt-18 flex flex-row gap-12 -translate-x-1/2">
 					<SettingsButton onclick={() => (showingSettings = true)} />
+					<GitButton />
 				</div>
 			</div>
 		</div>
@@ -101,7 +108,7 @@
 				{/each}
 			</div>
 			<button
-				class="hover-sfx border-fancy bg-fancy interactive text-sm tracking-wider"
+				class="hover-sfx click-sfx border-fancy bg-fancy interactive text-sm tracking-wider"
 				onclick={() => (showingCreation = false)}
 				transition:osuDeath|global={{
 					duration: 400,
@@ -116,13 +123,15 @@
 	{/if}
 
 	{#if mounted && !active && !closing && showingSettings}
-		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
-			<Settings
-				onclose={() => {
-					showingSettings = false;
-					saveConfig();
-				}}
-			/>
+		<div class="absolute inset-0 overflow-y-auto">
+			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
+				<Settings
+					onclose={() => {
+						showingSettings = false;
+						saveConfig();
+					}}
+				/>
+			</div>
 		</div>
 	{/if}
 </div>

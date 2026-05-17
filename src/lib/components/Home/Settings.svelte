@@ -37,12 +37,14 @@
 		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 50, easing: sineIn }}
 	>
 		<p class="text-muted text-xs tracking-[0.25em] uppercase">Theme</p>
-		<div class={`grid ${themes.length > 2 ? 'grid-cols-4' : `grid-cols-${themes.length}`} gap-2`}>
+		<div
+			class={`@container grid ${themes.length > 2 ? 'grid-cols-4' : `grid-cols-${themes.length}`} gap-2`}
+		>
 			{#each themes as t (t.themeName)}
 				<button
 					type="button"
 					onclick={() => pickTheme(t.themeName)}
-					class="hover-sfx border-fancy shadow-fancy interactive flex-1 px-4 py-2 text-sm tracking-wider uppercase"
+					class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex-1 px-2 py-2 text-center text-[clamp(0.65rem,3.2cqw,1rem)] leading-tight tracking-wider"
 					class:bg-primary={config.currentTheme === t.themeName}
 					class:text-bg={config.currentTheme === t.themeName}
 				>
@@ -50,6 +52,30 @@
 				</button>
 			{/each}
 		</div>
+	</div>
+
+	<!-- sound config -->
+	<div
+		class="border-fancy bg-fancy flex flex-col gap-3 px-6 py-4"
+		in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 140 }}
+		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 100, easing: sineIn }}
+	>
+		<div class="flex items-baseline justify-between">
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Menu Sfx Volume</p>
+			<span class="glow-num text-sm tabular-nums">
+				{Math.round(config.uiVolume * 100)}%
+			</span>
+		</div>
+		<input
+			type="range"
+			min="0"
+			max="1"
+			step="0.05"
+			bind:value={config.uiVolume}
+			oninput={saveConfig}
+			class="slider-fancy click-sfx hover-sfx w-full"
+			style:--val="{config.uiVolume * 100}%"
+		/>
 	</div>
 
 	<!-- keyboard selection -->
@@ -72,7 +98,7 @@
 			step="0.05"
 			bind:value={config.keyboardVolume}
 			oninput={saveConfig}
-			class="slider-fancy w-full"
+			class="slider-fancy click-sfx hover-sfx w-full"
 			style:--val="{config.keyboardVolume * 100}%"
 		/>
 
@@ -83,7 +109,7 @@
 				<button
 					type="button"
 					onclick={() => pickKeyboard(kb.fileName)}
-					class="hover-sfx border-fancy shadow-fancy interactive flex items-center justify-between px-4 py-2 text-sm tracking-wider uppercase"
+					class="hover-sfx border-fancy shadow-fancy interactive flex items-center justify-between px-4 py-2 text-sm tracking-wider"
 					class:bg-primary={config.currentKeyboard === kb.fileName}
 					class:text-bg={config.currentKeyboard === kb.fileName}
 				>
@@ -97,7 +123,7 @@
 	</div>
 
 	<button
-		class="hover-sfx border-fancy bg-fancy interactive self-center text-sm tracking-wider"
+		class="hover-sfx click-sfx border-fancy bg-fancy interactive self-center text-sm tracking-wider"
 		onclick={onclose}
 		in:osuDeath|global={{ duration: 400, y: 60, rotate: 15, easing: cubicOut, delay: 150 }}
 		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 50, easing: sineIn }}

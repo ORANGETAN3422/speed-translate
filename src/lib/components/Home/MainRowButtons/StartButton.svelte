@@ -6,7 +6,7 @@
 </script>
 
 <button
-	class="bg-fancy border-fancy bg-primary flex h-55 w-55 items-center justify-center transition-all duration-600 ease-in-out hover:-translate-y-2 hover:scale-105 hover:brightness-125"
+	class="bg-fancy click-sfx hover-sfx border-fancy bg-primary flex h-55 w-55 items-center justify-center transition-all duration-600 ease-in-out hover:-translate-y-2 hover:scale-105 hover:brightness-125"
 	style:--bc="color-mix(in oklch, var(--primary), black 20%)"
 	in:osuDeath|global={{ duration: 800, y: 100, easing: cubicOut }}
 	out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, easing: sineIn }}

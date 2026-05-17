@@ -143,3 +143,81 @@
 	--fancy-deep-tint: black;
 	--fancy-deep-amount: 52%;
 }
+
+[data-theme='purple'] {
+	--bg: oklch(0.15 0.05 300);
+	--surface: oklch(0.22 0.06 300);
+	--text: oklch(0.94 0.02 300);
+	--muted: oklch(0.55 0.06 300);
+	--primary: oklch(0.62 0.22 300);
+	--accent: oklch(0.78 0.13 325);
+	--success: oklch(0.7 0.1 150);
+	--error: oklch(0.65 0.18 15);
+
+	--fancy-tint: black;
+	--fancy-tint-amount: 64%;
+	--fancy-highlight: black;
+	--fancy-highlight-amount: 17%;
+	--fancy-shadow: black;
+	--fancy-shadow-amount: 73%;
+
+	--glow-color: var(--primary);
+
+	--dot-mix: white;
+	--dot-mix-amount: 3%;
+
+	--fancy-deep-tint: black;
+	--fancy-deep-amount: 52%;
+}
+
+[data-theme='black-blue'] {
+	--bg: oklch(0.06 0.005 240);
+	--surface: oklch(0.14 0.01 240);
+	--text: oklch(0.97 0.005 240);
+	--muted: oklch(0.55 0.025 240);
+	--primary: oklch(0.82 0.14 220);
+	--accent: oklch(0.97 0.02 220);
+	--success: oklch(0.78 0.15 165);
+	--error: oklch(0.68 0.2 25);
+
+	--fancy-tint: black;
+	--fancy-tint-amount: 75%;
+	--fancy-highlight: white;
+	--fancy-highlight-amount: 30%;
+	--fancy-shadow: black;
+	--fancy-shadow-amount: 82%;
+
+	--glow-color: var(--primary);
+
+	--dot-mix: white;
+	--dot-mix-amount: 12%;
+
+	--fancy-deep-tint: black;
+	--fancy-deep-amount: 65%;
+}
+
+[data-theme='orange-red'] {
+	--bg: oklch(0.13 0.07 35);
+	--surface: oklch(0.19 0.08 35);
+	--text: oklch(0.94 0.03 65);
+	--muted: oklch(0.5 0.08 35);
+	--primary: oklch(0.7 0.22 40);
+	--accent: oklch(0.82 0.18 70);
+	--success: oklch(0.7 0.1 150);
+	--error: oklch(0.55 0.2 15);
+
+	--fancy-tint: black;
+	--fancy-tint-amount: 64%;
+	--fancy-highlight: black;
+	--fancy-highlight-amount: 17%;
+	--fancy-shadow: black;
+	--fancy-shadow-amount: 73%;
+
+	--glow-color: var(--primary);
+
+	--dot-mix: white;
+	--dot-mix-amount: 3%;
+
+	--fancy-deep-tint: black;
+	--fancy-deep-amount: 52%;
+}

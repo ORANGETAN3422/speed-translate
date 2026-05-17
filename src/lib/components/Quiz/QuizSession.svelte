@@ -35,6 +35,7 @@
 
 	function playKeySound(e: KeyboardEvent) {
 		if (!inputFocused) return;
+		if (finished) return;
 		playKeyboardKey(config.currentKeyboard, e.code);
 	}
 
@@ -148,8 +149,9 @@
 >
 	<!-- <ShaderBackground /> dead -->
 	<header class="p-4">
-		<button class="interactive text-muted text-sm tracking-wider uppercase" onclick={onclose}
-			>← Back</button
+		<button
+			class="click-sfx hover-sfx interactive text-muted text-sm tracking-wider uppercase"
+			onclick={onclose}>← Back</button
 		>
 	</header>
 
@@ -172,18 +174,18 @@
 			{#if !leaving}
 				<div class="flex flex-row gap-4">
 					<button
-						class="hover-sfx border-fancy bg-fancy interactive px-4 py-2"
-						transition:fade|global={{ duration: 750, easing: cubicIn }}
-						onclick={() => (leaving = true)}
-					>
-						Return to menu
-					</button>
-					<button
-						class="hover-sfx border-fancy bg-fancy interactive px-4 py-2"
+						class="hover-sfx click-sfx border-fancy bg-fancy interactive px-4 py-2"
 						transition:fade|global={{ duration: 750, easing: cubicIn }}
 						onclick={requestRetry}
 					>
 						Retry
+					</button>
+					<button
+						class="hover-sfx click-sfx border-fancy bg-fancy interactive px-4 py-2"
+						transition:fade|global={{ duration: 750, easing: cubicIn }}
+						onclick={() => (leaving = true)}
+					>
+						Return to menu
 					</button>
 				</div>
 			{/if}

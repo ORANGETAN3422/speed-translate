@@ -16,6 +16,7 @@ if (browser && audioCtx) {
 	window.addEventListener('keydown', resume);
 
 	document.addEventListener('mouseover', (e) => addHoverButtonEvent(e));
+	document.addEventListener('click', (e) => addClickButtonEvent(e));
 }
 
 export const getSfxURL = (file: string, mp3: boolean = false): string =>
@@ -34,7 +35,13 @@ function loadAudio(url: string): Promise<AudioBuffer> {
 
 export async function playSound(
 	url: string,
-	opts?: { volume?: number; detune?: number; rate?: number }
+	opts?: {
+		volume?: number;
+		detune?: number;
+		rate?: number;
+		offsetSec?: number;
+		durationSec?: number;
+	}
 ) {
 	if (!audioCtx) return;
 	try {
@@ -54,7 +61,11 @@ export async function playSound(
 			source.connect(audioCtx.destination);
 		}
 
-		source.start();
+		if (opts?.offsetSec !== undefined || opts?.durationSec !== undefined) {
+			source.start(0, opts.offsetSec ?? 0, opts.durationSec);
+		} else {
+			source.start();
+		}
 	} catch {
 		// ignore
 	}
@@ -73,9 +84,17 @@ function addHoverButtonEvent(e: MouseEvent) {
 	});
 }
 
-export async function playKeyboardSelectSound(keyboard: string) {
+function addClickButtonEvent(e: MouseEvent) {
+	const el = (e.target as HTMLElement | null)?.closest('.click-sfx') as HTMLElement | null;
+	if (!el || (el as HTMLButtonElement).disabled) return;
+	const from = e.relatedTarget as HTMLElement | null;
+	if (from && el.contains(from)) return;
+	playKeyboardSelectSound('eg-oreo', true);
+}
+
+export async function playKeyboardSelectSound(keyboard: string, isUi = false) {
 	await preloadKeyboard(keyboard);
-	playKeyboardKey(keyboard, 'Enter');
+	playKeyboardKey(keyboard, 'Enter', isUi);
 }
 
 // Keyboard Sound Functions
@@ -83,15 +102,33 @@ export async function playKeyboardSelectSound(keyboard: string) {
 type KeyboardConfig = {
 	id?: string;
 	name?: string;
-	defines: Record<string, string | null>;
+	key_define_type?: 'single' | 'multi';
+	sound?: string; // filename for single-sprite packs (e.g. "sound.ogg")
+	defines: Record<string, string | [number, number] | null>;
 };
 
 const configCache = new Map<string, KeyboardConfig>();
 const configPromises = new Map<string, Promise<KeyboardConfig>>();
 
-export function playKeyboardKey(keyboard: string, code: string) {
-	const url = getKeyboardSoundUrl(keyboard, code);
-	if (url) playSound(url, { volume: config.keyboardVolume });
+export function playKeyboardKey(keyboard: string, code: string, isUi?: boolean) {
+	const cfg = configCache.get(keyboard);
+	if (!cfg) return;
+	const scanCode = codeToScanCode[code];
+	if (!scanCode) return;
+	const define = cfg.defines[String(scanCode)];
+	if (!define) return;
+
+	const isSingle = cfg.key_define_type === 'single';
+	const opts = { volume: isUi ? config.uiVolume : config.keyboardVolume };
+
+	if (isSingle && Array.isArray(define) && cfg.sound) {
+		const [startMs, durationMs] = define;
+		const url = asset(`/sfx/keyboard/${keyboard}/${cfg.sound}`);
+		playSound(url, { ...opts, offsetSec: startMs / 1000, durationSec: durationMs / 1000 });
+	} else if (typeof define === 'string') {
+		const url = asset(`/sfx/keyboard/${keyboard}/${define}`);
+		playSound(url, opts);
+	}
 }
 
 export function preloadKeyboard(keyboard: string): Promise<KeyboardConfig> {
@@ -104,6 +141,10 @@ export function preloadKeyboard(keyboard: string): Promise<KeyboardConfig> {
 			.then((r) => r.json())
 			.then((cfg: KeyboardConfig) => {
 				configCache.set(keyboard, cfg);
+				// For sprite-style packs, fetch + decode the single audio file now
+				if (cfg.key_define_type === 'single' && cfg.sound) {
+					loadAudio(asset(`/sfx/keyboard/${keyboard}/${cfg.sound}`));
+				}
 				return cfg;
 			});
 		configPromises.set(keyboard, p);

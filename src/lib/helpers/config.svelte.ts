@@ -12,22 +12,32 @@ export type ThemeInfo = {
 
 export const keyboards: KeyboardInfo[] = [
 	{ fileName: 'nk-cream', displayName: 'NK Creams' },
-	{ fileName: 'Mettaton', displayName: 'Mettaton' }
+	{ fileName: 'cherrymx-brown-abs', displayName: 'CherryMX Brown ABS' },
+	{ fileName: 'kalih-box-white', displayName: 'Kalih Box White' },
+	{ fileName: 'eg-oreo', displayName: 'EG Oreo' },
+	{ fileName: 'Lincoln Typewriter', displayName: 'Lincoln Typewriter' },
+	{ fileName: 'Mettaton', displayName: 'Mettaton' },
+	{ fileName: 'Sans Undertale', displayName: 'Sans Undertale' },
+	{ fileName: 'undertale-papyrus', displayName: 'Papyrus Undertale' }
 ];
 
 export const themes: ThemeInfo[] = [
 	{ themeName: 'dark-default', displayName: 'Dark Default' },
-	{ themeName: 'dark-green', displayName: 'Dark Green' },
+	{ themeName: 'light-default', displayName: 'Light Default' },
 	{ themeName: 'dark-grey', displayName: 'Dark Grey' },
-	{ themeName: 'default-light', displayName: 'Light Default' },
-	{ themeName: 'light-grey', displayName: 'Light Grey' }
+	{ themeName: 'dark-green', displayName: 'The Golden' },
+	{ themeName: 'purple', displayName: 'Amethyst' },
+	{ themeName: 'light-grey', displayName: 'Thinking Space' },
+	{ themeName: 'orange-red', displayName: 'Flamewall' },
+	{ themeName: 'black-blue', displayName: 'Cold Sweat' }
 ];
 
 export const config = $state({
 	currentKeyboard: 'nk-cream',
 	keyboardVolume: 1,
 	currentTheme: 'dark-default',
-	uiVolume: 0.25
+	uiVolume: 0.25,
+	reducedMotion: false
 });
 
 if (browser) {
