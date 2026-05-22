@@ -1,4 +1,4 @@
-import type { Sentence } from "./sentence";
+import type { Sentence } from './sentence';
 
 export interface record {
 	set: string;
@@ -15,19 +15,19 @@ export interface customSet {
 }
 
 // CSV Parsing
-const customSetKey = "custom";
+const customSetKey = 'custom';
 
 export function csvToJson(csv: string): Sentence[] {
 	const lines = csv.split('\n');
-	const rows = lines.map(line => line.split(','));
+	const rows = lines.map((line) => line.split(','));
 
-	const sentences: Sentence[] = []
+	const sentences: Sentence[] = [];
 	for (let i = 1; i < rows.length; i++) {
 		const s = rows[i];
 		sentences.push({
-			"question": s[0].replace(/[\n\r]/g, ''), 
-			"answer": s[1].replace(/[\n\r]/g, '')  
-		} as Sentence)
+			question: s[0].replace(/[\n\r]/g, ''),
+			answer: s[1].replace(/[\n\r]/g, '')
+		} as Sentence);
 	}
 
 	return sentences;
@@ -35,19 +35,21 @@ export function csvToJson(csv: string): Sentence[] {
 
 export function tsvToJson(tsv: string): Sentence[] {
 	const lines = tsv.split('\n');
-	const rows = lines.map(line => line.split('\t'));
+	const rows = lines.map((line) => line.split('\t'));
 
-	const sentences: Sentence[] = []
+	const sentences: Sentence[] = [];
 	for (let i = 1; i < rows.length; i++) {
 		const s = rows[i];
-		sentences.push({"question": s[0], "answer": s[1]} as Sentence)
+		sentences.push({ question: s[0], answer: s[1] } as Sentence);
 	}
 
 	return sentences;
 }
 
+// set saving
+
 export function getCustomSets(): customSet[] | null {
-	const cursSets = window.localStorage.getItem(customSetKey)
+	const cursSets = window.localStorage.getItem(customSetKey);
 	if (!cursSets) return null;
 	return JSON.parse(cursSets) as customSet[];
 }
@@ -95,14 +97,12 @@ export function saveCustomSet(set: customSet): customSet {
 }
 
 /**
- * Stamps the named set with the current timestamp so it sorts to the top of recents.
+ * sets the named set with the current timestamp so it sorts to the top of recents.
  */
 export function markSetPlayed(name: string) {
 	const existing = getCustomSets();
 	if (!existing) return;
-	const updated = existing.map((s) =>
-		s.name === name ? { ...s, lastPlayed: Date.now() } : s
-	);
+	const updated = existing.map((s) => (s.name === name ? { ...s, lastPlayed: Date.now() } : s));
 	window.localStorage.setItem(customSetKey, JSON.stringify(updated));
 }
 
@@ -113,6 +113,15 @@ export function getRecentCustomSets(limit?: number): customSet[] {
 	const all = getCustomSets() ?? [];
 	const sorted = [...all].sort((a, b) => (b.lastPlayed ?? 0) - (a.lastPlayed ?? 0));
 	return limit !== undefined ? sorted.slice(0, limit) : sorted;
+}
+
+export function deleteSet(name: string) {
+	const existing = getCustomSets();
+	if (!existing) return;
+
+	const updated = existing.filter((s) => s.name !== name);
+	window.localStorage.setItem(customSetKey, JSON.stringify(updated));
+	return updated;
 }
 
 // Local Storage Record Interaction

@@ -92,7 +92,7 @@
 				<StartButton onclick={startCreation} />
 				<div class="absolute top-1/2 left-full ml-14 flex -translate-y-1/2 flex-col gap-3">
 					<ImportButton onclick={() => (showingImport = true)} />
-					{#each savedSets as set, i (set.name)}
+					{#each savedSets as set, i (set.name ?? i)}
 						<div
 							in:osuDeath|global={{
 								duration: 700,
@@ -105,15 +105,15 @@
 								y: 50,
 								rotate: 10,
 								easing: cubicIn,
-								delay: i * 40
+								delay: i * 30
 							}}
 						>
-							<ImportedSetCard {set} onclick={(s) => createSession(0, parseInt(s.count), s)} />
+							<ImportedSetCard {set} onclick={(s) => createSession(0, parseInt(s.count), s)} onDeleteClick={() => {}} canDelete={false} />
 						</div>
 					{/each}
 				</div>
 				<!-- bottom -->
-				<div class="absolute top-full left-1/2 mt-18 flex flex-row gap-12 -translate-x-1/2">
+				<div class="absolute top-full left-1/2 mt-18 flex -translate-x-1/2 flex-row gap-12">
 					<OrangeButton />
 					<AboutButton onclick={() => (showingAbout = true)} />
 					<SettingsButton onclick={() => (showingSettings = true)} />
@@ -178,7 +178,9 @@
 		<div class="absolute inset-0 overflow-y-auto">
 			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
 				<AboutMenu
-					onclose={() => {showingAbout = false;}}
+					onclose={() => {
+						showingAbout = false;
+					}}
 				/>
 			</div>
 		</div>
@@ -190,6 +192,7 @@
 				<ImportMenu
 					onclose={() => {
 						showingImport = false;
+						savedSets = getRecentCustomSets(2);
 					}}
 					onstart={(set) => createSession(0, parseInt(set.count), set)}
 				/>
@@ -200,11 +203,6 @@
 
 {#if active}
 	<div class="overlay">
-		<QuizSession
-			level={currentLevel}
-			goal={currentGoal}
-			set={currentSet}
-			onclose={closeSession}
-		/>
+		<QuizSession level={currentLevel} goal={currentGoal} set={currentSet} onclose={closeSession} />
 	</div>
 {/if}
