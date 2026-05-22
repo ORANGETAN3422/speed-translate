@@ -1,0 +1,4 @@
+- make the fcking thing work
+- create question answer sets from within and save directly to browser
+- import exising sets to edit
+- save to existing sets

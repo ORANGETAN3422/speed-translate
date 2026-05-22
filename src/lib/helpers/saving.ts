@@ -52,15 +52,46 @@ export function getCustomSets(): customSet[] | null {
 	return JSON.parse(cursSets) as customSet[];
 }
 
-export function saveCustomSet(set: customSet) {
+function sentencesEqual(a: Sentence[], b: Sentence[]): boolean {
+	if (a.length !== b.length) return false;
+	for (let i = 0; i < a.length; i++) {
+		if (a[i].question !== b[i].question || a[i].answer !== b[i].answer) return false;
+	}
+	return true;
+}
+
+/**
+ * Saves a set to localStorage. If a set with the same name AND same content exists,
+ * updates it in place (preserving metadata like lastPlayed). If the name collides but
+ * the content differs, auto-renames to "name (2)", "name (3)", etc.
+ * Returns the customSet.
+ */
+export function saveCustomSet(set: customSet): customSet {
 	const existing = getCustomSets() ?? [];
-	const idx = existing.findIndex((s) => s.name === set.name);
-	const updated =
-		idx >= 0
-			? existing.map((s, i) => (i === idx ? set : s)) // replace
-			: [...existing, set]; // append
+	const sameName = existing.find((s) => s.name === set.name);
+
+	let toSave = set;
+	let updated: customSet[];
+
+	if (sameName) {
+		if (sentencesEqual(sameName.sentences, set.sentences)) {
+			// dedupe
+			updated = existing.map((s) =>
+				s.name === set.name ? { ...s, ...set, lastPlayed: s.lastPlayed } : s
+			);
+		} else {
+			// suffix name
+			let suffix = 2;
+			while (existing.some((s) => s.name === `${set.name} (${suffix})`)) suffix++;
+			toSave = { ...set, name: `${set.name} (${suffix})` };
+			updated = [...existing, toSave];
+		}
+	} else {
+		updated = [...existing, set];
+	}
 
 	window.localStorage.setItem(customSetKey, JSON.stringify(updated));
+	return toSave;
 }
 
 /**

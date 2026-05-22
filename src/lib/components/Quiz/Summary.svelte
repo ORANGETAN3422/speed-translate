@@ -108,7 +108,7 @@
 >
 	<div class="flex flex-col gap-2">
 		{#if mounted && !allOutroed}
-			{#each answeredSentences as sentence, i (sentence.question)}
+			{#each answeredSentences as sentence, i (i)}
 				<div
 					bind:this={slotEls[i]}
 					style:min-height={lockedSlotHeights[i] ? `${lockedSlotHeights[i]}px` : undefined}

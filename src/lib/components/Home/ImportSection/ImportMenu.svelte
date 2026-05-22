@@ -65,15 +65,14 @@
 			sentences: parsed
 		} as customSet;
 		
-		saveCustomSet(set);
+		const saved = saveCustomSet(set);
 		savedSets = getCustomSets() ?? [];
-		onstart(set);
+		onstart(saved);
 	}
 </script>
 <!-- todo -->
-    <!-- import csv and tsv files (add helper/add to saving?) -->
-    <!-- borser save laoded stuff -->
-    <!-- loaded cache select menu -->
+<!-- export button on browser saves -->
+<!-- rename saves -->
 
 
 <div class="flex w-full max-w-3xl flex-col gap-6">
