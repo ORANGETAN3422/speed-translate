@@ -24,7 +24,7 @@ export const keyboards: KeyboardInfo[] = [
 export const themes: ThemeInfo[] = [
 	{ themeName: 'dark-default', displayName: 'Dark Default' },
 	{ themeName: 'light-default', displayName: 'Light Default' },
-	{ themeName: 'dark-grey', displayName: 'Dark Grey' },
+	{ themeName: 'dark-grey', displayName: 'Nullscapes' },
 	{ themeName: 'dark-green', displayName: 'The Golden' },
 	{ themeName: 'purple', displayName: 'Amethyst' },
 	{ themeName: 'light-grey', displayName: 'Thinking Space' },

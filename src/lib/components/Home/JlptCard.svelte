@@ -50,7 +50,7 @@
 				type="button"
 				onclick={(e) => {
 					e.stopPropagation();
-					adjust(-1);
+					adjust(-5);
 				}}
 				disabled={wordCount <= MIN}
 				class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"
@@ -62,7 +62,7 @@
 				type="button"
 				onclick={(e) => {
 					e.stopPropagation();
-					adjust(1);
+					adjust(5);
 				}}
 				disabled={wordCount >= MAX}
 				class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex h-8 w-8 items-center justify-center text-lg disabled:opacity-40"

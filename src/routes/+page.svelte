@@ -13,22 +13,28 @@
 	import Settings from '$lib/components/Home/SettingsMenu.svelte';
 	import AboutMenu from '$lib/components/Home/AboutMenu.svelte';
 	import JlptCard from '$lib/components/Home/JlptCard.svelte';
+	import ImportMenu from '$lib/components/Home/ImportSection/ImportMenu.svelte';
+	import ImportedSetCard from '$lib/components/Home/ImportSection/ImportedSetCard.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { saveConfig } from '$lib/helpers/config.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import { cubicOut, sineIn } from 'svelte/easing';
+	import { cubicOut, cubicIn, sineIn } from 'svelte/easing';
+	import { getRecentCustomSets, markSetPlayed, type customSet } from '$lib/helpers/saving';
 
 	let active = $state(false);
 	let closing = $state(false);
 	let currentLevel = $state(0);
 	let currentGoal = $state(10);
+	let currentSet = $state<customSet | undefined>(undefined);
+	let savedSets = $state<customSet[]>([]);
 	let mounted = $state(false);
 
 	let showingCreation = $state(false);
 	let showingSettings = $state(false);
 	let showingAbout = $state(false);
+	let showingImport = $state(false);
 
 	const things = [5, 4, 3, 2, 1];
 
@@ -36,22 +42,29 @@
 		showingCreation = true;
 	}
 
-	function createSession(jlpt: number, goal: number) {
-		console.log('create session', { jlpt, goal });
+	function createSession(jlpt: number, goal: number, set?: customSet) {
+		console.log('create session', { jlpt, goal, set });
 		showingCreation = false;
+		showingImport = false;
 		active = true;
 		currentLevel = jlpt;
 		currentGoal = goal;
+		currentSet = set;
+		if (set) markSetPlayed(set.name);
 	}
 
 	function closeSession() {
 		closing = true;
 		active = false; // triggers QuizSession's out:fade (300ms)
-		setTimeout(() => (closing = false), 300);
+		setTimeout(() => {
+			closing = false;
+			savedSets = getRecentCustomSets(2);
+		}, 300);
 	}
 
 	onMount(() => {
 		mounted = true;
+		savedSets = getRecentCustomSets(2);
 	});
 </script>
 
@@ -62,7 +75,7 @@
 </div> -->
 
 <div class="fixed inset-0">
-	{#if mounted && !active && !closing && !showingCreation && !showingSettings && !showingAbout}
+	{#if mounted && !active && !closing && !showingCreation && !showingSettings && !showingAbout && !showingImport}
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
 			<h1
 				class="pb-4 text-center text-6xl tracking-wider uppercase"
@@ -77,8 +90,27 @@
 					<StatCard />
 				</div>
 				<StartButton onclick={startCreation} />
-				<div class="absolute top-1/2 left-full ml-14 -translate-y-1/2">
-					<ImportButton />
+				<div class="absolute top-1/2 left-full ml-14 flex -translate-y-1/2 flex-col gap-3">
+					<ImportButton onclick={() => (showingImport = true)} />
+					{#each savedSets as set, i (set.name)}
+						<div
+							in:osuDeath|global={{
+								duration: 700,
+								y: 80,
+								easing: cubicOut,
+								delay: 320 + i * 60
+							}}
+							out:osuDeath|global={{
+								duration: 350,
+								y: 50,
+								rotate: 10,
+								easing: cubicIn,
+								delay: i * 40
+							}}
+						>
+							<ImportedSetCard {set} onclick={(s) => createSession(0, parseInt(s.count), s)} />
+						</div>
+					{/each}
 				</div>
 				<!-- bottom -->
 				<div class="absolute top-full left-1/2 mt-18 flex flex-row gap-12 -translate-x-1/2">
@@ -151,10 +183,28 @@
 			</div>
 		</div>
 	{/if}
+
+	{#if mounted && !active && !closing && showingImport}
+		<div class="absolute inset-0 overflow-y-auto">
+			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
+				<ImportMenu
+					onclose={() => {
+						showingImport = false;
+					}}
+					onstart={(set) => createSession(0, parseInt(set.count), set)}
+				/>
+			</div>
+		</div>
+	{/if}
 </div>
 
 {#if active}
 	<div class="overlay">
-		<QuizSession level={currentLevel} goal={currentGoal} onclose={closeSession} />
+		<QuizSession
+			level={currentLevel}
+			goal={currentGoal}
+			set={currentSet}
+			onclose={closeSession}
+		/>
 	</div>
 {/if}

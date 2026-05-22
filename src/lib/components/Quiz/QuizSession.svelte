@@ -3,6 +3,7 @@
 	import { loadSentence, type Sentence } from '$lib/helpers/sentence';
 	import { playKeyboardKey, preloadKeyboard } from '../../helpers/sound';
 	import { config } from '$lib/helpers/config.svelte';
+	import type { customSet } from '$lib/helpers/saving';
 	import { flyRotate } from '$lib/helpers/transitions';
 	import { cubicIn } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
@@ -19,8 +20,14 @@
 	let {
 		level,
 		goal = 10,
+		set,
 		onclose
-	}: { level: number; goal?: number; onclose: () => void } = $props();
+	}: {
+		level: number;
+		goal?: number;
+		set?: customSet;
+		onclose: () => void;
+	} = $props();
 
 	let mounted = $state(false);
 	let leaving = $state(false);
@@ -76,7 +83,11 @@
 
 	onMount(async () => {
 		preloadKeyboard(config.currentKeyboard);
-		originalSentences = await loadSentence(level);
+		if (set) {
+			originalSentences = set.sentences;
+		} else {
+			originalSentences = await loadSentence(level);
+		}
 		unansweredSentences = [...originalSentences];
 		await startSession();
 	});
@@ -165,7 +176,7 @@
 				{answeredSentences}
 				{englishAnswers}
 				time={elapsedMs}
-				set={`n${level}`}
+				set={set?.name ?? `n${level}`}
 				closing={leaving}
 				onclosed={handleSummaryClosed}
 			/>
