@@ -76,25 +76,22 @@
 			class="slider-fancy click-sfx hover-sfx w-full"
 			style:--val="{config.uiVolume * 100}%"
 		/>
-		<div
-			class="flex items-center justify-between gap-3 pt-2"
-			in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 50 }}
-			out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 30, easing: sineIn }}
-		>
-			<p class="text-muted text-xs tracking-[0.25em] uppercase">Menu Animations</p>
-			<button
-				type="button"
-				onclick={() => {
-					config.disableAnimations = !config.disableAnimations;
-					saveConfig();
-				}}
-				class="hover-sfx click-sfx border-fancy shadow-fancy interactive px-3 py-1.5 text-xs tracking-wider uppercase"
-				class:bg-primary={!config.disableAnimations}
-				class:text-bg={!config.disableAnimations}
-			>
-				{config.disableAnimations ? 'Off' : 'On'}
-			</button>
+		<div class="flex items-baseline justify-between pt-2">
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Animation Speed</p>
+			<span class="glow-num text-sm tabular-nums">
+				{config.animationSpeed === 0 ? 'Off' : `${config.animationSpeed}x`}
+			</span>
 		</div>
+		<input
+			type="range"
+			min="0"
+			max="3"
+			step="1"
+			bind:value={config.animationSpeed}
+			oninput={saveConfig}
+			class="slider-fancy click-sfx hover-sfx w-full"
+			style:--val="{(config.animationSpeed / 3) * 100}%"
+		/>
 	</div>
 
 	<!-- keyboard selection -->
