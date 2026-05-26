@@ -19,7 +19,7 @@
 		onedit
 	}: {
 		onclose: () => void;
-		onstart: (set: customSet) => void;
+		onstart: (set: customSet, count: number) => void;
 		onedit: (set?: customSet) => void;
 	} = $props();
 
@@ -73,7 +73,7 @@
 
 		const saved = saveCustomSet(set);
 		savedSets = getCustomSets() ?? [];
-		onstart(saved);
+		onstart(saved, wordCount);
 	}
 </script>
 
@@ -101,7 +101,7 @@
 					{#each savedSets as set, i (set.name ?? i)}
 						<ImportedSetCard
 							{set}
-							onclick={(s) => onstart(s)}
+							onclick={(s, c) => onstart(s, c)}
 							onDeleteClick={refreshSets}
 							onEditClick={(s) => onedit(s)}
 							canDelete={true}

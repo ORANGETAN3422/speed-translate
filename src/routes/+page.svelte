@@ -113,7 +113,7 @@
 						>
 							<ImportedSetCard
 								{set}
-								onclick={(s) => createSession(0, parseInt(s.count), s)}
+								onclick={(s, c) => createSession(0, c, s)}
 								onDeleteClick={() => {}}
 								canDelete={false}
 							/>
@@ -202,7 +202,7 @@
 						showingImport = false;
 						savedSets = getRecentCustomSets(2);
 					}}
-					onstart={(set) => createSession(0, parseInt(set.count), set)}
+					onstart={(set, count) => createSession(0, count, set)}
 					onedit={(set) => {
 						editingSet = set;
 						showingImport = false;

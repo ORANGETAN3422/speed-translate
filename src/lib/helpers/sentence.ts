@@ -8,7 +8,7 @@ export interface Sentence {
 type RawSentence = { question: string; answer: string; jlpt: string };
 
 export async function loadSentence(jlpt: number): Promise<Sentence[]> {
-	const res = await fetch(asset(`sentences/n${jlpt}.json`));
+	const res = await fetch(asset(`/sentences/n${jlpt}.json`));
 	if (!res.ok) throw new Error(`Failed to load sentences for n${jlpt}: ${res.status}`);
 
 	const raw = (await res.json()) as RawSentence[];
