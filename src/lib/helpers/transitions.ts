@@ -1,5 +1,18 @@
 import { cubicOut } from 'svelte/easing';
 import { cubicIn } from 'svelte/easing';
+import { fly as svelteFly, fade as svelteFade } from 'svelte/transition';
+import type { FlyParams, FadeParams } from 'svelte/transition';
+import { config } from '$lib/helpers/config.svelte';
+
+export function fly(node: Element, params?: FlyParams) {
+	if (config.disableAnimations) return { duration: 0, delay: 0 };
+	return svelteFly(node, params);
+}
+
+export function fade(node: Element, params?: FadeParams) {
+	if (config.disableAnimations) return { duration: 0, delay: 0 };
+	return svelteFade(node, params);
+}
 
 export function flyRotate(
 	node: Element,
@@ -21,6 +34,7 @@ export function flyRotate(
 		rotate?: number;
 	} = {}
 ) {
+	if (config.disableAnimations) return { duration: 0, delay: 0 };
 	const style = getComputedStyle(node);
 	const target_opacity = +style.opacity;
 	const transform = style.transform === 'none' ? '' : style.transform;
@@ -56,6 +70,7 @@ export function osuDeath(
 		rotate?: number;
 	} = {}
 ) {
+	if (config.disableAnimations) return { duration: 0, delay: 0 };
 	const style = getComputedStyle(node);
 	const target_opacity = +style.opacity;
 	const transform = style.transform === 'none' ? '' : style.transform;

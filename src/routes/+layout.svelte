@@ -15,6 +15,6 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Quiz Game Thing</title>
+	<title>Quiz Thing</title>
 </svelte:head>
 {@render children()}

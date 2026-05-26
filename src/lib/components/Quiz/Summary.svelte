@@ -4,6 +4,7 @@
 	import { flyRotate, osuDeath } from '$lib/helpers/transitions';
 	import { setRecord, compareRecord } from '$lib/helpers/saving';
 	import SummaryCard from './SummaryCard.svelte';
+	import { ms } from '$lib/helpers/config.svelte';
 
 	let {
 		answeredSentences,
@@ -69,7 +70,7 @@
 			const id = setTimeout(() => {
 				allOutroed = true;
 				onclosed?.();
-			}, totalMs);
+			}, ms(totalMs));
 			return () => clearTimeout(id);
 		}
 	});
@@ -117,7 +118,7 @@
 						<div
 							in:flyRotate|global={{ duration: 700, y: 150, rotate: 15, delay: i * CARD_STAGGER }}
 							out:osuDeath|global={{ duration: CARD_DURATION, y: 250, delay: i * CARD_STAGGER }}
-							class="group/card border-fancy bg-fancy flex items-center gap-6 px-5 py-3 transition-all duration-300 hover:translate-x-3"
+							class="group/card border-fancy bg-fancy flex items-center gap-6 px-5 py-3 transition-all duration-300 hover:translate-x-1.5"
 						>
 							<SummaryCard
 								{sentence}

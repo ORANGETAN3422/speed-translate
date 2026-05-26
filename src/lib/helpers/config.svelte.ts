@@ -37,7 +37,7 @@ export const config = $state({
 	keyboardVolume: 1,
 	currentTheme: 'dark-default',
 	uiVolume: 0.25,
-	reducedMotion: false
+	disableAnimations: true
 });
 
 if (browser) {
@@ -55,4 +55,8 @@ export function saveConfig() {
 	if (browser) {
 		localStorage.setItem('config', JSON.stringify(config));
 	}
+}
+
+export function ms(time: number): number {
+	return config.disableAnimations ? 0 : time;
 }

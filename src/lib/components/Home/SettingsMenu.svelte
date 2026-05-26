@@ -44,7 +44,7 @@
 				<button
 					type="button"
 					onclick={() => pickTheme(t.themeName)}
-					class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex-1 px-2 py-2 text-center text-[clamp(0.65rem,3.2cqw,1rem)] leading-tight tracking-wider"
+					class="hover-sfx click-sfx border-fancy shadow-fancy interactive flex-1 px-2 py-2 text-center text-[clamp(0.65rem,3.2cqw,1rem)] leading-tight tracking-wider wrap-anywhere"
 					class:bg-primary={config.currentTheme === t.themeName}
 					class:text-bg={config.currentTheme === t.themeName}
 				>
@@ -54,14 +54,14 @@
 		</div>
 	</div>
 
-	<!-- sound config -->
+	<!-- ui config -->
 	<div
 		class="border-fancy bg-fancy flex flex-col gap-3 px-6 py-4"
 		in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 140 }}
 		out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 100, easing: sineIn }}
 	>
 		<div class="flex items-baseline justify-between">
-			<p class="text-muted text-xs tracking-[0.25em] uppercase">Menu Sfx Volume</p>
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Menu SFX Volume</p>
 			<span class="glow-num text-sm tabular-nums">
 				{Math.round(config.uiVolume * 100)}%
 			</span>
@@ -76,6 +76,25 @@
 			class="slider-fancy click-sfx hover-sfx w-full"
 			style:--val="{config.uiVolume * 100}%"
 		/>
+		<div
+			class="flex items-center justify-between gap-3 pt-2"
+			in:osuDeath|global={{ duration: 500, y: 60, rotate: 10, easing: cubicOut, delay: 50 }}
+			out:osuDeath|global={{ duration: 350, y: 50, rotate: 10, delay: 30, easing: sineIn }}
+		>
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Menu Animations</p>
+			<button
+				type="button"
+				onclick={() => {
+					config.disableAnimations = !config.disableAnimations;
+					saveConfig();
+				}}
+				class="hover-sfx click-sfx border-fancy shadow-fancy interactive px-3 py-1.5 text-xs tracking-wider uppercase"
+				class:bg-primary={!config.disableAnimations}
+				class:text-bg={!config.disableAnimations}
+			>
+				{config.disableAnimations ? 'Off' : 'On'}
+			</button>
+		</div>
 	</div>
 
 	<!-- keyboard selection -->

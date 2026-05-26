@@ -17,10 +17,9 @@
 	import ImportedSetCard from '$lib/components/Home/ImportSection/ImportedSetCard.svelte';
 	import EditMenu from '$lib/components/Editor/EditMenu.svelte';
 
-	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
-	import { saveConfig } from '$lib/helpers/config.svelte';
+	import { osuDeath, flyRotate, fly } from '$lib/helpers/transitions';
+	import { saveConfig, ms } from '$lib/helpers/config.svelte';
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
 	import { cubicOut, cubicIn, sineIn } from 'svelte/easing';
 	import { getRecentCustomSets, markSetPlayed, type customSet } from '$lib/helpers/saving';
 
@@ -62,7 +61,7 @@
 		setTimeout(() => {
 			closing = false;
 			savedSets = getRecentCustomSets(2);
-		}, 300);
+		}, ms(300));
 	}
 
 	onMount(() => {
@@ -85,7 +84,7 @@
 				in:osuDeath|global={{ duration: 700, y: 100, delay: 50, easing: cubicOut }}
 				out:fly|global={{ duration: 350, y: -50, easing: sineIn }}
 			>
-				Quiz Game Thing
+				Quiz Thing
 			</h1>
 			<div class="relative">
 				<!-- middle -->

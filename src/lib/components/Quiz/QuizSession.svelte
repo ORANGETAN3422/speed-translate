@@ -4,9 +4,8 @@
 	import { playKeyboardKey, preloadKeyboard } from '../../helpers/sound';
 	import { config } from '$lib/helpers/config.svelte';
 	import type { customSet } from '$lib/helpers/saving';
-	import { flyRotate } from '$lib/helpers/transitions';
+	import { flyRotate, fade } from '$lib/helpers/transitions';
 	import { cubicIn } from 'svelte/easing';
-	import { fade } from 'svelte/transition';
 
 	import Summary from './Summary.svelte';
 	//import ShaderBackground from '../Graphics/ShaderBackground.svelte';
@@ -14,7 +13,7 @@
 	// add a settings creation thing later for this
 	// add reveal answer support
 	const REVEAL_ANSWER = false;
-	const INITIAL_TIMEOUT = 500; //ms
+	const INITIAL_TIMEOUT = 250; //ms
 
 	// session vars
 	let {
