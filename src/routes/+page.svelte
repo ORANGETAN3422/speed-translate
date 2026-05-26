@@ -29,6 +29,7 @@
 	let currentLevel = $state(0);
 	let currentGoal = $state(10);
 	let currentSet = $state<customSet | undefined>(undefined);
+	let editingSet = $state<customSet | undefined>(undefined);
 	let savedSets = $state<customSet[]>([]);
 	let mounted = $state(false);
 
@@ -202,7 +203,8 @@
 						savedSets = getRecentCustomSets(2);
 					}}
 					onstart={(set) => createSession(0, parseInt(set.count), set)}
-					onedit={() => {
+					onedit={(set) => {
+						editingSet = set;
 						showingImport = false;
 						showingEdit = true;
 					}}
@@ -215,9 +217,11 @@
 		<div class="absolute inset-0 overflow-y-auto">
 			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
 				<EditMenu
+					set={editingSet}
 					onclose={() => {
 						showingEdit = false;
 						showingImport = true;
+						editingSet = undefined;
 					}}
 				/>
 			</div>

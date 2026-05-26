@@ -20,7 +20,7 @@
 	}: {
 		onclose: () => void;
 		onstart: (set: customSet) => void;
-		onedit: () => void;
+		onedit: (set?: customSet) => void;
 	} = $props();
 
 	let fileInput = $state<HTMLInputElement>();
@@ -103,6 +103,7 @@
 							{set}
 							onclick={(s) => onstart(s)}
 							onDeleteClick={refreshSets}
+							onEditClick={(s) => onedit(s)}
 							canDelete={true}
 						/>
 					{/each}

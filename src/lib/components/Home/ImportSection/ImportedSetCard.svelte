@@ -5,11 +5,13 @@
 		set,
 		onclick,
 		onDeleteClick,
+		onEditClick,
 		canDelete
 	}: {
 		set: customSet;
 		onclick: (set: customSet) => void;
 		onDeleteClick: () => void;
+		onEditClick?: (set: customSet) => void;
 		canDelete: boolean;
 	} = $props();
 
@@ -65,17 +67,32 @@
 
 		<div class="flex items-center justify-between gap-2">
 			<span class="text-muted shrink-0 text-xs tabular-nums">{set.count} questions</span>
-			<button
-				type="button"
-				onclick={(e) => {
-					e.stopPropagation();
-					handleDelete();
-				}}
-				class="hover-sfx click-sfx border-fancy interactive flex h-6 w-6 shrink-0 items-center justify-center text-xs"
-				aria-label="Delete set"
-			>
-				✕
-			</button>
+			<div class="flex items-center gap-1">
+				{#if onEditClick}
+					<button
+						type="button"
+						onclick={(e) => {
+							e.stopPropagation();
+							onEditClick(set);
+						}}
+						class="hover-sfx click-sfx border-fancy interactive flex h-6 w-6 shrink-0 items-center justify-center text-xs"
+						aria-label="Edit set"
+					>
+						✎
+					</button>
+				{/if}
+				<button
+					type="button"
+					onclick={(e) => {
+						e.stopPropagation();
+						handleDelete();
+					}}
+					class="hover-sfx click-sfx border-fancy interactive flex h-6 w-6 shrink-0 items-center justify-center text-xs"
+					aria-label="Delete set"
+				>
+					✕
+				</button>
+			</div>
 		</div>
 	{:else}
 		<span class="text-md flex-1 truncate tracking-wider uppercase">{set.name}</span>

@@ -7,10 +7,15 @@
 	import PlaceholderRow from './PlaceholderRow.svelte';
 	import InputRow from './InputRow.svelte';
 
-	let { onclose }: { onclose: () => void } = $props();
+	let {
+		onclose,
+		set
+	}: { onclose: () => void; set?: customSet } = $props();
 
-	let sentences: Sentence[] = $state([]);
-	let title: string = $state('New Set');
+	// svelte-ignore state_referenced_locally
+	let sentences: Sentence[] = $state(set?.sentences ? [...set.sentences] : []);
+	// svelte-ignore state_referenced_locally
+	let title: string = $state(set?.name ?? 'New Set');
 
 	function buildSet(): customSet {
 		return {
@@ -24,6 +29,10 @@
 		if (sentences.length === 0) return;
 		saveCustomSet(buildSet());
 	}
+
+    function importSet(name: string) {
+        
+    }
 
 	function downloadCsv() {
 		if (sentences.length === 0) return;
