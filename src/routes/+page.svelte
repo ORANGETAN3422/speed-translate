@@ -37,7 +37,7 @@
 	let showingSettings = $state(false);
 	let showingAbout = $state(false);
 	let showingImport = $state(false);
-	let showingEdit = $state(true);
+	let showingEdit = $state(false);
 
 	const things = [5, 4, 3, 2, 1];
 
@@ -85,7 +85,7 @@
 				in:osuDeath|global={{ duration: 700, y: 100, delay: 50, easing: cubicOut }}
 				out:fly|global={{ duration: 350, y: -50, easing: sineIn }}
 			>
-				Temporary Name
+				Quiz Game Thing
 			</h1>
 			<div class="relative">
 				<!-- middle -->

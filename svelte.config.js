@@ -1,12 +1,13 @@
 import adapter from '@sveltejs/adapter-static';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	compilerOptions: {
-		// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
-		runes: ({ filename }) => (filename.split(/[/\\]/).includes('node_modules') ? undefined : true)
-	},
-	kit: { adapter: adapter() }
-};
+const dev = process.argv.includes('dev');
 
+const config = {
+	kit: {
+		adapter: adapter({ fallback: '404.html' }),
+		paths: {
+			base: dev ? '' : '/speed-translate'
+		}
+	}
+};
 export default config;

@@ -4,7 +4,7 @@
 
 	import './layout.css';
 	import './themes.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/cube_23.png';
 
 	let { children } = $props();
 
@@ -13,5 +13,8 @@
 	});
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+	<title>Quiz Game Thing</title>
+</svelte:head>
 {@render children()}
