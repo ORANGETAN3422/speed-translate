@@ -187,16 +187,16 @@
 					<button
 						class="hover-sfx click-sfx border-fancy bg-fancy interactive px-4 py-2"
 						transition:fade|global={{ duration: 750, easing: cubicIn }}
-						onclick={requestRetry}
+						onclick={() => (leaving = true)}
 					>
-						Retry
+						Return to menu
 					</button>
 					<button
 						class="hover-sfx click-sfx border-fancy bg-fancy interactive px-4 py-2"
 						transition:fade|global={{ duration: 750, easing: cubicIn }}
-						onclick={() => (leaving = true)}
+						onclick={requestRetry}
 					>
-						Return to menu
+						Retry
 					</button>
 				</div>
 			{/if}

@@ -46,6 +46,20 @@ export function tsvToJson(tsv: string): Sentence[] {
 	return sentences;
 }
 
+export function jsonToCsv(json: customSet): string {
+	if (!json) return '';
+
+	let csv: string = '';
+	csv += 'Question,Answer \n';
+
+	for (let i = 0; i < json.sentences.length; i++) {
+		const s: Sentence = json.sentences[i];
+		csv += s.question + ',' + s.answer + '\n';
+	}
+
+	return csv;
+}
+
 // set saving
 
 export function getCustomSets(): customSet[] | null {

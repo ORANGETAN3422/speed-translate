@@ -108,7 +108,12 @@
 								delay: i * 30
 							}}
 						>
-							<ImportedSetCard {set} onclick={(s) => createSession(0, parseInt(s.count), s)} onDeleteClick={() => {}} canDelete={false} />
+							<ImportedSetCard
+								{set}
+								onclick={(s) => createSession(0, parseInt(s.count), s)}
+								onDeleteClick={() => {}}
+								canDelete={false}
+							/>
 						</div>
 					{/each}
 				</div>

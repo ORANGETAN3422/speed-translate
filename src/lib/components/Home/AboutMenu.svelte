@@ -42,9 +42,34 @@
 		<p class="text-muted text-sm">
 			The import button on the main menu lets you import your own sentence pairs that you can use.
 			You can import a CSV or TSV of the following format, with as many sentences as you want:
-			<br />
-			After this, it will take you straight to the translation minigame. Imported sets will be saved to
-			your browser to make it a quicker to repeat custom sets.
+		</p>
+
+		<table class="border-fancy w-full text-left text-sm tabular-nums">
+			<thead>
+				<tr class="border-primary/30 border-b">
+					<th class="text-text px-3 py-2 text-xs tracking-[0.25em] uppercase">Question</th>
+					<th class="text-text px-3 py-2 text-xs tracking-[0.25em] uppercase">Answer</th>
+				</tr>
+			</thead>
+			<tbody class="text-muted">
+				<tr class="border-primary/15 border-b">
+					<td class="jp px-3 py-2">彼はいないだろう。</td>
+					<td class="px-3 py-2">He must be out.</td>
+				</tr>
+				<tr class="border-primary/15 border-b">
+					<td class="jp px-3 py-2">けど、いらない。</td>
+					<td class="px-3 py-2">But I don't need it.</td>
+				</tr>
+				<tr>
+					<td class="jp px-3 py-2">本を読みます。</td>
+					<td class="px-3 py-2">I read a book.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p class="text-muted text-sm">
+			After this, it will take you straight to the translation minigame. Imported sets will be saved
+			to your browser to make it quicker to repeat custom sets.
 		</p>
 	</div>
 
