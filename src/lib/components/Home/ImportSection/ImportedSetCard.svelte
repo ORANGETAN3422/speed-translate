@@ -6,13 +6,15 @@
 		onclick,
 		onDeleteClick,
 		onEditClick,
-		canDelete
+		canDelete,
+		nameOnly = false
 	}: {
 		set: customSet;
 		onclick: (set: customSet) => void;
 		onDeleteClick: () => void;
 		onEditClick?: (set: customSet) => void;
 		canDelete: boolean;
+		nameOnly?: boolean;
 	} = $props();
 
 	function handleDelete() {
@@ -49,7 +51,9 @@
 	class:items-center={!canDelete}
 	class:gap-3={!canDelete}
 >
-	{#if canDelete}
+	{#if nameOnly}
+		<span class="text-md flex-1 truncate tracking-wider uppercase">{set.name}</span>
+	{:else if canDelete}
 		<div class="flex items-center gap-2">
 			<span class="text-md flex-1 truncate tracking-wider uppercase">{set.name}</span>
 			<button
