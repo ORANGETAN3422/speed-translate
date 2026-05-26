@@ -15,6 +15,7 @@
 	import JlptCard from '$lib/components/Home/JlptCard.svelte';
 	import ImportMenu from '$lib/components/Home/ImportSection/ImportMenu.svelte';
 	import ImportedSetCard from '$lib/components/Home/ImportSection/ImportedSetCard.svelte';
+	import EditMenu from '$lib/components/Editor/EditMenu.svelte';
 
 	import { osuDeath, flyRotate } from '$lib/helpers/transitions';
 	import { saveConfig } from '$lib/helpers/config.svelte';
@@ -35,6 +36,7 @@
 	let showingSettings = $state(false);
 	let showingAbout = $state(false);
 	let showingImport = $state(false);
+	let showingEdit = $state(true);
 
 	const things = [5, 4, 3, 2, 1];
 
@@ -75,7 +77,7 @@
 </div> -->
 
 <div class="fixed inset-0">
-	{#if mounted && !active && !closing && !showingCreation && !showingSettings && !showingAbout && !showingImport}
+	{#if mounted && !active && !closing && !showingCreation && !showingSettings && !showingAbout && !showingImport && !showingEdit}
 		<div class="absolute inset-0 flex flex-col items-center justify-center gap-12">
 			<h1
 				class="pb-4 text-center text-6xl tracking-wider uppercase"
@@ -200,6 +202,23 @@
 						savedSets = getRecentCustomSets(2);
 					}}
 					onstart={(set) => createSession(0, parseInt(set.count), set)}
+					onedit={() => {
+						showingImport = false;
+						showingEdit = true;
+					}}
+				/>
+			</div>
+		</div>
+	{/if}
+
+	{#if mounted && !active && !closing && showingEdit}
+		<div class="absolute inset-0 overflow-y-auto">
+			<div class="flex min-h-full flex-col items-center justify-center gap-12 px-4 py-12">
+				<EditMenu
+					onclose={() => {
+						showingEdit = false;
+						showingImport = true;
+					}}
 				/>
 			</div>
 		</div>

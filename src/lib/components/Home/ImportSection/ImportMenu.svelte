@@ -10,15 +10,17 @@
 		type customSet
 	} from '$lib/helpers/saving';
 	import type { Sentence } from '$lib/helpers/sentence';
-	import ImportedSetCard from './ImportedSetCard.svelte';
 	import { onMount } from 'svelte';
+	import ImportedSetCard from './ImportedSetCard.svelte';
 
 	let {
 		onclose,
-		onstart
+		onstart,
+		onedit
 	}: {
 		onclose: () => void;
 		onstart: (set: customSet) => void;
+		onedit: () => void;
 	} = $props();
 
 	let fileInput = $state<HTMLInputElement>();
@@ -78,7 +80,6 @@
 <!-- todo -->
 <!-- export button on browser saves -->
 <!-- rename saves -->
-
 <div class="flex w-full max-w-3xl flex-col gap-6">
 	<h2
 		class="text-center text-3xl tracking-wider uppercase"
@@ -174,6 +175,15 @@
 			{#if selectedFile}
 				<p class="text-muted truncate text-xs">{selectedFile.name}</p>
 			{/if}
+
+			<p class="text-muted text-xs tracking-[0.25em] uppercase">Set Editor</p>
+			<button
+				type="button"
+				onclick={onedit}
+				class="hover-sfx click-sfx border-fancy shadow-fancy interactive px-4 py-2 text-sm tracking-wider uppercase"
+			>
+				Open Set Editor
+			</button>
 		</div>
 	</div>
 
